@@ -37,3 +37,6 @@ next-env.d.ts
 
 # IDE
 /.idea
+
+# firebase
+firebase/blood-bowl-team-manager-firebase-adminsdk.json

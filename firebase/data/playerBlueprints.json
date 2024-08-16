@@ -1,0 +1,56 @@
+{
+  "playerBlueprints": {
+    "goblin": {
+      "cost": 45000,
+      "name": "Goblin Bruiser",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/stunty",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      }
+    },
+    "blackOrc": {
+      "cost": 90000,
+      "name": "Black Orc",
+      "specialRules": [
+        "specialRules/brawler",
+        "specialRules/grab"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "4",
+        "ag": "4+",
+        "pa": "5+",
+        "av": "10+"
+      }
+    },
+    "trainedTroll": {
+      "cost": 115000,
+      "name": "Trained Troll",
+      "specialRules": [
+        "specialRules/alwaysHungry",
+        "specialRules/lonerThreePlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/projectileVomit",
+        "specialRules/reallyStupid",
+        "specialRules/regeneration",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "10+"
+      }
+    }
+  }
+}
