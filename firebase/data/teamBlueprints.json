@@ -1,0 +1,26 @@
+{
+  "teamBlueprints": {
+    "blackOrc": {
+      "name": "Black Orc",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/goblin"
+        },
+        {
+          "quantity": "0-6",
+          "position": "playerBlueprints/blackOrc"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/trainedTroll"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/badlandsBrawl",
+        "specialRules/briberyAndCorruption"
+      ]
+    }
+  }
+}

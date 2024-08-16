@@ -1,0 +1,69 @@
+{
+  "specialRules": {
+    "dodge": {
+      "name": "Dodge",
+      "type": "Agility",
+      "description": "A player with the Dodge skill is adept at slipping away from opponents, and is allowed to re-roll the D6 if he fails to dodge out of any of an opposing player’s tackle zones. However, the player may only re-roll one failed Dodge roll per turn. In addition, the Dodge skill, if used, affects the results rolled on the Block dice, as explained in the Blocking rules in the Blood Bowl book."
+    },
+    "rightStuff": {
+      "name": "Right Stuff",
+      "type": "Extraordinary",
+      "description": "A player with the Right Stuff skill can be thrown by a team-mate with the Throw Team-Mate skill. If a player with this skill is thrown or attempts to land, they do not cause a turnover unless they were holding the ball and they fumble the throw or land unsuccessfully."
+    },
+    "stunty": {
+      "name": "Stunty",
+      "type": "Extraordinary",
+      "description": "The player is so small that they are very difficult to tackle. Therefore, the player may ignore any enemy tackle zones on the square they are dodging to and only has to make a Dodge roll based on their Agility, with no modifiers. However, being so small also makes the player more susceptible to injury. Stunty players suffer a +1 modifier when rolling on the Injury table."
+    },
+    "thickSkull": {
+      "name": "Thick Skull",
+      "type": "Strength",
+      "description": "This player is especially resilient to being knocked out. Whenever this player suffers a Knocked Out result on the Injury table, roll a D6. On a roll of 4+, the player is only Stunned, not Knocked Out."
+    },
+    "brawler": {
+      "name": "Brawler",
+      "type": "Strength",
+      "description": "Once per turn, a player with this skill may re-roll a single both down result when making a Block action. This skill may not be used if the player is making a Blitz action."
+    },
+    "grab": {
+      "name": "Grab",
+      "type": "Strength",
+      "description": "A player with the Grab skill uses their strength and bulk to move opposing players where they want them. When making a Block action, they may choose to push back an opponent to any empty square adjacent to them, rather than directly away. This skill may not be used if the player is making a Blitz action, nor can it be used in conjunction with the Frenzy or Side Step skills."
+    },
+    "alwaysHungry": {
+      "name": "Always Hungry",
+      "type": "Negatrait",
+      "description": "The player is a voracious eater and may occasionally try to eat a team-mate! If the player attempts to throw a team-mate with the Right Stuff skill, roll a D6 after they have finished the Pass action but before the team-mate lands. On a roll of 1, the player attempts to eat their team-mate instead of throwing them! The team-mate must roll on the Injury table and the move ends immediately."
+    },
+    "lonerThreePlus": {
+      "name": "Loner (3+)",
+      "type": "Negatrait",
+      "description": "The player does not work well with the team and is hesitant to re-roll dice unless absolutely necessary. Whenever this player attempts to use a team re-roll, roll a D6. On a 3 or more, they can use the re-roll as normal. On a roll of 1 or 2, they cannot use the re-roll, but the re-roll is still lost."
+    },
+    "mightyBlowPlusOne": {
+      "name": "Mighty Blow (+1)",
+      "type": "Strength",
+      "description": "A player with the Mighty Blow skill may add 1 to any Armor or Injury roll they make as part of a Block action."
+    },
+    "projectileVomit": {
+      "name": "Projectile Vomit",
+      "type": "Extraordinary",
+      "description": "Instead of performing a Block action, a player with the Projectile Vomit skill may vomit on an adjacent player. Roll a D6. On a roll of 2+, treat the vomit as a Block with a single die against the adjacent player, which cannot be modified by any skills. On a roll of 1, the player instead vomits on themselves and must make an Injury roll against themselves."
+    },
+    "reallyStupid": {
+      "name": "Really Stupid",
+      "type": "Negatrait",
+      "description": "Players with this skill are so mind-bogglingly dumb that they need help to do anything. If the player attempts to take an action while not standing adjacent to any standing team-mates, roll a D6. On a roll of 4+, they proceed as normal. On a 1-3, they do nothing for the turn and lose their tackle zone."
+    },
+    "regeneration": {
+      "name": "Regeneration",
+      "type": "Extraordinary",
+      "description": "If this player suffers a Casualty, roll a D6. On a roll of 4+, the player ignores the injury and is placed in the reserves box instead of the dead & injured box. This skill may not be used if the player suffers an injury that would remove them from the game entirely (such as being eaten by an Always Hungry player)."
+    },
+    "throwTeammate": {
+      "name": "Throw Team-Mate",
+      "type": "Extraordinary",
+      "description": "A player with this skill may throw a team-mate with the Right Stuff skill instead of the ball. The thrown player must be in an adjacent square and standing. The player may be thrown instead of performing a Block, and the throw is treated as a normal Throw action, except that the range is limited to Short Pass or less. The thrown player may attempt to land using the rules for landing."
+    }
+  }
+}
