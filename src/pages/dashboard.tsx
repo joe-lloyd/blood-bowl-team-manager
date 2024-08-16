@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { auth, logout } from '@/firebase';
+import { auth, logout } from '@/services/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import styled from 'styled-components';
 

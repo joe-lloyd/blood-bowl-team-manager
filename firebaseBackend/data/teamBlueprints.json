@@ -5,7 +5,7 @@
       "players": [
         {
           "quantity": "0-12",
-          "position": "playerBlueprints/goblin"
+          "position": "playerBlueprints/goblinBruiser"
         },
         {
           "quantity": "0-6",
@@ -20,7 +20,956 @@
       "specialRules": [
         "specialRules/badlandsBrawl",
         "specialRules/briberyAndCorruption"
-      ]
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "amazon": {
+      "name": "Amazon",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/eagleWarriorLinewomen"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/pythonWarriorThrowers"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/piranhaWarriorBlitzers"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/jaguarWarriorBlockers"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/lustrianSuperleague"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "chaosChosen": {
+      "name": "Chaos Chosen",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/beastman"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/chosenBlockers"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/chaosTroll"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/chaosOgre"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/minotaur"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/favourOf"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "chaosDwarf": {
+      "name": "Chaos Dwarf",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/hobgoblin"
+        },
+        {
+          "quantity": "0-6",
+          "position": "playerBlueprints/chaosDwarf"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/bullCentaur"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/enslavedMinotaur"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/badlandsBrawl",
+        "specialRules/favourOf",
+        "specialRules/worldsEdgeSuperleague"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "chaosRenegade": {
+      "name": "Chaos Renegade",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/renegadeLineman"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/renegadeThrower"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/renegadeGoblin"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/renegadeOrc"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/renegadeSkaven"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/renegadeDarkElf"
+        },
+        {
+          "quantity": "0-3",
+          "position": "playerBlueprints/renegadeTroll"
+        },
+        {
+          "quantity": "0-3",
+          "position": "playerBlueprints/renegadeOgre"
+        },
+        {
+          "quantity": "0-3",
+          "position": "playerBlueprints/renegadeMinotaur"
+        },
+        {
+          "quantity": "0-3",
+          "position": "playerBlueprints/renegadeRatOgre"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/favourOf"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "darkElf": {
+      "name": "Dark Elf",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/darkElfLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/darkElfRunner"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/darkElfBlitzer"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/darkElfAssassin"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/darkElfWitchElf"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/elvenKingdomsLeague"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "dwarf": {
+      "name": "Dwarf",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/dwarfLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/dwarfRunner"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/dwarfBlitzer"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/trollSlayer"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/deathroller"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/oldWorldClassic",
+        "specialRules/worldsEdgeSuperleague"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "elvenUnion": {
+      "name": "Elven Union",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/elvenUnionLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/elvenUnionThrower"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/elvenUnionCatcher"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/elvenUnionBlitzer"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/elvenKingdomsLeague"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "gnomes": {
+      "name": "Gnomes",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/gnomeLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/gnomeIllusionist"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/woodlandFox"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/gnomeBeastmaster"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/alternForestTreeman"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/halflingThimbleCup"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "goblins": {
+      "name": "Goblins",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/goblin"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/bomma"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/looney"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/fanatic"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/pogoer"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/ooligan"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/doomDiver"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/trainedTroll"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/badlandsBrawl",
+        "specialRules/briberyAndCorruption",
+        "specialRules/underworldChallenge"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "highElves": {
+      "name": "High Elf",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/highElfLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/highElfThrower"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/highElfCatcher"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/highElfBlitzer"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/elvenKingdomsLeague"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "halflings": {
+      "name": "Halflings",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/hopeful"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/hefty"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/catcher"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/alternForestTreeman"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/halflingThimbleCup",
+        "specialRules/oldWorldClassic"
+      ],
+      "tier": 3,
+      "apothecary": true
+    },
+    "humans": {
+      "name": "Humans",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/humanLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/humanThrower"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/humanCatcher"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/humanBlitzer"
+        },
+        {
+          "quantity": "0-3",
+          "position": "playerBlueprints/humanHalfling"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/humanOgre"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/oldWorldClassic"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "imperialNobility": {
+      "name": "Imperial Nobility",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/retainerLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/imperialThrower"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/nobleBlitzer"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/bodyguard"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/imperialOgre"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/oldWorldClassic"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "khemri": {
+      "name": "Khemri",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/skeleton"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/anointedThrower"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/anointedBlitzer"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/tombGuardian"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/sylvanianSpotlight"
+      ],
+      "tier": 2,
+      "apothecary": false
+    },
+    "khorne": {
+      "name": "Khorne",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/bloodbornMarauderLineman"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/khornagor"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/bloodseeker"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/bloodspawn"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/favouredOfKhorne"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "lizardmen": {
+      "name": "Lizardmen",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/skink"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/chameleonSkink"
+        },
+        {
+          "quantity": "0-6",
+          "position": "playerBlueprints/saurus"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/kroxigor"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/lustrianSuperleague"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "necromanticHorror": {
+      "name": "Necromantic Horror",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/zombie"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/ghoulRunner"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/wraith"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/werewolf"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/fleshGolem"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/mastersOfUndeath",
+        "specialRules/sylvanianSpotlight"
+      ],
+      "tier": 2,
+      "apothecary": false
+    },
+    "norse": {
+      "name": "Norse",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/norseRaiderLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/beerBoar"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/norseBerserker"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/valkyrie"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/ulfwerener"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/yheteeSnowTroll"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/favouredOfKhorne",
+        "specialRules/favouredOfChaosUndivided",
+        "specialRules/oldWorldClassic"
+      ],
+      "tier": 1,
+      "apothecary": true
+    },
+    "nurgle": {
+      "name": "Nurgle",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/rotter"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/pestigor"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/bloater"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/rotspawn"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/favouredOfNurgle"
+      ],
+      "tier": 2,
+      "apothecary": false
+    },
+    "ogre": {
+      "name": "Ogre",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/gnoblar"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/runtPunter"
+        },
+        {
+          "quantity": "0-5",
+          "position": "playerBlueprints/ogre"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/badlandsBrawl",
+        "specialRules/lowCostLineman",
+        "specialRules/oldWorldClassic"
+      ],
+      "tier": 3,
+      "apothecary": true
+    },
+    "oldWorldAlliance": {
+      "name": "Old World Alliance",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/humanLineman"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/owaHumanThrower"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/owaHumanCatcher"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/owaHumanBlitzer"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/owaDwarfBlocker"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/owaDwarfRunner"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/owaDwarfBlitzer"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/owaTrollSlayer"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/owaHalfling"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/humanOgre"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/owaAlternForestTreeman"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/oldWorldClassic"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "orcTeam": {
+      "name": "Orc",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/orcLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/orcThrower"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/orcBlitzer"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/bigUn"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/orcGoblin"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/untrainedTroll"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/badlandsBrawl"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "shamblingUndeadTeam": {
+      "name": "Shambling Undead",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/shamblingSkeleton"
+        },
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/shamblingZombie"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/shamblingGhoul"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/shamblingWight"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/shamblingMummy"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/mastersOfUndeath",
+        "specialRules/sylvanianSpotlight"
+      ],
+      "tier": 2,
+      "apothecary": false
+    },
+    "skavenTeam": {
+      "name": "Skaven",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/skavenLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/skavenThrower"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/skavenGutterRunner"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/skavenBlitzer"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/skavenRatOgre"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/underworldChallenge"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "slannTeam": {
+      "name": "Slann",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/slannLineman"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/slannCatcher"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/slannBlitzer"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/slannKroxigor"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/lustriaSuperleague"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "snotlingTeam": {
+      "name": "Snotling",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/snotlingSnotling"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/snotlingFungusFlinga"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/snotlingFunhoppa"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/snotlingStiltyRunna"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/snotlingPumpWagon"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/snotlingTrainedTroll"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/briberyAndCorruption",
+        "specialRules/lowCostLineman",
+        "specialRules/underworldChallenge"
+      ],
+      "tier": 3,
+      "apothecary": true
+    },
+    "underworldTeam": {
+      "name": "Underworld Denizens",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/underworldGoblin"
+        },
+        {
+          "quantity": "0-6",
+          "position": "playerBlueprints/underworldSnotling"
+        },
+        {
+          "quantity": "0-3",
+          "position": "playerBlueprints/underworldSkavenClanrat"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/underworldSkavenThrower"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/underworldGutterRunner"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/underworldSkavenBlitzer"
+        },
+        {
+          "quantity": "1 of 2",
+          "position": "playerBlueprints/underworldTroll",
+          "altPosition": "playerBlueprints/underworldMutantRatOgre"
+        }
+      ],
+      "rerollCost": 70000,
+      "specialRules": [
+        "specialRules/briberyAndCorruption",
+        "specialRules/underworldChallenge"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "vampireTeam": {
+      "name": "Vampire Team",
+      "players": [
+        {
+          "quantity": "0-16",
+          "position": "playerBlueprints/vampireThrall"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/vampireThrower"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/vampireBlitzer"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/vampireRunner"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/vampireVargheist"
+        }
+      ],
+      "rerollCost": 60000,
+      "specialRules": [
+        "specialRules/sylvanianSpotlight"
+      ],
+      "tier": 2,
+      "apothecary": true
+    },
+    "woodElfTeam": {
+      "name": "Wood Elf Team",
+      "players": [
+        {
+          "quantity": "0-12",
+          "position": "playerBlueprints/woodElfLineman"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/woodElfThrower"
+        },
+        {
+          "quantity": "0-4",
+          "position": "playerBlueprints/woodElfCatcher"
+        },
+        {
+          "quantity": "0-2",
+          "position": "playerBlueprints/woodElfWardancer"
+        },
+        {
+          "quantity": "0-1",
+          "position": "playerBlueprints/woodElfLorenForestTreeman"
+        }
+      ],
+      "rerollCost": 50000,
+      "specialRules": [
+        "specialRules/elvenKingdomsLeague"
+      ],
+      "tier": 1,
+      "apothecary": true
     }
   }
 }
