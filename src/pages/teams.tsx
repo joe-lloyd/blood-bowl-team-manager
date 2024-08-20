@@ -1,58 +1,71 @@
-import { useEffect, useState } from 'react';
-import { collection, getDocs, query, select } from 'firebase/firestore';
-import { db } from '@/services/firebase'; // Adjust the path based on your setup
+import React, { useEffect, useState } from 'react';
+import { fetchTeamsList, getTeamData } from '@/utils/teamUtils';
+import Hero from '@/components/Hero';
+import Parchment from '@/components/Parchment';
+import TeamDetails from '@/components/TeamDetails';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  padding: 20px;
+`;
+
+const Button = styled.button`
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #922d26;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #701d1a;
+  }
+`;
 
 const TeamsPage = () => {
-  const [teams, setTeams] = useState([]);
+  const [teams, setTeams] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [teamData, setTeamData] = useState(null);
 
   useEffect(() => {
-    const fetchTeamsList = async () => {
+    const initializeTeamsList = async () => {
       try {
-        // Fetch document IDs only
-        const teamsCollection = await getDocs(
-          query(collection(db, 'teamBlueprints'), select())
-        );
-        const firestoreTeamList = teamsCollection.docs.map((doc) => doc.id);
-
-        // Check against local storage
-        const storedTeamList = JSON.parse(localStorage.getItem('teamList'));
-
-        if (
-          !storedTeamList ||
-          storedTeamList.length !== firestoreTeamList.length
-        ) {
-          // If the counts differ or no data in local storage, fetch full team names
-          const teamsCollectionFull = await getDocs(
-            collection(db, 'teamBlueprints')
-          );
-          const fullTeamList = teamsCollectionFull.docs.map(
-            (doc) => doc.data().name
-          );
-
-          // Store the full team list in local storage
-          localStorage.setItem('teamList', JSON.stringify(fullTeamList));
-          setTeams(fullTeamList);
-        } else {
-          // If counts match, use the stored data
-          setTeams(storedTeamList);
-        }
+        const teamList = await fetchTeamsList();
+        setTeams(teamList);
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching teams:', error);
+        setLoading(false);
       }
     };
 
-    fetchTeamsList();
+    initializeTeamsList();
   }, []);
 
+  const handleTeamClick = async (teamId) => {
+    try {
+      const teamData = await getTeamData(teamId, teams[teamId]);
+      setTeamData(teamData);
+    } catch (error) {
+      console.error(`Error fetching team data for ${teamId}:`, error);
+    }
+  };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div>
-      <h1>Teams</h1>
-      <ul>
-        {teams.map((team, index) => (
-          <li key={index}>{team}</li>
-        ))}
-      </ul>
-    </div>
+    <Container>
+      <Parchment />
+      <Hero text={'Blood Bowl Teams'} />
+      {Object.entries(teams).map(([teamId, teamName]) => (
+        <Button key={teamId} onClick={() => handleTeamClick(teamId)}>
+          {teamName}
+        </Button>
+      ))}
+      {teamData && <TeamDetails teamData={teamData} />}
+    </Container>
   );
 };
 

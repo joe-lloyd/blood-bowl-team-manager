@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { getTeamData } from '@/utils/teamUtils';
+import React from 'react';
 import styled from 'styled-components';
+import Stars from '@/components/stars';
 
 export const Container = styled.div`
   padding: 20px;
@@ -108,23 +108,13 @@ export const TableBottom = styled.div`
   margin-bottom: 20px;
 `;
 
-const TeamDetails = ({ teamName }) => {
-  const [teamData, setTeamData] = useState(null);
-
-  useEffect(() => {
-    const fetchTeamData = async () => {
-      const data = await getTeamData(teamName);
-      setTeamData(data);
-    };
-    fetchTeamData();
-  }, [teamName]);
-
+const TeamDetails = ({ teamData }) => {
   if (!teamData) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div>
+    <Container>
       <TableTitle>{teamData.name.toUpperCase()}</TableTitle>
       <Table>
         <thead>
@@ -178,9 +168,9 @@ const TeamDetails = ({ teamName }) => {
       </Table>
       <TableBottom>
         <Hr />
-        {/* You can add additional components like Stars here */}
+        <Stars />
       </TableBottom>
-    </div>
+    </Container>
   );
 };
 

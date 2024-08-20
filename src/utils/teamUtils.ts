@@ -1,9 +1,11 @@
 import { db } from '@/services/firebase';
-import { collection, getDoc, getDocs } from 'firebase/firestore';
+import { collection, getDoc, getDocs, doc } from 'firebase/firestore';
 
-export const getTeamData = async (teamName) => {
-  const localData = localStorage.getItem(`team_${teamName}`);
-  const teamVersion = 1; // Update this when you change the team data structure
+const teamVersion = 1;
+
+// Fetches and enriches team data
+const getTeamData = async (teamId) => {
+  const localData = localStorage.getItem(`team_${teamId}`);
 
   if (localData) {
     const parsedData = JSON.parse(localData);
@@ -13,21 +15,22 @@ export const getTeamData = async (teamName) => {
   }
 
   // If no local data or version mismatch, fetch from Firebase
-  const querySnapshot = await getDocs(collection(db, 'teamBlueprints'));
-  const teamDoc = querySnapshot.docs.find(
-    (doc) => doc.data().name === teamName
-  );
-  const team = teamDoc.data();
+  const teamDoc = await getDoc(doc(db, 'teamBlueprints', teamId));
+  const team = teamDoc.exists() ? teamDoc.data() : null;
+
+  if (!team) {
+    throw new Error(`Team with ID ${teamId} not found`);
+  }
 
   const playersWithBlueprints = await Promise.all(
     team.players.map(async (player) => {
       const playerDoc = await getDoc(player.position);
-      const positionData = playerDoc.data();
+      const positionData = playerDoc.exists() ? playerDoc.data() : null;
 
       const specialRules = await Promise.all(
         positionData.specialRules.map(async (ruleRef) => {
           const ruleDoc = await getDoc(ruleRef);
-          return ruleDoc.data();
+          return ruleDoc.exists() ? ruleDoc.data() : null;
         })
       );
 
@@ -48,9 +51,54 @@ export const getTeamData = async (teamName) => {
 
   // Save to local storage with version
   localStorage.setItem(
-    `team_${teamName}`,
+    `team_${teamId}`,
     JSON.stringify({ version: teamVersion, data: teamData })
   );
 
   return teamData;
 };
+
+// Fetches the list of teams and checks the meta version
+const fetchTeamsList = async () => {
+  const storedTeamList = JSON.parse(localStorage.getItem('teamList'));
+  const storedMeta = JSON.parse(localStorage.getItem('meta'));
+
+  if (storedTeamList && storedMeta) {
+    const metaDoc = await getDoc(doc(db, 'meta', 'dataInfo'));
+    const firestoreMeta = metaDoc.exists() ? metaDoc.data() : null;
+
+    if (firestoreMeta && firestoreMeta.lastUpdated === storedMeta.lastUpdated) {
+      return storedTeamList;
+    } else {
+      clearTeamDataFromLocalStorage();
+    }
+  }
+
+  const teamsCollection = await getDocs(collection(db, 'teamBlueprints'));
+  const fullTeamList = teamsCollection.docs.reduce((acc, doc) => {
+    acc[doc.id] = doc.data().name;
+    return acc;
+  }, {});
+
+  const metaDoc = await getDoc(doc(db, 'meta', 'dataInfo'));
+  const firestoreMeta = metaDoc.exists() ? metaDoc.data() : null;
+
+  localStorage.setItem('teamList', JSON.stringify(fullTeamList));
+  if (firestoreMeta) {
+    localStorage.setItem('meta', JSON.stringify(firestoreMeta));
+  }
+
+  return fullTeamList;
+};
+
+// Clears specific team-related data from localStorage
+const clearTeamDataFromLocalStorage = () => {
+  const keysToRemove = ['teamList', 'meta'];
+  Object.keys(localStorage).forEach((key) => {
+    if (key.startsWith('team_') || keysToRemove.includes(key)) {
+      localStorage.removeItem(key);
+    }
+  });
+};
+
+export { getTeamData, fetchTeamsList, clearTeamDataFromLocalStorage };
