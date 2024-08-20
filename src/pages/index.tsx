@@ -1,9 +1,10 @@
-import { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
 import { db } from '@/services/firebase'; // Adjust the path based on your setup
 import { collection, getDocs, getDoc } from 'firebase/firestore';
 import Stars from '@/components/stars';
 import Parchment from '@/components/Parchment';
+import Hero from '@/components/Hero';
 
 const Container = styled.div`
   padding: 20px;
@@ -159,7 +160,7 @@ const HomePage = () => {
     <>
       <Parchment />
       <Container>
-        <Title>Blood Bowl Teams</Title>
+        <Hero text={'Blood Bowl Teams'} />
         {teams.map((team, index) => (
           <Fragment key={team.name}>
             <TableTitle>{team.name.toUpperCase()}</TableTitle>
