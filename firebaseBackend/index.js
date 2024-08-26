@@ -16,7 +16,6 @@ const db = admin.firestore();
  * @returns {any} - The original value or a Firestore reference if applicable.
  */
 const convertReferences = (value) => {
-  // Specific pattern to match your Firestore collections
   const referencePattern =
     /^(specialRules\/[a-zA-Z0-9_-]+|playerBlueprints\/[a-zA-Z0-9_-]+)$/;
 
@@ -30,7 +29,7 @@ const convertReferences = (value) => {
     );
   }
 
-  return value; // Return original value if no conversion needed
+  return value;
 };
 
 /**
@@ -38,6 +37,7 @@ const convertReferences = (value) => {
  * @param {string} filePath - The path to the JSON file.
  * @param {string} collectionName - The Firestore collection where the data should be uploaded.
  * @param {string} dataKey - The key in the JSON file that holds the data object.
+ * @returns {Promise<number>} - The number of documents uploaded.
  */
 const uploadDataToFirestore = async (filePath, collectionName, dataKey) => {
   try {
@@ -45,38 +45,65 @@ const uploadDataToFirestore = async (filePath, collectionName, dataKey) => {
     const data = fs.readFileSync(filePath, 'utf8');
     const jsonData = JSON.parse(data)[dataKey];
 
+    // Initialize an array to store the promises
+    const uploadPromises = [];
+
     // Iterate over the data and add it to Firestore
     for (const [docId, docData] of Object.entries(jsonData)) {
       const convertedData = convertReferences(docData);
-      await db.collection(collectionName).doc(docId).set(convertedData);
+      const uploadPromise = db
+        .collection(collectionName)
+        .doc(docId)
+        .set(convertedData);
+      uploadPromises.push(uploadPromise);
       console.log(
-        `Uploaded document: ${docId} to collection: ${collectionName}`
+        `Uploading document: ${docId} to collection: ${collectionName}`
       );
     }
 
+    // Wait for all uploads to complete
+    await Promise.all(uploadPromises);
     console.log(
       `All documents have been uploaded to ${collectionName} successfully.`
     );
+
+    // Return the number of uploaded documents
+    return uploadPromises.length;
   } catch (error) {
     console.error(`Error uploading data to ${collectionName}:`, error);
+    return 0;
   }
 };
 
 // Example Usage:
 (async () => {
-  await uploadDataToFirestore(
+  const specialRulesCount = await uploadDataToFirestore(
     'data/specialRules.json',
     'specialRules',
     'specialRules'
   );
-  await uploadDataToFirestore(
+  const playerBlueprintsCount = await uploadDataToFirestore(
     'data/playerBlueprints.json',
     'playerBlueprints',
     'playerBlueprints'
   );
-  await uploadDataToFirestore(
+  const teamBlueprintsCount = await uploadDataToFirestore(
     'data/teamBlueprints.json',
     'teamBlueprints',
     'teamBlueprints'
   );
+
+  const metaDoc = {
+    lastUpdated: Date.now(),
+    teamCount: teamBlueprintsCount,
+  };
+
+  try {
+    await db.collection('meta').doc('dataInfo').set(metaDoc);
+    console.log(
+      'Meta document created/updated successfully at the root of Firestore.'
+    );
+  } catch (error) {
+    console.error('Error creating/updating meta document:', error);
+  }
 })();

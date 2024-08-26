@@ -1,6 +1,6 @@
 {
   "playerBlueprints": {
-    "goblin": {
+    "goblinBruiser": {
       "cost": 45000,
       "name": "Goblin Bruiser",
       "specialRules": [
@@ -15,7 +15,9 @@
         "ag": "3+",
         "pa": "4+",
         "av": "8+"
-      }
+      },
+      "primary": "A",
+      "secondary": "GPS"
     },
     "blackOrc": {
       "cost": 90000,
@@ -30,7 +32,9 @@
         "ag": "4+",
         "pa": "5+",
         "av": "10+"
-      }
+      },
+      "primary": "GS",
+      "secondary": "AP"
     },
     "trainedTroll": {
       "cost": 115000,
@@ -50,7 +54,2713 @@
         "ag": "5+",
         "pa": "5+",
         "av": "10+"
-      }
+      },
+      "primary": "S",
+      "secondary": "AGP"
+    },
+    "eagleWarriorLinewomen": {
+      "cost": 50000,
+      "name": "Eagle Warrior Linewomen",
+      "specialRules": [
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "pythonWarriorThrowers": {
+      "cost": 80000,
+      "name": "Python Warrior Throwers",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/onTheBall",
+        "specialRules/pass",
+        "specialRules/safePass"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "8+"
+      },
+      "primary": "GP",
+      "secondary": "AS"
+    },
+    "piranhaWarriorBlitzers": {
+      "cost": 90000,
+      "name": "Piranha Warrior Blitzers",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/hitAndRun",
+        "specialRules/jumpUp"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "S"
+    },
+    "jaguarWarriorBlockers": {
+      "cost": 110000,
+      "name": "Jaguar Warrior Blockers",
+      "specialRules": [
+        "specialRules/defensive",
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "4",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "beastman": {
+      "cost": 60000,
+      "name": "Beastman",
+      "specialRules": [
+        "specialRules/horns"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "GMS",
+      "secondary": "AP"
+    },
+    "chosenBlockers": {
+      "cost": 100000,
+      "name": "Chosen Blockers",
+      "specialRules": [],
+      "stats": {
+        "ma": "5",
+        "st": "4",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "GMS",
+      "secondary": "A"
+    },
+    "chaosTroll": {
+      "cost": 115000,
+      "name": "Chaos Troll",
+      "specialRules": [
+        "specialRules/alwaysHungry",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/projectileVomit",
+        "specialRules/reallyStupid",
+        "specialRules/regeneration",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "MS",
+      "secondary": "AG"
+    },
+    "chaosOgre": {
+      "cost": 140000,
+      "name": "Chaos Ogre",
+      "specialRules": [
+        "specialRules/boneHead",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "MS",
+      "secondary": "AG"
+    },
+    "minotaur": {
+      "cost": 150000,
+      "name": "Minotaur",
+      "specialRules": [
+        "specialRules/lonerFourPlus",
+        "specialRules/frenzy",
+        "specialRules/horns",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull",
+        "specialRules/unchanneledFury"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "—",
+        "av": "9+"
+      },
+      "primary": "MS",
+      "secondary": "AG"
+    },
+    "hobgoblin": {
+      "cost": 40000,
+      "name": "Hobgoblin",
+      "specialRules": [],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "chaosDwarf": {
+      "cost": 70000,
+      "name": "Chaos Dwarf",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/tackle",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "3",
+        "ag": "4+",
+        "pa": "6+",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "AM"
+    },
+    "bullCentaur": {
+      "cost": 130000,
+      "name": "Bull Centaur",
+      "specialRules": [
+        "specialRules/sprint",
+        "specialRules/sureFeet",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "4",
+        "ag": "4+",
+        "pa": "6+",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "enslavedMinotaur": {
+      "cost": 150000,
+      "name": "Enslaved Minotaur",
+      "specialRules": [
+        "specialRules/animalSavagery",
+        "specialRules/frenzy",
+        "specialRules/horns",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "—",
+        "av": "9+"
+      },
+      "primary": "S",
+      "secondary": "AGM"
+    },
+    "renegadeLineman": {
+      "cost": 50000,
+      "name": "Lineman",
+      "specialRules": [],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "GM",
+      "secondary": "AS"
+    },
+    "renegadeThrower": {
+      "cost": 75000,
+      "name": "Thrower",
+      "specialRules": [
+        "specialRules/animosityAllTeammates",
+        "specialRules/pass",
+        "specialRules/safePairOfHands"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "9+"
+      },
+      "primary": "GMP",
+      "secondary": "AS"
+    },
+    "renegadeGoblin": {
+      "cost": 40000,
+      "name": "Goblin",
+      "specialRules": [
+        "specialRules/animosityAllTeammates",
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AM",
+      "secondary": "GP"
+    },
+    "renegadeOrc": {
+      "cost": 50000,
+      "name": "Orc",
+      "specialRules": [
+        "specialRules/animosityAllTeammates"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "GM",
+      "secondary": "AS"
+    },
+    "renegadeSkaven": {
+      "cost": 50000,
+      "name": "Skaven",
+      "specialRules": [
+        "specialRules/animosityAllTeammates"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "GM",
+      "secondary": "AS"
+    },
+    "renegadeDarkElf": {
+      "cost": 75000,
+      "name": "Dark Elf",
+      "specialRules": [
+        "specialRules/animosityAllTeammates"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "2+",
+        "pa": "3+",
+        "av": "9+"
+      },
+      "primary": "AGM",
+      "secondary": "PS"
+    },
+    "renegadeTroll": {
+      "cost": 115000,
+      "name": "Renegade Troll",
+      "specialRules": [
+        "specialRules/alwaysHungry",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/projectileVomit",
+        "specialRules/reallyStupid",
+        "specialRules/regeneration",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AGM"
+    },
+    "renegadeOgre": {
+      "cost": 140000,
+      "name": "Renegade Ogre",
+      "specialRules": [
+        "specialRules/boneHead",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AGM"
+    },
+    "renegadeMinotaur": {
+      "cost": 150000,
+      "name": "Renegade Minotaur",
+      "specialRules": [
+        "specialRules/lonerFourPlus",
+        "specialRules/frenzy",
+        "specialRules/horns",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull",
+        "specialRules/unchanneledFury"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "—",
+        "av": "9+"
+      },
+      "primary": "S",
+      "secondary": "AGM"
+    },
+    "renegadeRatOgre": {
+      "cost": 150000,
+      "name": "Renegade Rat Ogre",
+      "specialRules": [
+        "specialRules/animalSavagery",
+        "specialRules/frenzy",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/prehensileTail"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "5",
+        "ag": "4+",
+        "pa": "—",
+        "av": "9+"
+      },
+      "primary": "S",
+      "secondary": "AGM"
+    },
+    "darkElfLineman": {
+      "cost": 70000,
+      "name": "Lineman",
+      "specialRules": [],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "AG",
+      "secondary": "S"
+    },
+    "darkElfRunner": {
+      "cost": 80000,
+      "name": "Runner",
+      "specialRules": [
+        "specialRules/dumpOff"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "2+",
+        "pa": "3+",
+        "av": "8+"
+      },
+      "primary": "AGP",
+      "secondary": "S"
+    },
+    "darkElfBlitzer": {
+      "cost": 100000,
+      "name": "Blitzer",
+      "specialRules": [
+        "specialRules/block"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "darkElfAssassin": {
+      "cost": 85000,
+      "name": "Assassin",
+      "specialRules": [
+        "specialRules/shadowing",
+        "specialRules/stab"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "2+",
+        "pa": "5+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "darkElfWitchElf": {
+      "cost": 110000,
+      "name": "Witch Elf",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/frenzy",
+        "specialRules/jumpUp"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "2+",
+        "pa": "5+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "dwarfLineman": {
+      "cost": 70000,
+      "name": "Lineman",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/tackle",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "3",
+        "ag": "4+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "dwarfRunner": {
+      "cost": 85000,
+      "name": "Runner",
+      "specialRules": [
+        "specialRules/sureHands",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "GP",
+      "secondary": "AS"
+    },
+    "dwarfBlitzer": {
+      "cost": 80000,
+      "name": "Blitzer",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "AP"
+    },
+    "trollSlayer": {
+      "cost": 95000,
+      "name": "Troll Slayer",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/dauntless",
+        "specialRules/frenzy",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "4+",
+        "pa": "—",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "deathroller": {
+      "cost": 170000,
+      "name": "Deathroller",
+      "specialRules": [
+        "specialRules/breakTackle",
+        "specialRules/dirtyPlayerPlusTwo",
+        "specialRules/juggernaut",
+        "specialRules/lonerFivePlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/noHands",
+        "specialRules/secretWeapon",
+        "specialRules/standFirm"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "7",
+        "ag": "5+",
+        "pa": "—",
+        "av": "11+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "elvenUnionLineman": {
+      "cost": 60000,
+      "name": "Lineman",
+      "specialRules": [],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "S"
+    },
+    "elvenUnionThrower": {
+      "cost": 75000,
+      "name": "Thrower",
+      "specialRules": [
+        "specialRules/pass"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "2+",
+        "pa": "2+",
+        "av": "8+"
+      },
+      "primary": "AGP",
+      "secondary": "S"
+    },
+    "elvenUnionCatcher": {
+      "cost": 100000,
+      "name": "Catcher",
+      "specialRules": [
+        "specialRules/catch",
+        "specialRules/nervesOfSteel"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "S"
+    },
+    "elvenUnionBlitzer": {
+      "cost": 115000,
+      "name": "Blitzer",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/sideStep"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "2+",
+        "pa": "3+",
+        "av": "9+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "gnomeLineman": {
+      "cost": 40000,
+      "name": "Gnome Linemen",
+      "specialRules": [
+        "specialRules/jumpUp",
+        "specialRules/rightStuff",
+        "specialRules/stunty",
+        "specialRules/wrestle"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "7+"
+      },
+      "primary": "A",
+      "secondary": "GS"
+    },
+    "gnomeIllusionist": {
+      "cost": 50000,
+      "name": "Gnome Illusionist",
+      "specialRules": [
+        "specialRules/jumpUp",
+        "specialRules/stunty",
+        "specialRules/trickster",
+        "specialRules/wrestle"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "2",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "7+"
+      },
+      "primary": "AP",
+      "secondary": "G"
+    },
+    "woodlandFox": {
+      "cost": 50000,
+      "name": "Woodland Fox",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/myBall",
+        "specialRules/sideStep",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "2",
+        "ag": "2+",
+        "pa": "—",
+        "av": "6+"
+      },
+      "primary": "-",
+      "secondary": "A"
+    },
+    "gnomeBeastmaster": {
+      "cost": 55000,
+      "name": "Gnome Beastmaster",
+      "specialRules": [
+        "specialRules/guard",
+        "specialRules/jumpUp",
+        "specialRules/stunty",
+        "specialRules/wrestle"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GS"
+    },
+    "alternForestTreeman": {
+      "cost": 120000,
+      "name": "Altern Forest Treeman",
+      "specialRules": [
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/standFirm",
+        "specialRules/strongArm",
+        "specialRules/takeRoot",
+        "specialRules/thickSkull",
+        "specialRules/throwTeammate",
+        "specialRules/timmber"
+      ],
+      "stats": {
+        "ma": "2",
+        "st": "6",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "11+"
+      },
+      "primary": "S",
+      "secondary": "AGP"
+    },
+    "goblin": {
+      "cost": 40000,
+      "name": "Goblin",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GPS"
+    },
+    "bomma": {
+      "cost": 45000,
+      "name": "Bomma",
+      "specialRules": [
+        "specialRules/bombardier",
+        "specialRules/dodge",
+        "specialRules/secretWeapon",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AP",
+      "secondary": "GS"
+    },
+    "looney": {
+      "cost": 40000,
+      "name": "Looney",
+      "specialRules": [
+        "specialRules/chainsaw",
+        "specialRules/secretWeapon",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "—",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GS"
+    },
+    "fanatic": {
+      "cost": 70000,
+      "name": "Fanatic",
+      "specialRules": [
+        "specialRules/ballAndChain",
+        "specialRules/noHands",
+        "specialRules/secretWeapon",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "3",
+        "st": "7",
+        "ag": "3+",
+        "pa": "—",
+        "av": "8+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "pogoer": {
+      "cost": 75000,
+      "name": "Pogoer",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/pogoStick",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "2",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GPS"
+    },
+    "ooligan": {
+      "cost": 65000,
+      "name": "'Ooligan",
+      "specialRules": [
+        "specialRules/dirtyPlayerPlusOne",
+        "specialRules/disturbingPresence",
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "6+",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GPS"
+    },
+    "doomDiver": {
+      "cost": 60000,
+      "name": "Doom Diver",
+      "specialRules": [
+        "specialRules/rightStuff",
+        "specialRules/stunty",
+        "specialRules/swoop"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "6+",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GPS"
+    },
+    "highElfLineman": {
+      "cost": 70000,
+      "name": "Lineman",
+      "specialRules": [],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "highElfThrower": {
+      "cost": 100000,
+      "name": "Thrower",
+      "specialRules": [
+        "specialRules/cloudBurster",
+        "specialRules/pass",
+        "specialRules/safePass"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "2+",
+        "pa": "2+",
+        "av": "9+"
+      },
+      "primary": "AGP",
+      "secondary": "S"
+    },
+    "highElfCatcher": {
+      "cost": 90000,
+      "name": "Catcher",
+      "specialRules": [
+        "specialRules/catch"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "3",
+        "ag": "2+",
+        "pa": "5+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "S"
+    },
+    "highElfBlitzer": {
+      "cost": 100000,
+      "name": "Blitzer",
+      "specialRules": [
+        "specialRules/block"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "hopeful": {
+      "cost": 30000,
+      "name": "Hopeful",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "7+"
+      },
+      "primary": "A",
+      "secondary": "GS"
+    },
+    "hefty": {
+      "cost": 50000,
+      "name": "Hefty",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/fend",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "2",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "8+"
+      },
+      "primary": "AP",
+      "secondary": "GS"
+    },
+    "catcher": {
+      "cost": 55000,
+      "name": "Catcher",
+      "specialRules": [
+        "specialRules/catch",
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/sprint",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "2",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "7+"
+      },
+      "primary": "A",
+      "secondary": "GS"
+    },
+    "humanLineman": {
+      "cost": 50000,
+      "name": "Lineman",
+      "specialRules": [],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "humanThrower": {
+      "cost": 80000,
+      "name": "Thrower",
+      "specialRules": [
+        "specialRules/pass",
+        "specialRules/sureHands"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "2+",
+        "av": "9+"
+      },
+      "primary": "GP",
+      "secondary": "AS"
+    },
+    "humanCatcher": {
+      "cost": 65000,
+      "name": "Catcher",
+      "specialRules": [
+        "specialRules/catch",
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "2",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "humanBlitzer": {
+      "cost": 85000,
+      "name": "Blitzer",
+      "specialRules": [
+        "specialRules/block"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "AP"
+    },
+    "humanHalfling": {
+      "cost": 30000,
+      "name": "Halfling",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "7+"
+      },
+      "primary": "A",
+      "secondary": "GS"
+    },
+    "humanOgre": {
+      "cost": 140000,
+      "name": "Ogre",
+      "specialRules": [
+        "specialRules/boneHead",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "retainerLineman": {
+      "cost": 45000,
+      "name": "Retainer Lineman",
+      "specialRules": [
+        "specialRules/fend"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "4+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "imperialThrower": {
+      "cost": 75000,
+      "name": "Thrower",
+      "specialRules": [
+        "specialRules/pass",
+        "specialRules/runningPass"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "9+"
+      },
+      "primary": "GP",
+      "secondary": "AS"
+    },
+    "nobleBlitzer": {
+      "cost": 105000,
+      "name": "Noble Blitzer",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/catch"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "bodyguard": {
+      "cost": 90000,
+      "name": "Bodyguard",
+      "specialRules": [
+        "specialRules/standFirm",
+        "specialRules/wrestle"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "imperialOgre": {
+      "cost": 140000,
+      "name": "Ogre",
+      "specialRules": [
+        "specialRules/boneHead",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "skeleton": {
+      "cost": 40000,
+      "name": "Skeleton",
+      "specialRules": [
+        "specialRules/regeneration",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "4+",
+        "pa": "6+",
+        "av": "8+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "anointedThrower": {
+      "cost": 70000,
+      "name": "Anointed Thrower",
+      "specialRules": [
+        "specialRules/pass",
+        "specialRules/regeneration",
+        "specialRules/sureHands",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "4+",
+        "pa": "3+",
+        "av": "8+"
+      },
+      "primary": "GP",
+      "secondary": "A"
+    },
+    "anointedBlitzer": {
+      "cost": 90000,
+      "name": "Anointed Blitzer",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/regeneration",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "4+",
+        "pa": "6+",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "AP"
+    },
+    "tombGuardian": {
+      "cost": 100000,
+      "name": "Tomb Guardian",
+      "specialRules": [
+        "specialRules/decay",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "-",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "bloodbornMarauderLineman": {
+      "cost": 50000,
+      "name": "Bloodborn Marauder Lineman",
+      "specialRules": [
+        "specialRules/frenzy"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "GM",
+      "secondary": "AS"
+    },
+    "khornagor": {
+      "cost": 70000,
+      "name": "Khornagor",
+      "specialRules": [
+        "specialRules/horns",
+        "specialRules/juggernaut"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "GMS",
+      "secondary": "AP"
+    },
+    "bloodseeker": {
+      "cost": 110000,
+      "name": "Bloodseeker",
+      "specialRules": [
+        "specialRules/frenzy"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "4",
+        "ag": "4+",
+        "pa": "6+",
+        "av": "10+"
+      },
+      "primary": "GMS",
+      "secondary": "A"
+    },
+    "bloodspawn": {
+      "cost": 160000,
+      "name": "Bloodspawn",
+      "specialRules": [
+        "specialRules/claws",
+        "specialRules/frenzy",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/unchanneledFury"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "-",
+        "av": "9+"
+      },
+      "primary": "MS",
+      "secondary": "AG"
+    },
+    "skink": {
+      "cost": 60000,
+      "name": "Skink",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GPS"
+    },
+    "chameleonSkink": {
+      "cost": 70000,
+      "name": "Chameleon Skink",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/onTheBall",
+        "specialRules/shadowing",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "2",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GPS"
+    },
+    "saurus": {
+      "cost": 85000,
+      "name": "Saurus",
+      "specialRules": [],
+      "stats": {
+        "ma": "6",
+        "st": "4",
+        "ag": "5+",
+        "pa": "6+",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "kroxigor": {
+      "cost": 140000,
+      "name": "Kroxigor",
+      "specialRules": [
+        "specialRules/boneHead",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/prehensileTail",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "5",
+        "ag": "5+",
+        "pa": "-",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "zombie": {
+      "cost": 40000,
+      "name": "Zombie",
+      "specialRules": [
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "3",
+        "ag": "4+",
+        "pa": "-",
+        "av": "9+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "ghoulRunner": {
+      "cost": 75000,
+      "name": "Ghoul Runner",
+      "specialRules": [
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "wraith": {
+      "cost": 95000,
+      "name": "Wraith",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/foulAppearance",
+        "specialRules/noHands",
+        "specialRules/regeneration",
+        "specialRules/sideStep"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "-",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "werewolf": {
+      "cost": 125000,
+      "name": "Werewolf",
+      "specialRules": [
+        "specialRules/claws",
+        "specialRules/frenzy",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "fleshGolem": {
+      "cost": 115000,
+      "name": "Flesh Golem",
+      "specialRules": [
+        "specialRules/regeneration",
+        "specialRules/standFirm",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "4",
+        "ag": "4+",
+        "pa": "-",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "norseRaiderLineman": {
+      "cost": 50000,
+      "name": "Norse Raider Lineman",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/drunkard",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "G",
+      "secondary": "APS"
+    },
+    "beerBoar": {
+      "cost": 20000,
+      "name": "Beer Boars",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/noHands",
+        "specialRules/pickMeUp",
+        "specialRules/stunty",
+        "specialRules/titchy"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "1",
+        "ag": "3+",
+        "pa": "-",
+        "av": "6+"
+      },
+      "primary": "-",
+      "secondary": "A"
+    },
+    "norseBerserker": {
+      "cost": 90000,
+      "name": "Norse Berserker",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/frenzy",
+        "specialRules/jumpUp"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "8+"
+      },
+      "primary": "GS",
+      "secondary": "AP"
+    },
+    "valkyrie": {
+      "cost": 95000,
+      "name": "Valkyrie",
+      "specialRules": [
+        "specialRules/catch",
+        "specialRules/dauntless",
+        "specialRules/pass",
+        "specialRules/stripBall"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "8+"
+      },
+      "primary": "AGP",
+      "secondary": "S"
+    },
+    "ulfwerener": {
+      "cost": 105000,
+      "name": "Ulfwerener",
+      "specialRules": [
+        "specialRules/frenzy"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "4",
+        "ag": "4+",
+        "pa": "-",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "yheteeSnowTroll": {
+      "cost": 140000,
+      "name": "Yhetee / Snow Troll",
+      "specialRules": [
+        "specialRules/claws",
+        "specialRules/disturbingPresence",
+        "specialRules/frenzy",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/unchanneledFury"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "-",
+        "av": "9+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "rotter": {
+      "cost": 35000,
+      "name": "Rotter",
+      "specialRules": [
+        "specialRules/decay",
+        "specialRules/plagueRidden"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "4+",
+        "pa": "6+",
+        "av": "9+"
+      },
+      "primary": "GM",
+      "secondary": "AS"
+    },
+    "pestigor": {
+      "cost": 75000,
+      "name": "Pestigor",
+      "specialRules": [
+        "specialRules/horns",
+        "specialRules/plagueRidden",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "GMS",
+      "secondary": "AP"
+    },
+    "bloater": {
+      "cost": 115000,
+      "name": "Bloater",
+      "specialRules": [
+        "specialRules/disturbingPresence",
+        "specialRules/foulAppearance",
+        "specialRules/plagueRidden",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "4",
+        "ag": "4+",
+        "pa": "6+",
+        "av": "10+"
+      },
+      "primary": "GMS",
+      "secondary": "A"
+    },
+    "rotspawn": {
+      "cost": 140000,
+      "name": "Rotspawn",
+      "specialRules": [
+        "specialRules/disturbingPresence",
+        "specialRules/foulAppearance",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/plagueRidden",
+        "specialRules/reallyStupid",
+        "specialRules/regeneration",
+        "specialRules/tentacles"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "-",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AGM"
+    },
+    "gnoblar": {
+      "cost": 15000,
+      "name": "Gnoblar",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/sideStep",
+        "specialRules/stunty",
+        "specialRules/titchy"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "1",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "6+"
+      },
+      "primary": "A",
+      "secondary": "G"
+    },
+    "runtPunter": {
+      "cost": 145000,
+      "name": "Runt Punter",
+      "specialRules": [
+        "specialRules/boneHead",
+        "specialRules/kickTeamMate",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "4+",
+        "av": "10+"
+      },
+      "primary": "PS",
+      "secondary": "AG"
+    },
+    "ogre": {
+      "cost": 140000,
+      "name": "Ogre",
+      "specialRules": [
+        "specialRules/boneHead",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/thickSkull",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AGP"
+    },
+    "owaHumanThrower": {
+      "cost": 80000,
+      "name": "Human Thrower",
+      "specialRules": [
+        "specialRules/animosityDwarfHalfling",
+        "specialRules/pass",
+        "specialRules/sureHands"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "9+"
+      },
+      "primary": "GP",
+      "secondary": "AS"
+    },
+    "owaHumanCatcher": {
+      "cost": 65000,
+      "name": "Human Catcher",
+      "specialRules": [
+        "specialRules/animosityDwarfHalfling",
+        "specialRules/catch",
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "2",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "S"
+    },
+    "owaHumanBlitzer": {
+      "cost": 90000,
+      "name": "Human Blitzer",
+      "specialRules": [
+        "specialRules/animosityDwarfHalfling",
+        "specialRules/block"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "owaDwarfBlocker": {
+      "cost": 75000,
+      "name": "Dwarf Blocker",
+      "specialRules": [
+        "specialRules/armBar",
+        "specialRules/brawler",
+        "specialRules/lonerThreePlus",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "3",
+        "ag": "4+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "owaDwarfRunner": {
+      "cost": 85000,
+      "name": "Dwarf Runner",
+      "specialRules": [
+        "specialRules/lonerThreePlus",
+        "specialRules/sureHands",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "GP",
+      "secondary": "AS"
+    },
+    "owaDwarfBlitzer": {
+      "cost": 80000,
+      "name": "Dwarf Blitzer",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/lonerThreePlus",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "4+",
+        "pa": "4+",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "owaTrollSlayer": {
+      "cost": 95000,
+      "name": "Troll Slayer",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/dauntless",
+        "specialRules/frenzy",
+        "specialRules/lonerThreePlus",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "4+",
+        "pa": "–",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "owaHalfling": {
+      "cost": 30000,
+      "name": "Halfling",
+      "specialRules": [
+        "specialRules/animosityDwarfHuman",
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "7+"
+      },
+      "primary": "A",
+      "secondary": "GS"
+    },
+    "owaAlternForestTreeman": {
+      "cost": 120000,
+      "name": "Altern Forest Treeman",
+      "specialRules": [
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/standFirm",
+        "specialRules/strongArm",
+        "specialRules/takeRoot",
+        "specialRules/thickSkull",
+        "specialRules/throwTeammate",
+        "specialRules/timmber"
+      ],
+      "stats": {
+        "ma": "2",
+        "st": "6",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "11+"
+      },
+      "primary": "S",
+      "secondary": "AGP"
+    },
+    "orcLineman": {
+      "cost": 50000,
+      "name": "Lineman",
+      "specialRules": [
+        "specialRules/animosityOrcLinemen"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "10+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "orcThrower": {
+      "cost": 65000,
+      "name": "Thrower",
+      "specialRules": [
+        "specialRules/animosityAllTeammates",
+        "specialRules/pass",
+        "specialRules/sureHands"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "3+",
+        "pa": "3+",
+        "av": "9+"
+      },
+      "primary": "GP",
+      "secondary": "AS"
+    },
+    "orcBlitzer": {
+      "cost": 80000,
+      "name": "Blitzer",
+      "specialRules": [
+        "specialRules/animosityAllTeammates",
+        "specialRules/block"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "AP"
+    },
+    "bigUn": {
+      "cost": 90000,
+      "name": "Big Un",
+      "specialRules": [
+        "specialRules/animosityBigUns"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "4",
+        "ag": "4+",
+        "pa": "–",
+        "av": "10+"
+      },
+      "primary": "GS",
+      "secondary": "A"
+    },
+    "orcGoblin": {
+      "cost": 40000,
+      "name": "Goblin",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "A",
+      "secondary": "GS"
+    },
+    "untrainedTroll": {
+      "cost": 115000,
+      "name": "Untrained Troll",
+      "specialRules": [
+        "specialRules/alwaysHungry",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/projectileVomit",
+        "specialRules/reallyStupid",
+        "specialRules/regeneration",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AGP"
+    },
+    "shamblingSkeleton": {
+      "cost": 40000,
+      "name": "Skeleton",
+      "specialRules": [
+        "specialRules/regeneration",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "3",
+        "ag": "4+",
+        "pa": "6+",
+        "av": "8+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "shamblingZombie": {
+      "cost": 40000,
+      "name": "Zombie",
+      "specialRules": [
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "3",
+        "ag": "4+",
+        "pa": "–",
+        "av": "9+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "shamblingGhoul": {
+      "cost": 75000,
+      "name": "Ghoul",
+      "specialRules": [
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "shamblingWight": {
+      "cost": 90000,
+      "name": "Wight",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "AP"
+    },
+    "shamblingMummy": {
+      "cost": 125000,
+      "name": "Mummy",
+      "specialRules": [
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "3",
+        "st": "5",
+        "ag": "5+",
+        "pa": "–",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "skavenLineman": {
+      "cost": 50000,
+      "name": "Lineman",
+      "specialRules": [],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "G",
+      "secondary": "AMS"
+    },
+    "skavenThrower": {
+      "cost": 85000,
+      "name": "Thrower",
+      "specialRules": [
+        "specialRules/pass",
+        "specialRules/sureHands"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "2+",
+        "av": "8+"
+      },
+      "primary": "GP",
+      "secondary": "AMS"
+    },
+    "skavenGutterRunner": {
+      "cost": 85000,
+      "name": "Gutter Runner",
+      "specialRules": [
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "9",
+        "st": "2",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "MPS"
+    },
+    "skavenBlitzer": {
+      "cost": 90000,
+      "name": "Blitzer",
+      "specialRules": [
+        "specialRules/block"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "9+"
+      },
+      "primary": "GS",
+      "secondary": "AMP"
+    },
+    "skavenRatOgre": {
+      "cost": 150000,
+      "name": "Rat Ogre",
+      "specialRules": [
+        "specialRules/animalSavagery",
+        "specialRules/frenzy",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/prehensileTail"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "5",
+        "ag": "4+",
+        "pa": "–",
+        "av": "9+"
+      },
+      "primary": "S",
+      "secondary": "AGM"
+    },
+    "slannLineman": {
+      "cost": 60000,
+      "name": "Lineman",
+      "specialRules": [
+        "specialRules/pogoStick",
+        "specialRules/veryLongLegs"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "slannCatcher": {
+      "cost": 80000,
+      "name": "Catcher",
+      "specialRules": [
+        "specialRules/pogoStick",
+        "specialRules/veryLongLegs",
+        "specialRules/divingCatch"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "2",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "SP"
+    },
+    "slannBlitzer": {
+      "cost": 110000,
+      "name": "Blitzer",
+      "specialRules": [
+        "specialRules/pogoStick",
+        "specialRules/veryLongLegs",
+        "specialRules/divingTackle",
+        "specialRules/jumpUp"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "9+"
+      },
+      "primary": "AGS",
+      "secondary": "P"
+    },
+    "slannKroxigor": {
+      "cost": 140000,
+      "name": "Kroxigor",
+      "specialRules": [
+        "specialRules/boneHead",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/prehensileTail",
+        "specialRules/thickSkull"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "5",
+        "ag": "5+",
+        "pa": "–",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "snotlingSnotling": {
+      "cost": 15000,
+      "name": "Snotling",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/sideStep",
+        "specialRules/stunty",
+        "specialRules/titchy",
+        "specialRules/swarming"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "1",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "6+"
+      },
+      "primary": "A",
+      "secondary": "G"
+    },
+    "snotlingFungusFlinga": {
+      "cost": 30000,
+      "name": "Fungus Flinga",
+      "specialRules": [
+        "specialRules/bombardier",
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/secretWeapon",
+        "specialRules/sideStep",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "1",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "6+"
+      },
+      "primary": "AP",
+      "secondary": "G"
+    },
+    "snotlingFunhoppa": {
+      "cost": 20000,
+      "name": "Funhoppa",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/pogoStick",
+        "specialRules/rightStuff",
+        "specialRules/sideStep",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "1",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "6+"
+      },
+      "primary": "A",
+      "secondary": "G"
+    },
+    "snotlingStiltyRunna": {
+      "cost": 20000,
+      "name": "Stilty Runna",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/sideStep",
+        "specialRules/sprint",
+        "specialRules/stunty"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "1",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "6+"
+      },
+      "primary": "A",
+      "secondary": "G"
+    },
+    "snotlingPumpWagon": {
+      "cost": 105000,
+      "name": "Pump Wagon",
+      "specialRules": [
+        "specialRules/dirtyPlayerPlusOne",
+        "specialRules/juggernaut",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/reallyStupid",
+        "specialRules/secretWeapon",
+        "specialRules/standFirm"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "–",
+        "av": "9+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "snotlingTrainedTroll": {
+      "cost": 115000,
+      "name": "Trained Troll",
+      "specialRules": [
+        "specialRules/alwaysHungry",
+        "specialRules/lonerThreePlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/projectileVomit",
+        "specialRules/reallyStupid",
+        "specialRules/regeneration",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AGP"
+    },
+    "underworldGoblin": {
+      "cost": 40000,
+      "name": "Goblin",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/stunty",
+        "specialRules/rightStuff"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "2",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AM",
+      "secondary": "GS"
+    },
+    "underworldSnotling": {
+      "cost": 15000,
+      "name": "Snotling",
+      "specialRules": [
+        "specialRules/dodge",
+        "specialRules/rightStuff",
+        "specialRules/sideStep",
+        "specialRules/stunty",
+        "specialRules/titchy"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "1",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "6+"
+      },
+      "primary": "AM",
+      "secondary": "G"
+    },
+    "underworldSkavenClanrat": {
+      "cost": 50000,
+      "name": "Skaven Clanrat",
+      "specialRules": [
+        "specialRules/animosityGoblins"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "GM",
+      "secondary": "AS"
+    },
+    "underworldSkavenThrower": {
+      "cost": 85000,
+      "name": "Skaven Thrower",
+      "specialRules": [
+        "specialRules/animosityGoblins",
+        "specialRules/pass",
+        "specialRules/sureHands"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "2+",
+        "av": "8+"
+      },
+      "primary": "GMP",
+      "secondary": "AS"
+    },
+    "underworldGutterRunner": {
+      "cost": 85000,
+      "name": "Gutter Runner",
+      "specialRules": [
+        "specialRules/animosityGoblins",
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "9",
+        "st": "2",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AGM",
+      "secondary": "PS"
+    },
+    "underworldSkavenBlitzer": {
+      "cost": 90000,
+      "name": "Skaven Blitzer",
+      "specialRules": [
+        "specialRules/animosityGoblins",
+        "specialRules/block"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "3+",
+        "pa": "5+",
+        "av": "9+"
+      },
+      "primary": "GMS",
+      "secondary": "AP"
+    },
+    "underworldTroll": {
+      "cost": 115000,
+      "name": "Underworld Troll",
+      "specialRules": [
+        "specialRules/alwaysHungry",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/projectileVomit",
+        "specialRules/reallyStupid",
+        "specialRules/regeneration",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "4",
+        "st": "5",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "10+"
+      },
+      "primary": "MS",
+      "secondary": "AGP"
+    },
+    "underworldMutantRatOgre": {
+      "cost": 150000,
+      "name": "Mutant Rat Ogre",
+      "specialRules": [
+        "specialRules/animalSavagery",
+        "specialRules/frenzy",
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/prehensileTail"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "5",
+        "ag": "4+",
+        "pa": "–",
+        "av": "9+"
+      },
+      "primary": "MS",
+      "secondary": "AG"
+    },
+    "vampireThrall": {
+      "cost": 40000,
+      "name": "Thrall",
+      "specialRules": [],
+      "stats": {
+        "ma": "6",
+        "st": "3",
+        "ag": "3+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "G",
+      "secondary": "AS"
+    },
+    "vampireThrower": {
+      "cost": 110000,
+      "name": "Vampire Thrower",
+      "specialRules": [
+        "specialRules/bloodLustTwoPlus",
+        "specialRules/hypnoticGaze",
+        "specialRules/pass",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "4",
+        "ag": "2+",
+        "pa": "2+",
+        "av": "9+"
+      },
+      "primary": "AGP",
+      "secondary": "S"
+    },
+    "vampireBlitzer": {
+      "cost": 110000,
+      "name": "Vampire Blitzer",
+      "specialRules": [
+        "specialRules/bloodLustThreePlus",
+        "specialRules/hypnoticGaze",
+        "specialRules/juggernaut",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "6",
+        "st": "4",
+        "ag": "2+",
+        "pa": "5+",
+        "av": "9+"
+      },
+      "primary": "AGS",
+      "secondary": "None"
+    },
+    "vampireRunner": {
+      "cost": 100000,
+      "name": "Vampire Runner",
+      "specialRules": [
+        "specialRules/bloodLustTwoPlus",
+        "specialRules/hypnoticGaze",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "vampireVargheist": {
+      "cost": 150000,
+      "name": "Vargheist",
+      "specialRules": [
+        "specialRules/bloodLustThreePlus",
+        "specialRules/claws",
+        "specialRules/frenzy",
+        "specialRules/lonerFourPlus",
+        "specialRules/regeneration"
+      ],
+      "stats": {
+        "ma": "5",
+        "st": "5",
+        "ag": "4+",
+        "pa": "–",
+        "av": "10+"
+      },
+      "primary": "S",
+      "secondary": "AG"
+    },
+    "woodElfLineman": {
+      "cost": 70000,
+      "name": "Lineman",
+      "specialRules": [],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "S"
+    },
+    "woodElfThrower": {
+      "cost": 95000,
+      "name": "Thrower",
+      "specialRules": [
+        "specialRules/pass"
+      ],
+      "stats": {
+        "ma": "7",
+        "st": "3",
+        "ag": "2+",
+        "pa": "2+",
+        "av": "8+"
+      },
+      "primary": "AGP",
+      "secondary": "S"
+    },
+    "woodElfCatcher": {
+      "cost": 90000,
+      "name": "Catcher",
+      "specialRules": [
+        "specialRules/catch",
+        "specialRules/dodge"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "2",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "woodElfWardancer": {
+      "cost": 125000,
+      "name": "Wardancer",
+      "specialRules": [
+        "specialRules/block",
+        "specialRules/dodge",
+        "specialRules/leap"
+      ],
+      "stats": {
+        "ma": "8",
+        "st": "3",
+        "ag": "2+",
+        "pa": "4+",
+        "av": "8+"
+      },
+      "primary": "AG",
+      "secondary": "PS"
+    },
+    "woodElfLorenForestTreeman": {
+      "cost": 120000,
+      "name": "Loren Forest Treeman",
+      "specialRules": [
+        "specialRules/lonerFourPlus",
+        "specialRules/mightyBlowPlusOne",
+        "specialRules/standFirm",
+        "specialRules/strongArm",
+        "specialRules/takeRoot",
+        "specialRules/thickSkull",
+        "specialRules/throwTeammate"
+      ],
+      "stats": {
+        "ma": "2",
+        "st": "6",
+        "ag": "5+",
+        "pa": "5+",
+        "av": "11+"
+      },
+      "primary": "S",
+      "secondary": "AG"
     }
   }
 }

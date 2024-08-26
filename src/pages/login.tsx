@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { signInWithGoogle, auth } from '@/firebase';
+import { signInWithGoogle, auth } from '@/services/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import styled from 'styled-components';
 
@@ -20,7 +20,7 @@ const Login = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        router.push('/dashboard'); // Redirect to dashboard if already logged in
+        router.push('/'); // Redirect to dashboard if already logged in
       }
     });
   }, [router]);
