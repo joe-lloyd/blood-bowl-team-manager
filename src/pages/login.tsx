@@ -20,7 +20,7 @@ const Login = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        router.push('/dashboard'); // Redirect to dashboard if already logged in
+        router.push('/'); // Redirect to dashboard if already logged in
       }
     });
   }, [router]);

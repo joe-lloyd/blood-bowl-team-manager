@@ -2,14 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useUser } from '@/contexts/UserContext';
 
 const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   grid-gap: 20px;
 `;
 
@@ -20,7 +23,7 @@ const Card = styled.div`
   text-align: center;
   background-color: #922d26;
   color: white;
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   aspect-ratio: 16 / 9;
 
   &:after {
@@ -42,10 +45,10 @@ const Card = styled.div`
 
   &:hover {
     &:after {
-      opacity: 0.7;
+      opacity: ${({ disabled }) => (disabled ? 0.85 : 0.7)};
     }
     img {
-      transform: scale(1.1);
+      transform: ${({ disabled }) => (disabled ? 'none' : 'scale(1.1)')};
     }
   }
 `;
@@ -70,7 +73,13 @@ const CardTitle = styled.h3`
   color: #eaaa02;
 `;
 
-const HomeContent = ({ isLoggedIn, userContent }) => {
+const HomeContent = ({ userContent }) => {
+  const user = useUser();
+
+  const handleDisabledClick = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <Container>
       <Grid>
@@ -88,7 +97,7 @@ const HomeContent = ({ isLoggedIn, userContent }) => {
           </Card>
         </Link>
 
-        <Link href={isLoggedIn ? '/create-team' : '/login'}>
+        <Link href={!!user ? '/create-team' : '/login'}>
           <Card>
             <Image
               src="/create-team.webp"
@@ -98,33 +107,45 @@ const HomeContent = ({ isLoggedIn, userContent }) => {
             />
             <Overlay>
               <CardTitle>
-                {isLoggedIn ? 'Create a Team' : 'Become a Coach'}
+                {!!user ? 'Create a Team' : 'Become a Coach'}
               </CardTitle>
             </Overlay>
           </Card>
         </Link>
 
-        {isLoggedIn && (
+        {!!user && (
           <>
-            <Link href="/create-league">
-              <Card>
+            <Link href="/create-league" onClick={handleDisabledClick}>
+              <Card disabled>
+                <Image
+                  src="/coming-soon.webp"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Coming Soon"
+                />
                 <Overlay>
-                  <CardTitle>Join a League</CardTitle>
+                  <CardTitle>Coming Soon: Join a League</CardTitle>
                 </Overlay>
               </Card>
             </Link>
 
-            <Link href="/tournaments">
-              <Card>
+            <Link href="/tournaments" onClick={handleDisabledClick}>
+              <Card disabled>
+                <Image
+                  src="/coming-soon.webp"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Coming Soon"
+                />
                 <Overlay>
-                  <CardTitle>Join a Tournament</CardTitle>
+                  <CardTitle>Coming Soon: Join a Tournament</CardTitle>
                 </Overlay>
               </Card>
             </Link>
           </>
         )}
 
-        {isLoggedIn && userContent?.teams?.length > 0 && (
+        {!!user && userContent?.teams?.length > 0 && (
           <Link href="/my-teams">
             <Card>
               <Overlay>
@@ -134,21 +155,33 @@ const HomeContent = ({ isLoggedIn, userContent }) => {
           </Link>
         )}
 
-        {isLoggedIn && userContent?.leagues?.length > 0 && (
-          <Link href="/my-leagues">
-            <Card>
+        {!!user && userContent?.leagues?.length > 0 && (
+          <Link href="/my-leagues" onClick={handleDisabledClick}>
+            <Card disabled>
+              <Image
+                src="/coming-soon.webp"
+                layout="fill"
+                objectFit="cover"
+                alt="Coming Soon"
+              />
               <Overlay>
-                <CardTitle>See Your Leagues</CardTitle>
+                <CardTitle>Coming Soon: See Your Leagues</CardTitle>
               </Overlay>
             </Card>
           </Link>
         )}
 
-        {isLoggedIn && userContent?.tournaments?.length > 0 && (
-          <Link href="/my-tournaments">
-            <Card>
+        {!!user && userContent?.tournaments?.length > 0 && (
+          <Link href="/my-tournaments" onClick={handleDisabledClick}>
+            <Card disabled>
+              <Image
+                src="/coming-soon.webp"
+                layout="fill"
+                objectFit="cover"
+                alt="Coming Soon"
+              />
               <Overlay>
-                <CardTitle>See Your Tournaments</CardTitle>
+                <CardTitle>Coming Soon: See Your Tournaments</CardTitle>
               </Overlay>
             </Card>
           </Link>

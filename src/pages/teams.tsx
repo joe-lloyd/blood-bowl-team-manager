@@ -4,9 +4,10 @@ import Hero from '@/components/Hero';
 import Parchment from '@/components/Parchment';
 import TeamDetails from '@/components/TeamDetails';
 import styled from 'styled-components';
+import AppBar from '@/components/AppBar';
 
 const Container = styled.div`
-  padding: 20px;
+  //padding: 20px;
 `;
 
 const Button = styled.button`
@@ -51,19 +52,20 @@ const TeamsPage = () => {
     }
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <Container>
       <Parchment />
+      <AppBar />
       <Hero text={'Blood Bowl Teams'} />
-      {Object.entries(teams).map(([teamId, teamName]) => (
-        <Button key={teamId} onClick={() => handleTeamClick(teamId)}>
-          {teamName}
-        </Button>
-      ))}
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        Object.entries(teams).map(([teamId, teamName]) => (
+          <Button key={teamId} onClick={() => handleTeamClick(teamId)}>
+            {teamName}
+          </Button>
+        ))
+      )}
       {teamData && <TeamDetails teamData={teamData} />}
     </Container>
   );

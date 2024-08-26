@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Parchment from '@/components/Parchment';
-import Image from 'next/image';
 import HomeContent from '@/components/HomeContent';
+import AppBar from '@/components/AppBar';
+import HomeHero from '@/components/HomeHero';
 
 const Container = styled.div`
   width: 100%;
@@ -13,34 +14,15 @@ const Container = styled.div`
   padding: 80px 0;
 `;
 
-const LogoContainer = styled.div`
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  justify-content: center;
-`;
-
 const HomePage = () => {
   return (
     <>
       <Parchment />
+      <AppBar />
       <Container>
-        <LogoContainer>
-          <Image
-            src="/bb-logo.png"
-            alt="blood bowl logo"
-            layout="responsive"
-            width={1441}
-            height={289}
-            sizes="(max-width: 600px) 100vw,
-                   (max-width: 1024px) 80vw,
-                   1441px"
-            objectFit="contain"
-            priority={true}
-          />
-        </LogoContainer>
+        <HomeHero />
       </Container>
-      <HomeContent isLoggedIn={false} userContent={{}} />
+      <HomeContent userContent={{}} />
     </>
   );
 };
