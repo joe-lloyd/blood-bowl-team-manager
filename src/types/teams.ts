@@ -2,6 +2,7 @@ export interface TraitsAndSkills {
   name: string;
   description: string;
 }
+
 export interface PlayerPosition {
   name: string;
   cost: number;

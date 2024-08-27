@@ -48,19 +48,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false }; // fallback: false means any paths not returned by getStaticPaths will result in a 404 page
 };
 
-interface Params {
-  teamId: string;
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
+export const getStaticProps = (async ({ params }) => {
+  const { teamId } = params as { teamId: string };
   const teams = await fetchTeamsList();
-  const teamData = await getTeamData(params.teamId);
+  const teamData = await getTeamData(teamId);
   return {
     props: {
       teams,
       teamData,
     },
   };
-};
+}) satisfies GetStaticProps<{ teamData: Team; teams: TeamsList }>;
 
 export default TeamPage;

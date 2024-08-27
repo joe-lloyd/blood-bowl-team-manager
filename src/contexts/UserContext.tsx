@@ -1,11 +1,23 @@
-import React, { createContext, useState, useEffect, useContext } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useContext,
+  ReactNode,
+} from 'react';
+import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
 import { auth } from '@/services/firebase';
 
-const UserContext = createContext(null);
+type UserContextType = FirebaseUser | null;
 
-export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+const UserContext = createContext<UserContextType>(null);
+
+interface UserProviderProps {
+  children: ReactNode;
+}
+
+export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<UserContextType>(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {

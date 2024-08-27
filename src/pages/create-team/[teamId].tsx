@@ -22,7 +22,7 @@ const TeamPage: React.FC<{ teamData: Team }> = ({ teamData }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const teams = await fetchTeamsList(true);
+  const teams = await fetchTeamsList();
 
   const paths = Object.keys(teams).map((teamId) => ({
     params: { teamId },

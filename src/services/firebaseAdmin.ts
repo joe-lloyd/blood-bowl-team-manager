@@ -3,7 +3,9 @@ import admin from 'firebase-admin';
 let serviceAccount;
 
 try {
-  serviceAccount = JSON.parse(process.env.NEXT_FIREBASE_ADMIN_CREDENTIALS);
+  serviceAccount = JSON.parse(
+    process.env.NEXT_FIREBASE_ADMIN_CREDENTIALS as string
+  );
 } catch (error) {
   console.error('Error parsing service account:', error);
 }
