@@ -1,15 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Stars from '@/components/stars';
-
-export const Container = styled.div`
-  padding: 20px;
-`;
-
-export const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 20px;
-`;
+import ContentContainer from '@/components/ContentContainer';
+import { Team } from '@/types/teams';
 
 export const Table = styled.table`
   width: 100%;
@@ -108,13 +101,13 @@ export const TableBottom = styled.div`
   margin-bottom: 20px;
 `;
 
-const TeamDetails = ({ teamData }) => {
+const TeamDetails: React.FC<{ teamData: Team }> = ({ teamData }) => {
   if (!teamData) {
     return <div>Loading...</div>;
   }
 
   return (
-    <Container>
+    <ContentContainer>
       <TableTitle>{teamData.name.toUpperCase()}</TableTitle>
       <Table>
         <thead>
@@ -144,7 +137,7 @@ const TeamDetails = ({ teamData }) => {
               <TableCell>{position.stats.pa}</TableCell>
               <TableCell>{position.stats.av}</TableCell>
               <TableCell>
-                {position.specialRules.map((rule) => rule.name).join(', ')}
+                {position.traitsAndSkills.map((rule) => rule.name).join(', ')}
               </TableCell>
               <TableCell>{position.primary}</TableCell>
               <TableCell>{position.secondary}</TableCell>
@@ -158,7 +151,8 @@ const TeamDetails = ({ teamData }) => {
           </TableRow>
           <TableRow>
             <CustomTableCell colSpan={8}>
-              Special Rules: {teamData.specialRules.join(', ')}
+              Special Rules:{' '}
+              {teamData.teamSpecialRules.map(({ name }) => name).join(', ')}
             </CustomTableCell>
             <CustomTableCell colSpan={3}>
               Apothecary: {teamData.apothecary ? 'YES' : 'NO'}
@@ -170,7 +164,7 @@ const TeamDetails = ({ teamData }) => {
         <Hr />
         <Stars />
       </TableBottom>
-    </Container>
+    </ContentContainer>
   );
 };
 

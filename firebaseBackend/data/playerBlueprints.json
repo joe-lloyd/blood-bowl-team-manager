@@ -3,11 +3,11 @@
     "goblinBruiser": {
       "cost": 45000,
       "name": "Goblin Bruiser",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/stunty",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -22,9 +22,9 @@
     "blackOrc": {
       "cost": 90000,
       "name": "Black Orc",
-      "specialRules": [
-        "specialRules/brawler",
-        "specialRules/grab"
+      "traitsAndSkills": [
+        "traitsAndSkills/brawler",
+        "traitsAndSkills/grab"
       ],
       "stats": {
         "ma": "4",
@@ -39,14 +39,14 @@
     "trainedTroll": {
       "cost": 115000,
       "name": "Trained Troll",
-      "specialRules": [
-        "specialRules/alwaysHungry",
-        "specialRules/lonerThreePlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/projectileVomit",
-        "specialRules/reallyStupid",
-        "specialRules/regeneration",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/alwaysHungry",
+        "traitsAndSkills/lonerThreePlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/projectileVomit",
+        "traitsAndSkills/reallyStupid",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "4",
@@ -61,8 +61,8 @@
     "eagleWarriorLinewomen": {
       "cost": 50000,
       "name": "Eagle Warrior Linewomen",
-      "specialRules": [
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "6",
@@ -77,11 +77,11 @@
     "pythonWarriorThrowers": {
       "cost": 80000,
       "name": "Python Warrior Throwers",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/onTheBall",
-        "specialRules/pass",
-        "specialRules/safePass"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/onTheBall",
+        "traitsAndSkills/pass",
+        "traitsAndSkills/safePass"
       ],
       "stats": {
         "ma": "6",
@@ -96,10 +96,10 @@
     "piranhaWarriorBlitzers": {
       "cost": 90000,
       "name": "Piranha Warrior Blitzers",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/hitAndRun",
-        "specialRules/jumpUp"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/hitAndRun",
+        "traitsAndSkills/jumpUp"
       ],
       "stats": {
         "ma": "7",
@@ -114,9 +114,9 @@
     "jaguarWarriorBlockers": {
       "cost": 110000,
       "name": "Jaguar Warrior Blockers",
-      "specialRules": [
-        "specialRules/defensive",
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/defensive",
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "6",
@@ -131,8 +131,8 @@
     "beastman": {
       "cost": 60000,
       "name": "Beastman",
-      "specialRules": [
-        "specialRules/horns"
+      "traitsAndSkills": [
+        "traitsAndSkills/horns"
       ],
       "stats": {
         "ma": "6",
@@ -147,7 +147,7 @@
     "chosenBlockers": {
       "cost": 100000,
       "name": "Chosen Blockers",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "5",
         "st": "4",
@@ -161,14 +161,14 @@
     "chaosTroll": {
       "cost": 115000,
       "name": "Chaos Troll",
-      "specialRules": [
-        "specialRules/alwaysHungry",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/projectileVomit",
-        "specialRules/reallyStupid",
-        "specialRules/regeneration",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/alwaysHungry",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/projectileVomit",
+        "traitsAndSkills/reallyStupid",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "4",
@@ -183,12 +183,12 @@
     "chaosOgre": {
       "cost": 140000,
       "name": "Chaos Ogre",
-      "specialRules": [
-        "specialRules/boneHead",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/boneHead",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "5",
@@ -203,13 +203,13 @@
     "minotaur": {
       "cost": 150000,
       "name": "Minotaur",
-      "specialRules": [
-        "specialRules/lonerFourPlus",
-        "specialRules/frenzy",
-        "specialRules/horns",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull",
-        "specialRules/unchanneledFury"
+      "traitsAndSkills": [
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/horns",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/unchanneledFury"
       ],
       "stats": {
         "ma": "5",
@@ -224,7 +224,7 @@
     "hobgoblin": {
       "cost": 40000,
       "name": "Hobgoblin",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "6",
         "st": "3",
@@ -238,10 +238,10 @@
     "chaosDwarf": {
       "cost": 70000,
       "name": "Chaos Dwarf",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/tackle",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/tackle",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "4",
@@ -256,10 +256,10 @@
     "bullCentaur": {
       "cost": 130000,
       "name": "Bull Centaur",
-      "specialRules": [
-        "specialRules/sprint",
-        "specialRules/sureFeet",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/sprint",
+        "traitsAndSkills/sureFeet",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -274,13 +274,13 @@
     "enslavedMinotaur": {
       "cost": 150000,
       "name": "Enslaved Minotaur",
-      "specialRules": [
-        "specialRules/animalSavagery",
-        "specialRules/frenzy",
-        "specialRules/horns",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/animalSavagery",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/horns",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "5",
@@ -295,7 +295,7 @@
     "renegadeLineman": {
       "cost": 50000,
       "name": "Lineman",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "6",
         "st": "3",
@@ -309,10 +309,10 @@
     "renegadeThrower": {
       "cost": 75000,
       "name": "Thrower",
-      "specialRules": [
-        "specialRules/animosityAllTeammates",
-        "specialRules/pass",
-        "specialRules/safePairOfHands"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityAllTeammates",
+        "traitsAndSkills/pass",
+        "traitsAndSkills/safePairOfHands"
       ],
       "stats": {
         "ma": "6",
@@ -327,11 +327,11 @@
     "renegadeGoblin": {
       "cost": 40000,
       "name": "Goblin",
-      "specialRules": [
-        "specialRules/animosityAllTeammates",
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityAllTeammates",
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "6",
@@ -346,8 +346,8 @@
     "renegadeOrc": {
       "cost": 50000,
       "name": "Orc",
-      "specialRules": [
-        "specialRules/animosityAllTeammates"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityAllTeammates"
       ],
       "stats": {
         "ma": "5",
@@ -362,8 +362,8 @@
     "renegadeSkaven": {
       "cost": 50000,
       "name": "Skaven",
-      "specialRules": [
-        "specialRules/animosityAllTeammates"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityAllTeammates"
       ],
       "stats": {
         "ma": "7",
@@ -378,8 +378,8 @@
     "renegadeDarkElf": {
       "cost": 75000,
       "name": "Dark Elf",
-      "specialRules": [
-        "specialRules/animosityAllTeammates"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityAllTeammates"
       ],
       "stats": {
         "ma": "6",
@@ -394,14 +394,14 @@
     "renegadeTroll": {
       "cost": 115000,
       "name": "Renegade Troll",
-      "specialRules": [
-        "specialRules/alwaysHungry",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/projectileVomit",
-        "specialRules/reallyStupid",
-        "specialRules/regeneration",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/alwaysHungry",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/projectileVomit",
+        "traitsAndSkills/reallyStupid",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "4",
@@ -416,12 +416,12 @@
     "renegadeOgre": {
       "cost": 140000,
       "name": "Renegade Ogre",
-      "specialRules": [
-        "specialRules/boneHead",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/boneHead",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "5",
@@ -436,13 +436,13 @@
     "renegadeMinotaur": {
       "cost": 150000,
       "name": "Renegade Minotaur",
-      "specialRules": [
-        "specialRules/lonerFourPlus",
-        "specialRules/frenzy",
-        "specialRules/horns",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull",
-        "specialRules/unchanneledFury"
+      "traitsAndSkills": [
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/horns",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/unchanneledFury"
       ],
       "stats": {
         "ma": "5",
@@ -457,12 +457,12 @@
     "renegadeRatOgre": {
       "cost": 150000,
       "name": "Renegade Rat Ogre",
-      "specialRules": [
-        "specialRules/animalSavagery",
-        "specialRules/frenzy",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/prehensileTail"
+      "traitsAndSkills": [
+        "traitsAndSkills/animalSavagery",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/prehensileTail"
       ],
       "stats": {
         "ma": "6",
@@ -477,7 +477,7 @@
     "darkElfLineman": {
       "cost": 70000,
       "name": "Lineman",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "6",
         "st": "3",
@@ -491,8 +491,8 @@
     "darkElfRunner": {
       "cost": 80000,
       "name": "Runner",
-      "specialRules": [
-        "specialRules/dumpOff"
+      "traitsAndSkills": [
+        "traitsAndSkills/dumpOff"
       ],
       "stats": {
         "ma": "7",
@@ -507,8 +507,8 @@
     "darkElfBlitzer": {
       "cost": 100000,
       "name": "Blitzer",
-      "specialRules": [
-        "specialRules/block"
+      "traitsAndSkills": [
+        "traitsAndSkills/block"
       ],
       "stats": {
         "ma": "7",
@@ -523,9 +523,9 @@
     "darkElfAssassin": {
       "cost": 85000,
       "name": "Assassin",
-      "specialRules": [
-        "specialRules/shadowing",
-        "specialRules/stab"
+      "traitsAndSkills": [
+        "traitsAndSkills/shadowing",
+        "traitsAndSkills/stab"
       ],
       "stats": {
         "ma": "7",
@@ -540,10 +540,10 @@
     "darkElfWitchElf": {
       "cost": 110000,
       "name": "Witch Elf",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/frenzy",
-        "specialRules/jumpUp"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/jumpUp"
       ],
       "stats": {
         "ma": "7",
@@ -558,10 +558,10 @@
     "dwarfLineman": {
       "cost": 70000,
       "name": "Lineman",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/tackle",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/tackle",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "4",
@@ -576,9 +576,9 @@
     "dwarfRunner": {
       "cost": 85000,
       "name": "Runner",
-      "specialRules": [
-        "specialRules/sureHands",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/sureHands",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -593,9 +593,9 @@
     "dwarfBlitzer": {
       "cost": 80000,
       "name": "Blitzer",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "5",
@@ -610,11 +610,11 @@
     "trollSlayer": {
       "cost": 95000,
       "name": "Troll Slayer",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/dauntless",
-        "specialRules/frenzy",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/dauntless",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "5",
@@ -629,15 +629,15 @@
     "deathroller": {
       "cost": 170000,
       "name": "Deathroller",
-      "specialRules": [
-        "specialRules/breakTackle",
-        "specialRules/dirtyPlayerPlusTwo",
-        "specialRules/juggernaut",
-        "specialRules/lonerFivePlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/noHands",
-        "specialRules/secretWeapon",
-        "specialRules/standFirm"
+      "traitsAndSkills": [
+        "traitsAndSkills/breakTackle",
+        "traitsAndSkills/dirtyPlayerPlusTwo",
+        "traitsAndSkills/juggernaut",
+        "traitsAndSkills/lonerFivePlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/noHands",
+        "traitsAndSkills/secretWeapon",
+        "traitsAndSkills/standFirm"
       ],
       "stats": {
         "ma": "4",
@@ -652,7 +652,7 @@
     "elvenUnionLineman": {
       "cost": 60000,
       "name": "Lineman",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "6",
         "st": "3",
@@ -666,8 +666,8 @@
     "elvenUnionThrower": {
       "cost": 75000,
       "name": "Thrower",
-      "specialRules": [
-        "specialRules/pass"
+      "traitsAndSkills": [
+        "traitsAndSkills/pass"
       ],
       "stats": {
         "ma": "6",
@@ -682,9 +682,9 @@
     "elvenUnionCatcher": {
       "cost": 100000,
       "name": "Catcher",
-      "specialRules": [
-        "specialRules/catch",
-        "specialRules/nervesOfSteel"
+      "traitsAndSkills": [
+        "traitsAndSkills/catch",
+        "traitsAndSkills/nervesOfSteel"
       ],
       "stats": {
         "ma": "8",
@@ -699,9 +699,9 @@
     "elvenUnionBlitzer": {
       "cost": 115000,
       "name": "Blitzer",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/sideStep"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/sideStep"
       ],
       "stats": {
         "ma": "7",
@@ -716,11 +716,11 @@
     "gnomeLineman": {
       "cost": 40000,
       "name": "Gnome Linemen",
-      "specialRules": [
-        "specialRules/jumpUp",
-        "specialRules/rightStuff",
-        "specialRules/stunty",
-        "specialRules/wrestle"
+      "traitsAndSkills": [
+        "traitsAndSkills/jumpUp",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/wrestle"
       ],
       "stats": {
         "ma": "5",
@@ -735,11 +735,11 @@
     "gnomeIllusionist": {
       "cost": 50000,
       "name": "Gnome Illusionist",
-      "specialRules": [
-        "specialRules/jumpUp",
-        "specialRules/stunty",
-        "specialRules/trickster",
-        "specialRules/wrestle"
+      "traitsAndSkills": [
+        "traitsAndSkills/jumpUp",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/trickster",
+        "traitsAndSkills/wrestle"
       ],
       "stats": {
         "ma": "5",
@@ -754,11 +754,11 @@
     "woodlandFox": {
       "cost": 50000,
       "name": "Woodland Fox",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/myBall",
-        "specialRules/sideStep",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/myBall",
+        "traitsAndSkills/sideStep",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "7",
@@ -773,11 +773,11 @@
     "gnomeBeastmaster": {
       "cost": 55000,
       "name": "Gnome Beastmaster",
-      "specialRules": [
-        "specialRules/guard",
-        "specialRules/jumpUp",
-        "specialRules/stunty",
-        "specialRules/wrestle"
+      "traitsAndSkills": [
+        "traitsAndSkills/guard",
+        "traitsAndSkills/jumpUp",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/wrestle"
       ],
       "stats": {
         "ma": "5",
@@ -792,14 +792,14 @@
     "alternForestTreeman": {
       "cost": 120000,
       "name": "Altern Forest Treeman",
-      "specialRules": [
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/standFirm",
-        "specialRules/strongArm",
-        "specialRules/takeRoot",
-        "specialRules/thickSkull",
-        "specialRules/throwTeammate",
-        "specialRules/timmber"
+      "traitsAndSkills": [
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/standFirm",
+        "traitsAndSkills/strongArm",
+        "traitsAndSkills/takeRoot",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/throwTeammate",
+        "traitsAndSkills/timmber"
       ],
       "stats": {
         "ma": "2",
@@ -814,10 +814,10 @@
     "goblin": {
       "cost": 40000,
       "name": "Goblin",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "6",
@@ -832,11 +832,11 @@
     "bomma": {
       "cost": 45000,
       "name": "Bomma",
-      "specialRules": [
-        "specialRules/bombardier",
-        "specialRules/dodge",
-        "specialRules/secretWeapon",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/bombardier",
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/secretWeapon",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "6",
@@ -851,10 +851,10 @@
     "looney": {
       "cost": 40000,
       "name": "Looney",
-      "specialRules": [
-        "specialRules/chainsaw",
-        "specialRules/secretWeapon",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/chainsaw",
+        "traitsAndSkills/secretWeapon",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "6",
@@ -869,11 +869,11 @@
     "fanatic": {
       "cost": 70000,
       "name": "Fanatic",
-      "specialRules": [
-        "specialRules/ballAndChain",
-        "specialRules/noHands",
-        "specialRules/secretWeapon",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/ballAndChain",
+        "traitsAndSkills/noHands",
+        "traitsAndSkills/secretWeapon",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "3",
@@ -888,10 +888,10 @@
     "pogoer": {
       "cost": 75000,
       "name": "Pogoer",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/pogoStick",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/pogoStick",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "7",
@@ -906,12 +906,12 @@
     "ooligan": {
       "cost": 65000,
       "name": "'Ooligan",
-      "specialRules": [
-        "specialRules/dirtyPlayerPlusOne",
-        "specialRules/disturbingPresence",
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dirtyPlayerPlusOne",
+        "traitsAndSkills/disturbingPresence",
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "6",
@@ -926,10 +926,10 @@
     "doomDiver": {
       "cost": 60000,
       "name": "Doom Diver",
-      "specialRules": [
-        "specialRules/rightStuff",
-        "specialRules/stunty",
-        "specialRules/swoop"
+      "traitsAndSkills": [
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/swoop"
       ],
       "stats": {
         "ma": "6",
@@ -944,7 +944,7 @@
     "highElfLineman": {
       "cost": 70000,
       "name": "Lineman",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "6",
         "st": "3",
@@ -958,10 +958,10 @@
     "highElfThrower": {
       "cost": 100000,
       "name": "Thrower",
-      "specialRules": [
-        "specialRules/cloudBurster",
-        "specialRules/pass",
-        "specialRules/safePass"
+      "traitsAndSkills": [
+        "traitsAndSkills/cloudBurster",
+        "traitsAndSkills/pass",
+        "traitsAndSkills/safePass"
       ],
       "stats": {
         "ma": "6",
@@ -976,8 +976,8 @@
     "highElfCatcher": {
       "cost": 90000,
       "name": "Catcher",
-      "specialRules": [
-        "specialRules/catch"
+      "traitsAndSkills": [
+        "traitsAndSkills/catch"
       ],
       "stats": {
         "ma": "8",
@@ -992,8 +992,8 @@
     "highElfBlitzer": {
       "cost": 100000,
       "name": "Blitzer",
-      "specialRules": [
-        "specialRules/block"
+      "traitsAndSkills": [
+        "traitsAndSkills/block"
       ],
       "stats": {
         "ma": "7",
@@ -1008,10 +1008,10 @@
     "hopeful": {
       "cost": 30000,
       "name": "Hopeful",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "5",
@@ -1026,10 +1026,10 @@
     "hefty": {
       "cost": 50000,
       "name": "Hefty",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/fend",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/fend",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "5",
@@ -1044,12 +1044,12 @@
     "catcher": {
       "cost": 55000,
       "name": "Catcher",
-      "specialRules": [
-        "specialRules/catch",
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/sprint",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/catch",
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/sprint",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "5",
@@ -1064,7 +1064,7 @@
     "humanLineman": {
       "cost": 50000,
       "name": "Lineman",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "6",
         "st": "3",
@@ -1078,9 +1078,9 @@
     "humanThrower": {
       "cost": 80000,
       "name": "Thrower",
-      "specialRules": [
-        "specialRules/pass",
-        "specialRules/sureHands"
+      "traitsAndSkills": [
+        "traitsAndSkills/pass",
+        "traitsAndSkills/sureHands"
       ],
       "stats": {
         "ma": "6",
@@ -1095,9 +1095,9 @@
     "humanCatcher": {
       "cost": 65000,
       "name": "Catcher",
-      "specialRules": [
-        "specialRules/catch",
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/catch",
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "8",
@@ -1112,8 +1112,8 @@
     "humanBlitzer": {
       "cost": 85000,
       "name": "Blitzer",
-      "specialRules": [
-        "specialRules/block"
+      "traitsAndSkills": [
+        "traitsAndSkills/block"
       ],
       "stats": {
         "ma": "7",
@@ -1128,10 +1128,10 @@
     "humanHalfling": {
       "cost": 30000,
       "name": "Halfling",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "5",
@@ -1146,12 +1146,12 @@
     "humanOgre": {
       "cost": 140000,
       "name": "Ogre",
-      "specialRules": [
-        "specialRules/boneHead",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/boneHead",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "5",
@@ -1166,8 +1166,8 @@
     "retainerLineman": {
       "cost": 45000,
       "name": "Retainer Lineman",
-      "specialRules": [
-        "specialRules/fend"
+      "traitsAndSkills": [
+        "traitsAndSkills/fend"
       ],
       "stats": {
         "ma": "6",
@@ -1182,9 +1182,9 @@
     "imperialThrower": {
       "cost": 75000,
       "name": "Thrower",
-      "specialRules": [
-        "specialRules/pass",
-        "specialRules/runningPass"
+      "traitsAndSkills": [
+        "traitsAndSkills/pass",
+        "traitsAndSkills/runningPass"
       ],
       "stats": {
         "ma": "6",
@@ -1199,9 +1199,9 @@
     "nobleBlitzer": {
       "cost": 105000,
       "name": "Noble Blitzer",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/catch"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/catch"
       ],
       "stats": {
         "ma": "7",
@@ -1216,9 +1216,9 @@
     "bodyguard": {
       "cost": 90000,
       "name": "Bodyguard",
-      "specialRules": [
-        "specialRules/standFirm",
-        "specialRules/wrestle"
+      "traitsAndSkills": [
+        "traitsAndSkills/standFirm",
+        "traitsAndSkills/wrestle"
       ],
       "stats": {
         "ma": "6",
@@ -1233,12 +1233,12 @@
     "imperialOgre": {
       "cost": 140000,
       "name": "Ogre",
-      "specialRules": [
-        "specialRules/boneHead",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/boneHead",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "5",
@@ -1253,9 +1253,9 @@
     "skeleton": {
       "cost": 40000,
       "name": "Skeleton",
-      "specialRules": [
-        "specialRules/regeneration",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "5",
@@ -1270,11 +1270,11 @@
     "anointedThrower": {
       "cost": 70000,
       "name": "Anointed Thrower",
-      "specialRules": [
-        "specialRules/pass",
-        "specialRules/regeneration",
-        "specialRules/sureHands",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/pass",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/sureHands",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -1289,10 +1289,10 @@
     "anointedBlitzer": {
       "cost": 90000,
       "name": "Anointed Blitzer",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/regeneration",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -1307,9 +1307,9 @@
     "tombGuardian": {
       "cost": 100000,
       "name": "Tomb Guardian",
-      "specialRules": [
-        "specialRules/decay",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/decay",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "4",
@@ -1324,8 +1324,8 @@
     "bloodbornMarauderLineman": {
       "cost": 50000,
       "name": "Bloodborn Marauder Lineman",
-      "specialRules": [
-        "specialRules/frenzy"
+      "traitsAndSkills": [
+        "traitsAndSkills/frenzy"
       ],
       "stats": {
         "ma": "6",
@@ -1340,9 +1340,9 @@
     "khornagor": {
       "cost": 70000,
       "name": "Khornagor",
-      "specialRules": [
-        "specialRules/horns",
-        "specialRules/juggernaut"
+      "traitsAndSkills": [
+        "traitsAndSkills/horns",
+        "traitsAndSkills/juggernaut"
       ],
       "stats": {
         "ma": "6",
@@ -1357,8 +1357,8 @@
     "bloodseeker": {
       "cost": 110000,
       "name": "Bloodseeker",
-      "specialRules": [
-        "specialRules/frenzy"
+      "traitsAndSkills": [
+        "traitsAndSkills/frenzy"
       ],
       "stats": {
         "ma": "5",
@@ -1373,12 +1373,12 @@
     "bloodspawn": {
       "cost": 160000,
       "name": "Bloodspawn",
-      "specialRules": [
-        "specialRules/claws",
-        "specialRules/frenzy",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/unchanneledFury"
+      "traitsAndSkills": [
+        "traitsAndSkills/claws",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/unchanneledFury"
       ],
       "stats": {
         "ma": "5",
@@ -1393,9 +1393,9 @@
     "skink": {
       "cost": 60000,
       "name": "Skink",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "8",
@@ -1410,11 +1410,11 @@
     "chameleonSkink": {
       "cost": 70000,
       "name": "Chameleon Skink",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/onTheBall",
-        "specialRules/shadowing",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/onTheBall",
+        "traitsAndSkills/shadowing",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "7",
@@ -1429,7 +1429,7 @@
     "saurus": {
       "cost": 85000,
       "name": "Saurus",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "6",
         "st": "4",
@@ -1443,12 +1443,12 @@
     "kroxigor": {
       "cost": 140000,
       "name": "Kroxigor",
-      "specialRules": [
-        "specialRules/boneHead",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/prehensileTail",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/boneHead",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/prehensileTail",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -1463,8 +1463,8 @@
     "zombie": {
       "cost": 40000,
       "name": "Zombie",
-      "specialRules": [
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "4",
@@ -1479,8 +1479,8 @@
     "ghoulRunner": {
       "cost": 75000,
       "name": "Ghoul Runner",
-      "specialRules": [
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "7",
@@ -1495,12 +1495,12 @@
     "wraith": {
       "cost": 95000,
       "name": "Wraith",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/foulAppearance",
-        "specialRules/noHands",
-        "specialRules/regeneration",
-        "specialRules/sideStep"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/foulAppearance",
+        "traitsAndSkills/noHands",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/sideStep"
       ],
       "stats": {
         "ma": "6",
@@ -1515,10 +1515,10 @@
     "werewolf": {
       "cost": 125000,
       "name": "Werewolf",
-      "specialRules": [
-        "specialRules/claws",
-        "specialRules/frenzy",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/claws",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "8",
@@ -1533,10 +1533,10 @@
     "fleshGolem": {
       "cost": 115000,
       "name": "Flesh Golem",
-      "specialRules": [
-        "specialRules/regeneration",
-        "specialRules/standFirm",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/standFirm",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "4",
@@ -1551,10 +1551,10 @@
     "norseRaiderLineman": {
       "cost": 50000,
       "name": "Norse Raider Lineman",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/drunkard",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/drunkard",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -1569,12 +1569,12 @@
     "beerBoar": {
       "cost": 20000,
       "name": "Beer Boars",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/noHands",
-        "specialRules/pickMeUp",
-        "specialRules/stunty",
-        "specialRules/titchy"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/noHands",
+        "traitsAndSkills/pickMeUp",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/titchy"
       ],
       "stats": {
         "ma": "5",
@@ -1589,10 +1589,10 @@
     "norseBerserker": {
       "cost": 90000,
       "name": "Norse Berserker",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/frenzy",
-        "specialRules/jumpUp"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/jumpUp"
       ],
       "stats": {
         "ma": "6",
@@ -1607,11 +1607,11 @@
     "valkyrie": {
       "cost": 95000,
       "name": "Valkyrie",
-      "specialRules": [
-        "specialRules/catch",
-        "specialRules/dauntless",
-        "specialRules/pass",
-        "specialRules/stripBall"
+      "traitsAndSkills": [
+        "traitsAndSkills/catch",
+        "traitsAndSkills/dauntless",
+        "traitsAndSkills/pass",
+        "traitsAndSkills/stripBall"
       ],
       "stats": {
         "ma": "7",
@@ -1626,8 +1626,8 @@
     "ulfwerener": {
       "cost": 105000,
       "name": "Ulfwerener",
-      "specialRules": [
-        "specialRules/frenzy"
+      "traitsAndSkills": [
+        "traitsAndSkills/frenzy"
       ],
       "stats": {
         "ma": "6",
@@ -1642,13 +1642,13 @@
     "yheteeSnowTroll": {
       "cost": 140000,
       "name": "Yhetee / Snow Troll",
-      "specialRules": [
-        "specialRules/claws",
-        "specialRules/disturbingPresence",
-        "specialRules/frenzy",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/unchanneledFury"
+      "traitsAndSkills": [
+        "traitsAndSkills/claws",
+        "traitsAndSkills/disturbingPresence",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/unchanneledFury"
       ],
       "stats": {
         "ma": "5",
@@ -1663,9 +1663,9 @@
     "rotter": {
       "cost": 35000,
       "name": "Rotter",
-      "specialRules": [
-        "specialRules/decay",
-        "specialRules/plagueRidden"
+      "traitsAndSkills": [
+        "traitsAndSkills/decay",
+        "traitsAndSkills/plagueRidden"
       ],
       "stats": {
         "ma": "5",
@@ -1680,10 +1680,10 @@
     "pestigor": {
       "cost": 75000,
       "name": "Pestigor",
-      "specialRules": [
-        "specialRules/horns",
-        "specialRules/plagueRidden",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/horns",
+        "traitsAndSkills/plagueRidden",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "6",
@@ -1698,11 +1698,11 @@
     "bloater": {
       "cost": 115000,
       "name": "Bloater",
-      "specialRules": [
-        "specialRules/disturbingPresence",
-        "specialRules/foulAppearance",
-        "specialRules/plagueRidden",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/disturbingPresence",
+        "traitsAndSkills/foulAppearance",
+        "traitsAndSkills/plagueRidden",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "4",
@@ -1717,15 +1717,15 @@
     "rotspawn": {
       "cost": 140000,
       "name": "Rotspawn",
-      "specialRules": [
-        "specialRules/disturbingPresence",
-        "specialRules/foulAppearance",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/plagueRidden",
-        "specialRules/reallyStupid",
-        "specialRules/regeneration",
-        "specialRules/tentacles"
+      "traitsAndSkills": [
+        "traitsAndSkills/disturbingPresence",
+        "traitsAndSkills/foulAppearance",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/plagueRidden",
+        "traitsAndSkills/reallyStupid",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/tentacles"
       ],
       "stats": {
         "ma": "4",
@@ -1740,12 +1740,12 @@
     "gnoblar": {
       "cost": 15000,
       "name": "Gnoblar",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/sideStep",
-        "specialRules/stunty",
-        "specialRules/titchy"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/sideStep",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/titchy"
       ],
       "stats": {
         "ma": "5",
@@ -1760,11 +1760,11 @@
     "runtPunter": {
       "cost": 145000,
       "name": "Runt Punter",
-      "specialRules": [
-        "specialRules/boneHead",
-        "specialRules/kickTeamMate",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/boneHead",
+        "traitsAndSkills/kickTeamMate",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "5",
@@ -1779,11 +1779,11 @@
     "ogre": {
       "cost": 140000,
       "name": "Ogre",
-      "specialRules": [
-        "specialRules/boneHead",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/thickSkull",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/boneHead",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "5",
@@ -1798,10 +1798,10 @@
     "owaHumanThrower": {
       "cost": 80000,
       "name": "Human Thrower",
-      "specialRules": [
-        "specialRules/animosityDwarfHalfling",
-        "specialRules/pass",
-        "specialRules/sureHands"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityDwarfHalfling",
+        "traitsAndSkills/pass",
+        "traitsAndSkills/sureHands"
       ],
       "stats": {
         "ma": "6",
@@ -1816,10 +1816,10 @@
     "owaHumanCatcher": {
       "cost": 65000,
       "name": "Human Catcher",
-      "specialRules": [
-        "specialRules/animosityDwarfHalfling",
-        "specialRules/catch",
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityDwarfHalfling",
+        "traitsAndSkills/catch",
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "8",
@@ -1834,9 +1834,9 @@
     "owaHumanBlitzer": {
       "cost": 90000,
       "name": "Human Blitzer",
-      "specialRules": [
-        "specialRules/animosityDwarfHalfling",
-        "specialRules/block"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityDwarfHalfling",
+        "traitsAndSkills/block"
       ],
       "stats": {
         "ma": "7",
@@ -1851,11 +1851,11 @@
     "owaDwarfBlocker": {
       "cost": 75000,
       "name": "Dwarf Blocker",
-      "specialRules": [
-        "specialRules/armBar",
-        "specialRules/brawler",
-        "specialRules/lonerThreePlus",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/armBar",
+        "traitsAndSkills/brawler",
+        "traitsAndSkills/lonerThreePlus",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "4",
@@ -1870,10 +1870,10 @@
     "owaDwarfRunner": {
       "cost": 85000,
       "name": "Dwarf Runner",
-      "specialRules": [
-        "specialRules/lonerThreePlus",
-        "specialRules/sureHands",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/lonerThreePlus",
+        "traitsAndSkills/sureHands",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -1888,10 +1888,10 @@
     "owaDwarfBlitzer": {
       "cost": 80000,
       "name": "Dwarf Blitzer",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/lonerThreePlus",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/lonerThreePlus",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "5",
@@ -1906,12 +1906,12 @@
     "owaTrollSlayer": {
       "cost": 95000,
       "name": "Troll Slayer",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/dauntless",
-        "specialRules/frenzy",
-        "specialRules/lonerThreePlus",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/dauntless",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/lonerThreePlus",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "5",
@@ -1926,11 +1926,11 @@
     "owaHalfling": {
       "cost": 30000,
       "name": "Halfling",
-      "specialRules": [
-        "specialRules/animosityDwarfHuman",
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityDwarfHuman",
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "5",
@@ -1945,15 +1945,15 @@
     "owaAlternForestTreeman": {
       "cost": 120000,
       "name": "Altern Forest Treeman",
-      "specialRules": [
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/standFirm",
-        "specialRules/strongArm",
-        "specialRules/takeRoot",
-        "specialRules/thickSkull",
-        "specialRules/throwTeammate",
-        "specialRules/timmber"
+      "traitsAndSkills": [
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/standFirm",
+        "traitsAndSkills/strongArm",
+        "traitsAndSkills/takeRoot",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/throwTeammate",
+        "traitsAndSkills/timmber"
       ],
       "stats": {
         "ma": "2",
@@ -1968,8 +1968,8 @@
     "orcLineman": {
       "cost": 50000,
       "name": "Lineman",
-      "specialRules": [
-        "specialRules/animosityOrcLinemen"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityOrcLinemen"
       ],
       "stats": {
         "ma": "5",
@@ -1984,10 +1984,10 @@
     "orcThrower": {
       "cost": 65000,
       "name": "Thrower",
-      "specialRules": [
-        "specialRules/animosityAllTeammates",
-        "specialRules/pass",
-        "specialRules/sureHands"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityAllTeammates",
+        "traitsAndSkills/pass",
+        "traitsAndSkills/sureHands"
       ],
       "stats": {
         "ma": "5",
@@ -2002,9 +2002,9 @@
     "orcBlitzer": {
       "cost": 80000,
       "name": "Blitzer",
-      "specialRules": [
-        "specialRules/animosityAllTeammates",
-        "specialRules/block"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityAllTeammates",
+        "traitsAndSkills/block"
       ],
       "stats": {
         "ma": "6",
@@ -2019,8 +2019,8 @@
     "bigUn": {
       "cost": 90000,
       "name": "Big Un",
-      "specialRules": [
-        "specialRules/animosityBigUns"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityBigUns"
       ],
       "stats": {
         "ma": "5",
@@ -2035,10 +2035,10 @@
     "orcGoblin": {
       "cost": 40000,
       "name": "Goblin",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "6",
@@ -2053,14 +2053,14 @@
     "untrainedTroll": {
       "cost": 115000,
       "name": "Untrained Troll",
-      "specialRules": [
-        "specialRules/alwaysHungry",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/projectileVomit",
-        "specialRules/reallyStupid",
-        "specialRules/regeneration",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/alwaysHungry",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/projectileVomit",
+        "traitsAndSkills/reallyStupid",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "4",
@@ -2075,9 +2075,9 @@
     "shamblingSkeleton": {
       "cost": 40000,
       "name": "Skeleton",
-      "specialRules": [
-        "specialRules/regeneration",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "5",
@@ -2092,8 +2092,8 @@
     "shamblingZombie": {
       "cost": 40000,
       "name": "Zombie",
-      "specialRules": [
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "4",
@@ -2108,8 +2108,8 @@
     "shamblingGhoul": {
       "cost": 75000,
       "name": "Ghoul",
-      "specialRules": [
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "7",
@@ -2124,9 +2124,9 @@
     "shamblingWight": {
       "cost": 90000,
       "name": "Wight",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "6",
@@ -2141,9 +2141,9 @@
     "shamblingMummy": {
       "cost": 125000,
       "name": "Mummy",
-      "specialRules": [
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "3",
@@ -2158,7 +2158,7 @@
     "skavenLineman": {
       "cost": 50000,
       "name": "Lineman",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "7",
         "st": "3",
@@ -2172,9 +2172,9 @@
     "skavenThrower": {
       "cost": 85000,
       "name": "Thrower",
-      "specialRules": [
-        "specialRules/pass",
-        "specialRules/sureHands"
+      "traitsAndSkills": [
+        "traitsAndSkills/pass",
+        "traitsAndSkills/sureHands"
       ],
       "stats": {
         "ma": "7",
@@ -2189,8 +2189,8 @@
     "skavenGutterRunner": {
       "cost": 85000,
       "name": "Gutter Runner",
-      "specialRules": [
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "9",
@@ -2205,8 +2205,8 @@
     "skavenBlitzer": {
       "cost": 90000,
       "name": "Blitzer",
-      "specialRules": [
-        "specialRules/block"
+      "traitsAndSkills": [
+        "traitsAndSkills/block"
       ],
       "stats": {
         "ma": "7",
@@ -2221,12 +2221,12 @@
     "skavenRatOgre": {
       "cost": 150000,
       "name": "Rat Ogre",
-      "specialRules": [
-        "specialRules/animalSavagery",
-        "specialRules/frenzy",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/prehensileTail"
+      "traitsAndSkills": [
+        "traitsAndSkills/animalSavagery",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/prehensileTail"
       ],
       "stats": {
         "ma": "6",
@@ -2241,9 +2241,9 @@
     "slannLineman": {
       "cost": 60000,
       "name": "Lineman",
-      "specialRules": [
-        "specialRules/pogoStick",
-        "specialRules/veryLongLegs"
+      "traitsAndSkills": [
+        "traitsAndSkills/pogoStick",
+        "traitsAndSkills/veryLongLegs"
       ],
       "stats": {
         "ma": "6",
@@ -2258,10 +2258,10 @@
     "slannCatcher": {
       "cost": 80000,
       "name": "Catcher",
-      "specialRules": [
-        "specialRules/pogoStick",
-        "specialRules/veryLongLegs",
-        "specialRules/divingCatch"
+      "traitsAndSkills": [
+        "traitsAndSkills/pogoStick",
+        "traitsAndSkills/veryLongLegs",
+        "traitsAndSkills/divingCatch"
       ],
       "stats": {
         "ma": "7",
@@ -2276,11 +2276,11 @@
     "slannBlitzer": {
       "cost": 110000,
       "name": "Blitzer",
-      "specialRules": [
-        "specialRules/pogoStick",
-        "specialRules/veryLongLegs",
-        "specialRules/divingTackle",
-        "specialRules/jumpUp"
+      "traitsAndSkills": [
+        "traitsAndSkills/pogoStick",
+        "traitsAndSkills/veryLongLegs",
+        "traitsAndSkills/divingTackle",
+        "traitsAndSkills/jumpUp"
       ],
       "stats": {
         "ma": "7",
@@ -2295,12 +2295,12 @@
     "slannKroxigor": {
       "cost": 140000,
       "name": "Kroxigor",
-      "specialRules": [
-        "specialRules/boneHead",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/prehensileTail",
-        "specialRules/thickSkull"
+      "traitsAndSkills": [
+        "traitsAndSkills/boneHead",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/prehensileTail",
+        "traitsAndSkills/thickSkull"
       ],
       "stats": {
         "ma": "6",
@@ -2315,13 +2315,13 @@
     "snotlingSnotling": {
       "cost": 15000,
       "name": "Snotling",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/sideStep",
-        "specialRules/stunty",
-        "specialRules/titchy",
-        "specialRules/swarming"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/sideStep",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/titchy",
+        "traitsAndSkills/swarming"
       ],
       "stats": {
         "ma": "5",
@@ -2336,13 +2336,13 @@
     "snotlingFungusFlinga": {
       "cost": 30000,
       "name": "Fungus Flinga",
-      "specialRules": [
-        "specialRules/bombardier",
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/secretWeapon",
-        "specialRules/sideStep",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/bombardier",
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/secretWeapon",
+        "traitsAndSkills/sideStep",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "5",
@@ -2357,12 +2357,12 @@
     "snotlingFunhoppa": {
       "cost": 20000,
       "name": "Funhoppa",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/pogoStick",
-        "specialRules/rightStuff",
-        "specialRules/sideStep",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/pogoStick",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/sideStep",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "6",
@@ -2377,12 +2377,12 @@
     "snotlingStiltyRunna": {
       "cost": 20000,
       "name": "Stilty Runna",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/sideStep",
-        "specialRules/sprint",
-        "specialRules/stunty"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/sideStep",
+        "traitsAndSkills/sprint",
+        "traitsAndSkills/stunty"
       ],
       "stats": {
         "ma": "6",
@@ -2397,13 +2397,13 @@
     "snotlingPumpWagon": {
       "cost": 105000,
       "name": "Pump Wagon",
-      "specialRules": [
-        "specialRules/dirtyPlayerPlusOne",
-        "specialRules/juggernaut",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/reallyStupid",
-        "specialRules/secretWeapon",
-        "specialRules/standFirm"
+      "traitsAndSkills": [
+        "traitsAndSkills/dirtyPlayerPlusOne",
+        "traitsAndSkills/juggernaut",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/reallyStupid",
+        "traitsAndSkills/secretWeapon",
+        "traitsAndSkills/standFirm"
       ],
       "stats": {
         "ma": "4",
@@ -2418,14 +2418,14 @@
     "snotlingTrainedTroll": {
       "cost": 115000,
       "name": "Trained Troll",
-      "specialRules": [
-        "specialRules/alwaysHungry",
-        "specialRules/lonerThreePlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/projectileVomit",
-        "specialRules/reallyStupid",
-        "specialRules/regeneration",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/alwaysHungry",
+        "traitsAndSkills/lonerThreePlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/projectileVomit",
+        "traitsAndSkills/reallyStupid",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "4",
@@ -2440,10 +2440,10 @@
     "underworldGoblin": {
       "cost": 40000,
       "name": "Goblin",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/stunty",
-        "specialRules/rightStuff"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/rightStuff"
       ],
       "stats": {
         "ma": "6",
@@ -2458,12 +2458,12 @@
     "underworldSnotling": {
       "cost": 15000,
       "name": "Snotling",
-      "specialRules": [
-        "specialRules/dodge",
-        "specialRules/rightStuff",
-        "specialRules/sideStep",
-        "specialRules/stunty",
-        "specialRules/titchy"
+      "traitsAndSkills": [
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/rightStuff",
+        "traitsAndSkills/sideStep",
+        "traitsAndSkills/stunty",
+        "traitsAndSkills/titchy"
       ],
       "stats": {
         "ma": "5",
@@ -2478,8 +2478,8 @@
     "underworldSkavenClanrat": {
       "cost": 50000,
       "name": "Skaven Clanrat",
-      "specialRules": [
-        "specialRules/animosityGoblins"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityGoblins"
       ],
       "stats": {
         "ma": "7",
@@ -2494,10 +2494,10 @@
     "underworldSkavenThrower": {
       "cost": 85000,
       "name": "Skaven Thrower",
-      "specialRules": [
-        "specialRules/animosityGoblins",
-        "specialRules/pass",
-        "specialRules/sureHands"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityGoblins",
+        "traitsAndSkills/pass",
+        "traitsAndSkills/sureHands"
       ],
       "stats": {
         "ma": "7",
@@ -2512,9 +2512,9 @@
     "underworldGutterRunner": {
       "cost": 85000,
       "name": "Gutter Runner",
-      "specialRules": [
-        "specialRules/animosityGoblins",
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityGoblins",
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "9",
@@ -2529,9 +2529,9 @@
     "underworldSkavenBlitzer": {
       "cost": 90000,
       "name": "Skaven Blitzer",
-      "specialRules": [
-        "specialRules/animosityGoblins",
-        "specialRules/block"
+      "traitsAndSkills": [
+        "traitsAndSkills/animosityGoblins",
+        "traitsAndSkills/block"
       ],
       "stats": {
         "ma": "7",
@@ -2546,14 +2546,14 @@
     "underworldTroll": {
       "cost": 115000,
       "name": "Underworld Troll",
-      "specialRules": [
-        "specialRules/alwaysHungry",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/projectileVomit",
-        "specialRules/reallyStupid",
-        "specialRules/regeneration",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/alwaysHungry",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/projectileVomit",
+        "traitsAndSkills/reallyStupid",
+        "traitsAndSkills/regeneration",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "4",
@@ -2568,12 +2568,12 @@
     "underworldMutantRatOgre": {
       "cost": 150000,
       "name": "Mutant Rat Ogre",
-      "specialRules": [
-        "specialRules/animalSavagery",
-        "specialRules/frenzy",
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/prehensileTail"
+      "traitsAndSkills": [
+        "traitsAndSkills/animalSavagery",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/prehensileTail"
       ],
       "stats": {
         "ma": "6",
@@ -2588,7 +2588,7 @@
     "vampireThrall": {
       "cost": 40000,
       "name": "Thrall",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "6",
         "st": "3",
@@ -2602,11 +2602,11 @@
     "vampireThrower": {
       "cost": 110000,
       "name": "Vampire Thrower",
-      "specialRules": [
-        "specialRules/bloodLustTwoPlus",
-        "specialRules/hypnoticGaze",
-        "specialRules/pass",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/bloodLustTwoPlus",
+        "traitsAndSkills/hypnoticGaze",
+        "traitsAndSkills/pass",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "6",
@@ -2621,11 +2621,11 @@
     "vampireBlitzer": {
       "cost": 110000,
       "name": "Vampire Blitzer",
-      "specialRules": [
-        "specialRules/bloodLustThreePlus",
-        "specialRules/hypnoticGaze",
-        "specialRules/juggernaut",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/bloodLustThreePlus",
+        "traitsAndSkills/hypnoticGaze",
+        "traitsAndSkills/juggernaut",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "6",
@@ -2640,10 +2640,10 @@
     "vampireRunner": {
       "cost": 100000,
       "name": "Vampire Runner",
-      "specialRules": [
-        "specialRules/bloodLustTwoPlus",
-        "specialRules/hypnoticGaze",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/bloodLustTwoPlus",
+        "traitsAndSkills/hypnoticGaze",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "8",
@@ -2658,12 +2658,12 @@
     "vampireVargheist": {
       "cost": 150000,
       "name": "Vargheist",
-      "specialRules": [
-        "specialRules/bloodLustThreePlus",
-        "specialRules/claws",
-        "specialRules/frenzy",
-        "specialRules/lonerFourPlus",
-        "specialRules/regeneration"
+      "traitsAndSkills": [
+        "traitsAndSkills/bloodLustThreePlus",
+        "traitsAndSkills/claws",
+        "traitsAndSkills/frenzy",
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/regeneration"
       ],
       "stats": {
         "ma": "5",
@@ -2678,7 +2678,7 @@
     "woodElfLineman": {
       "cost": 70000,
       "name": "Lineman",
-      "specialRules": [],
+      "traitsAndSkills": [],
       "stats": {
         "ma": "7",
         "st": "3",
@@ -2692,8 +2692,8 @@
     "woodElfThrower": {
       "cost": 95000,
       "name": "Thrower",
-      "specialRules": [
-        "specialRules/pass"
+      "traitsAndSkills": [
+        "traitsAndSkills/pass"
       ],
       "stats": {
         "ma": "7",
@@ -2708,9 +2708,9 @@
     "woodElfCatcher": {
       "cost": 90000,
       "name": "Catcher",
-      "specialRules": [
-        "specialRules/catch",
-        "specialRules/dodge"
+      "traitsAndSkills": [
+        "traitsAndSkills/catch",
+        "traitsAndSkills/dodge"
       ],
       "stats": {
         "ma": "8",
@@ -2725,10 +2725,10 @@
     "woodElfWardancer": {
       "cost": 125000,
       "name": "Wardancer",
-      "specialRules": [
-        "specialRules/block",
-        "specialRules/dodge",
-        "specialRules/leap"
+      "traitsAndSkills": [
+        "traitsAndSkills/block",
+        "traitsAndSkills/dodge",
+        "traitsAndSkills/leap"
       ],
       "stats": {
         "ma": "8",
@@ -2743,14 +2743,14 @@
     "woodElfLorenForestTreeman": {
       "cost": 120000,
       "name": "Loren Forest Treeman",
-      "specialRules": [
-        "specialRules/lonerFourPlus",
-        "specialRules/mightyBlowPlusOne",
-        "specialRules/standFirm",
-        "specialRules/strongArm",
-        "specialRules/takeRoot",
-        "specialRules/thickSkull",
-        "specialRules/throwTeammate"
+      "traitsAndSkills": [
+        "traitsAndSkills/lonerFourPlus",
+        "traitsAndSkills/mightyBlowPlusOne",
+        "traitsAndSkills/standFirm",
+        "traitsAndSkills/strongArm",
+        "traitsAndSkills/takeRoot",
+        "traitsAndSkills/thickSkull",
+        "traitsAndSkills/throwTeammate"
       ],
       "stats": {
         "ma": "2",

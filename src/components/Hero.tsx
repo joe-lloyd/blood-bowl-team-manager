@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-const StyledH1 = styled.h1`
+const StyledH1 = styled.h1<{ $angle: number }>`
   display: inline-block;
   font-size: 3.5rem;
   font-weight: 700;
@@ -11,7 +11,7 @@ const StyledH1 = styled.h1`
   font-style: italic;
   position: relative;
   top: 96%; // magic number 👎
-  transform: ${(props) => `rotate(${props.angle}deg)`};
+  transform: ${(props) => `rotate(${props.$angle}deg)`};
   transform-origin: bottom left;
 `;
 
@@ -33,8 +33,8 @@ const HeroContainer = styled.div`
   }
 `;
 
-const Hero = ({ text }) => {
-  const [angle, setAngle] = useState(-5); // Default angle
+const Hero: React.FC<{ text: string }> = ({ text }) => {
+  const [angle, setAngle] = useState(-5);
 
   useEffect(() => {
     const calculateAngle = () => {
@@ -62,7 +62,7 @@ const Hero = ({ text }) => {
 
   return (
     <HeroContainer>
-      <StyledH1 angle={angle}>{text.toUpperCase()}</StyledH1>
+      <StyledH1 $angle={angle}>{text.toUpperCase()}</StyledH1>
       <svg
         viewBox="0 0 300 150"
         xmlns="http://www.w3.org/2000/svg"

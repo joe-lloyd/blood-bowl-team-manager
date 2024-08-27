@@ -3,12 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useUser } from '@/contexts/UserContext';
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-`;
+import ContentContainer from '@/components/ContentContainer';
 
 const Grid = styled.div`
   display: grid;
@@ -16,7 +11,7 @@ const Grid = styled.div`
   grid-gap: 20px;
 `;
 
-const Card = styled.div`
+const Card = styled.div<{ disabled?: boolean }>`
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -73,23 +68,26 @@ const CardTitle = styled.h3`
   color: #eaaa02;
 `;
 
-const HomeContent = ({ userContent }) => {
+// @TODO: Replace the `unknown` type with the correct type
+const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
   const user = useUser();
 
-  const handleDisabledClick = (e) => {
-    e.preventDefault();
+  const handleDisabledClick = (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => {
+    event.preventDefault();
   };
 
   return (
-    <Container>
+    <ContentContainer>
       <Grid>
         <Link href="/teams">
           <Card>
             <Image
               src="/teams.webp"
-              layout="fill"
-              objectFit="cover"
               alt="Teams"
+              style={{ objectFit: 'cover' }}
+              fill
             />
             <Overlay>
               <CardTitle>See Teams</CardTitle>
@@ -101,8 +99,8 @@ const HomeContent = ({ userContent }) => {
           <Card>
             <Image
               src="/create-team.webp"
-              layout="fill"
-              objectFit="cover"
+              style={{ objectFit: 'cover' }}
+              fill
               alt="Create Team"
             />
             <Overlay>
@@ -119,8 +117,8 @@ const HomeContent = ({ userContent }) => {
               <Card disabled>
                 <Image
                   src="/coming-soon.webp"
-                  layout="fill"
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
+                  fill
                   alt="Coming Soon"
                 />
                 <Overlay>
@@ -133,8 +131,8 @@ const HomeContent = ({ userContent }) => {
               <Card disabled>
                 <Image
                   src="/coming-soon.webp"
-                  layout="fill"
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
+                  fill
                   alt="Coming Soon"
                 />
                 <Overlay>
@@ -160,8 +158,8 @@ const HomeContent = ({ userContent }) => {
             <Card disabled>
               <Image
                 src="/coming-soon.webp"
-                layout="fill"
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
+                fill
                 alt="Coming Soon"
               />
               <Overlay>
@@ -176,8 +174,8 @@ const HomeContent = ({ userContent }) => {
             <Card disabled>
               <Image
                 src="/coming-soon.webp"
-                layout="fill"
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
+                fill
                 alt="Coming Soon"
               />
               <Overlay>
@@ -187,7 +185,7 @@ const HomeContent = ({ userContent }) => {
           </Link>
         )}
       </Grid>
-    </Container>
+    </ContentContainer>
   );
 };
 

@@ -1,0 +1,64 @@
+{
+  "teamSpecialRules": {
+    "badlandsBrawl": {
+      "name": "Badlands Brawl",
+      "description": "Teams with this special rule benefit from being part of the Badlands Brawl league, where bashing and brute strength are the order of the day."
+    },
+    "briberyAndCorruption": {
+      "name": "Bribery and Corruption",
+      "description": "Teams with this special rule are notorious for underhanded tactics and dirty play, often bribing referees or using illegal plays."
+    },
+    "elvenKingdomsLeague": {
+      "name": "Elven Kingdoms League",
+      "description": "Teams with this special rule are members of the Elven Kingdoms League, where agility and finesse are highly valued."
+    },
+    "favouredOf": {
+      "name": "Favoured of...",
+      "description": "Teams with this special rule receive the favor of a specific Chaos God, gaining unique blessings and abilities depending on the god they follow."
+    },
+    "favouredOfKhorne": {
+      "name": "Favoured of Khorne",
+      "description": "Teams with this special rule are blessed by Khorne, the Blood God, which often manifests as a bloodthirsty and aggressive playstyle."
+    },
+    "favouredOfNurgle": {
+      "name": "Favoured of Nurgle",
+      "description": "Teams with this special rule are blessed by Nurgle, the Plague God, and often exhibit resilience and an ability to spread disease on the pitch."
+    },
+    "favouredOfChaosUndivided": {
+      "name": "Favoured of Chaos Undivided",
+      "description": "Teams with this special rule are aligned with Chaos Undivided, receiving general blessings that enhance their overall performance."
+    },
+    "halflingThimbleCup": {
+      "name": "Halfling Thimble Cup",
+      "description": "Teams with this special rule are part of the Halfling Thimble Cup, a league that celebrates the small but tenacious Halfling teams."
+    },
+    "lustrianSuperleague": {
+      "name": "Lustrian Superleague",
+      "description": "Teams with this special rule are members of the Lustrian Superleague, a competition dominated by the resilient Lizardmen and their allies."
+    },
+    "lowCostLineman": {
+      "name": "Low Cost Lineman",
+      "description": "Teams with this special rule can hire linemen at a reduced cost, making it easier to fill out their roster."
+    },
+    "mastersOfUndeath": {
+      "name": "Masters of Undeath",
+      "description": "Teams with this special rule have mastered the dark arts of necromancy, allowing them to raise the dead and add them to their team during a match."
+    },
+    "oldWorldClassic": {
+      "name": "Old World Classic",
+      "description": "Teams with this special rule are part of the Old World Classic league, which includes some of the oldest and most respected teams in the history of Blood Bowl."
+    },
+    "sylvanianSpotlight": {
+      "name": "Sylvanian Spotlight",
+      "description": "Teams with this special rule are part of the Sylvanian Spotlight league, often featuring undead and other nightmarish creatures."
+    },
+    "underworldChallenge": {
+      "name": "Underworld Challenge",
+      "description": "Teams with this special rule are part of the Underworld Challenge, a league where cunning and trickery are essential for survival."
+    },
+    "worldsEdgeSuperleague": {
+      "name": "World's Edge Superleague",
+      "description": "Teams with this special rule are part of the World's Edge Superleague, a competition known for its brutal and unrelenting playstyle."
+    }
+  }
+}

@@ -17,9 +17,9 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/badlandsBrawl",
-        "specialRules/briberyAndCorruption"
+      "teamSpecialRules": [
+        "teamSpecialRules/badlandsBrawl",
+        "teamSpecialRules/briberyAndCorruption"
       ],
       "tier": 2,
       "apothecary": true
@@ -45,8 +45,8 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/lustrianSuperleague"
+      "teamSpecialRules": [
+        "teamSpecialRules/lustrianSuperleague"
       ],
       "tier": 1,
       "apothecary": true
@@ -76,8 +76,8 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/favourOf"
+      "teamSpecialRules": [
+        "teamSpecialRules/favouredOf"
       ],
       "tier": 1,
       "apothecary": true
@@ -103,10 +103,10 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/badlandsBrawl",
-        "specialRules/favourOf",
-        "specialRules/worldsEdgeSuperleague"
+      "teamSpecialRules": [
+        "teamSpecialRules/badlandsBrawl",
+        "teamSpecialRules/favouredOf",
+        "teamSpecialRules/worldsEdgeSuperleague"
       ],
       "tier": 1,
       "apothecary": true
@@ -156,8 +156,8 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/favourOf"
+      "teamSpecialRules": [
+        "teamSpecialRules/favouredOf"
       ],
       "tier": 1,
       "apothecary": true
@@ -187,8 +187,8 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/elvenKingdomsLeague"
+      "teamSpecialRules": [
+        "teamSpecialRules/elvenKingdomsLeague"
       ],
       "tier": 1,
       "apothecary": true
@@ -218,9 +218,9 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/oldWorldClassic",
-        "specialRules/worldsEdgeSuperleague"
+      "teamSpecialRules": [
+        "teamSpecialRules/oldWorldClassic",
+        "teamSpecialRules/worldsEdgeSuperleague"
       ],
       "tier": 1,
       "apothecary": true
@@ -246,8 +246,8 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/elvenKingdomsLeague"
+      "teamSpecialRules": [
+        "teamSpecialRules/elvenKingdomsLeague"
       ],
       "tier": 1,
       "apothecary": true
@@ -277,8 +277,8 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/halflingThimbleCup"
+      "teamSpecialRules": [
+        "teamSpecialRules/halflingThimbleCup"
       ],
       "tier": 2,
       "apothecary": true
@@ -320,10 +320,10 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/badlandsBrawl",
-        "specialRules/briberyAndCorruption",
-        "specialRules/underworldChallenge"
+      "teamSpecialRules": [
+        "teamSpecialRules/badlandsBrawl",
+        "teamSpecialRules/briberyAndCorruption",
+        "teamSpecialRules/underworldChallenge"
       ],
       "tier": 2,
       "apothecary": true
@@ -349,8 +349,8 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/elvenKingdomsLeague"
+      "teamSpecialRules": [
+        "teamSpecialRules/elvenKingdomsLeague"
       ],
       "tier": 1,
       "apothecary": true
@@ -376,9 +376,9 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/halflingThimbleCup",
-        "specialRules/oldWorldClassic"
+      "teamSpecialRules": [
+        "teamSpecialRules/halflingThimbleCup",
+        "teamSpecialRules/oldWorldClassic"
       ],
       "tier": 3,
       "apothecary": true
@@ -412,8 +412,8 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/oldWorldClassic"
+      "teamSpecialRules": [
+        "teamSpecialRules/oldWorldClassic"
       ],
       "tier": 1,
       "apothecary": true
@@ -443,8 +443,8 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/oldWorldClassic"
+      "teamSpecialRules": [
+        "teamSpecialRules/oldWorldClassic"
       ],
       "tier": 2,
       "apothecary": true
@@ -470,8 +470,8 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/sylvanianSpotlight"
+      "teamSpecialRules": [
+        "teamSpecialRules/sylvanianSpotlight"
       ],
       "tier": 2,
       "apothecary": false
@@ -497,8 +497,8 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/favouredOfKhorne"
+      "teamSpecialRules": [
+        "teamSpecialRules/favouredOfKhorne"
       ],
       "tier": 2,
       "apothecary": true
@@ -524,8 +524,8 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/lustrianSuperleague"
+      "teamSpecialRules": [
+        "teamSpecialRules/lustrianSuperleague"
       ],
       "tier": 2,
       "apothecary": true
@@ -555,9 +555,9 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/mastersOfUndeath",
-        "specialRules/sylvanianSpotlight"
+      "teamSpecialRules": [
+        "teamSpecialRules/mastersOfUndeath",
+        "teamSpecialRules/sylvanianSpotlight"
       ],
       "tier": 2,
       "apothecary": false
@@ -591,10 +591,10 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/favouredOfKhorne",
-        "specialRules/favouredOfChaosUndivided",
-        "specialRules/oldWorldClassic"
+      "teamSpecialRules": [
+        "teamSpecialRules/favouredOfKhorne",
+        "teamSpecialRules/favouredOfChaosUndivided",
+        "teamSpecialRules/oldWorldClassic"
       ],
       "tier": 1,
       "apothecary": true
@@ -620,8 +620,8 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/favouredOfNurgle"
+      "teamSpecialRules": [
+        "teamSpecialRules/favouredOfNurgle"
       ],
       "tier": 2,
       "apothecary": false
@@ -643,10 +643,10 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/badlandsBrawl",
-        "specialRules/lowCostLineman",
-        "specialRules/oldWorldClassic"
+      "teamSpecialRules": [
+        "teamSpecialRules/badlandsBrawl",
+        "teamSpecialRules/lowCostLineman",
+        "teamSpecialRules/oldWorldClassic"
       ],
       "tier": 3,
       "apothecary": true
@@ -700,8 +700,8 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/oldWorldClassic"
+      "teamSpecialRules": [
+        "teamSpecialRules/oldWorldClassic"
       ],
       "tier": 2,
       "apothecary": true
@@ -735,8 +735,8 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/badlandsBrawl"
+      "teamSpecialRules": [
+        "teamSpecialRules/badlandsBrawl"
       ],
       "tier": 2,
       "apothecary": true
@@ -766,9 +766,9 @@
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/mastersOfUndeath",
-        "specialRules/sylvanianSpotlight"
+      "teamSpecialRules": [
+        "teamSpecialRules/mastersOfUndeath",
+        "teamSpecialRules/sylvanianSpotlight"
       ],
       "tier": 2,
       "apothecary": false
@@ -798,8 +798,8 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/underworldChallenge"
+      "teamSpecialRules": [
+        "teamSpecialRules/underworldChallenge"
       ],
       "tier": 2,
       "apothecary": true
@@ -825,8 +825,8 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/lustriaSuperleague"
+      "teamSpecialRules": [
+        "teamSpecialRules/lustrianSuperleague"
       ],
       "tier": 2,
       "apothecary": true
@@ -860,10 +860,10 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/briberyAndCorruption",
-        "specialRules/lowCostLineman",
-        "specialRules/underworldChallenge"
+      "teamSpecialRules": [
+        "teamSpecialRules/briberyAndCorruption",
+        "teamSpecialRules/lowCostLineman",
+        "teamSpecialRules/underworldChallenge"
       ],
       "tier": 3,
       "apothecary": true
@@ -897,14 +897,17 @@
         },
         {
           "quantity": "1 of 2",
-          "position": "playerBlueprints/underworldTroll",
-          "altPosition": "playerBlueprints/underworldMutantRatOgre"
+          "position": "playerBlueprints/underworldTroll"
+        },
+        {
+          "quantity": "1 of 2",
+          "position": "playerBlueprints/underworldMutantRatOgre"
         }
       ],
       "rerollCost": 70000,
-      "specialRules": [
-        "specialRules/briberyAndCorruption",
-        "specialRules/underworldChallenge"
+      "teamSpecialRules": [
+        "teamSpecialRules/briberyAndCorruption",
+        "teamSpecialRules/underworldChallenge"
       ],
       "tier": 2,
       "apothecary": true
@@ -934,8 +937,8 @@
         }
       ],
       "rerollCost": 60000,
-      "specialRules": [
-        "specialRules/sylvanianSpotlight"
+      "teamSpecialRules": [
+        "teamSpecialRules/sylvanianSpotlight"
       ],
       "tier": 2,
       "apothecary": true
@@ -965,8 +968,8 @@
         }
       ],
       "rerollCost": 50000,
-      "specialRules": [
-        "specialRules/elvenKingdomsLeague"
+      "teamSpecialRules": [
+        "teamSpecialRules/elvenKingdomsLeague"
       ],
       "tier": 1,
       "apothecary": true

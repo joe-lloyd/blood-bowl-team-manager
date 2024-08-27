@@ -8,12 +8,12 @@ import { useUser } from '@/contexts/UserContext';
 
 const AppBar = styled.div`
   width: 100%;
-  background-color: #1d3860; /* Blue background color */
+  background-color: #1d3860;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #eaaa02; /* Yellow text color */
+  color: #eaaa02;
 `;
 
 const Logo = styled.div`
