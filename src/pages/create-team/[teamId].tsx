@@ -7,6 +7,7 @@ import TeamDetails from '@/components/TeamDetails';
 import AppBar from '@/components/AppBar';
 import ContentContainer from '@/components/ContentContainer';
 import { Team } from '@/types/teams';
+import TeamBuilder from '@/components/TeamBuilder/TeamBuilder';
 
 const TeamPage: React.FC<{ teamData: Team }> = ({ teamData }) => {
   return (
@@ -15,6 +16,7 @@ const TeamPage: React.FC<{ teamData: Team }> = ({ teamData }) => {
       <AppBar />
       <Hero text={teamData.name} />
       <ContentContainer>
+        <TeamBuilder />
         <TeamDetails teamData={teamData} />
       </ContentContainer>
     </>
