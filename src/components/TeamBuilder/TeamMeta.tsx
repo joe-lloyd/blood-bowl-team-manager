@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Team } from '@/types/teams';
 
 const BottomTableContainer = styled.div`
   display: grid;
@@ -25,7 +26,10 @@ const Value = styled.span`
   color: #1d3860;
 `;
 
-const TeamMeta: React.FC = () => {
+const TeamMeta: React.FC<{ teamData: Team }> = ({ teamData }) => {
+  const { rerollCost, apothecary } = teamData;
+  const reRollCostMidSeason = rerollCost * 2;
+
   return (
     <BottomTableContainer>
       <BottomRow>
@@ -64,10 +68,12 @@ const TeamMeta: React.FC = () => {
         <Label>Cheerleaders:</Label>
         <Value>0</Value>
       </BottomRow>
-      <BottomRow>
-        <Label>Apothecary:</Label>
-        <Value>Yes</Value>
-      </BottomRow>
+      {apothecary && (
+        <BottomRow>
+          <Label>Apothecary:</Label>
+          <Value>Yes</Value>
+        </BottomRow>
+      )}
       <BottomRow>
         <Label>Team Value:</Label>
         <Value>1,000,000 GP</Value>

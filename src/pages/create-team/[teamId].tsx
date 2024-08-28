@@ -16,8 +16,8 @@ const TeamPage: React.FC<{ teamData: Team }> = ({ teamData }) => {
       <AppBar />
       <Hero text={teamData.name} />
       <ContentContainer>
-        <TeamBuilder />
         <TeamDetails teamData={teamData} />
+        <TeamBuilder teamData={teamData} />
       </ContentContainer>
     </>
   );

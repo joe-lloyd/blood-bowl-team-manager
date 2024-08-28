@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Team, PlayerPosition } from '@/types/teams';
 
 const MainTable = styled.table`
   width: 100%;
@@ -25,11 +26,31 @@ const TableRow = styled.tr`
 
 const TableCell = styled.td`
   border: 1px solid #1d3860;
-  padding: 10px;
   text-align: center;
 `;
 
-const PlayerList: React.FC = () => {
+const PositionDropdown = styled.select`
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e0f0ff;
+`;
+
+const PlayerList: React.FC<{ teamData: Team }> = ({ teamData }) => {
+  const [selectedPositions, setSelectedPositions] = useState<
+    (PlayerPosition | null)[]
+  >(Array(16).fill(null));
+
+  const handlePositionChange = (index: number, positionName: string) => {
+    const selectedPosition = teamData.players.find(
+      (player) => player.position.name === positionName
+    )?.position;
+
+    const updatedPositions = [...selectedPositions];
+    updatedPositions[index] = selectedPosition || null;
+    setSelectedPositions(updatedPositions);
+  };
+
   return (
     <MainTable>
       <thead>
@@ -52,25 +73,48 @@ const PlayerList: React.FC = () => {
         </tr>
       </thead>
       <tbody>
-        {Array.from({ length: 16 }, (_, index) => (
-          <TableRow key={index}>
-            <TableCell>{index + 1}</TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-            <TableCell></TableCell>
-          </TableRow>
-        ))}
+        {Array.from({ length: 16 }, (_, index) => {
+          const position = selectedPositions[index];
+          return (
+            <TableRow key={index}>
+              <TableCell>{index + 1}</TableCell>
+              <TableCell></TableCell>
+              <TableCell>
+                <PositionDropdown
+                  onChange={(e) => handlePositionChange(index, e.target.value)}
+                >
+                  <option value="">Select Position</option>
+                  {teamData.players.map((player) => (
+                    <option
+                      key={player.position.name}
+                      value={player.position.name}
+                    >
+                      {player.position.name}
+                    </option>
+                  ))}
+                </PositionDropdown>
+              </TableCell>
+              <TableCell>{position?.stats.ma || ''}</TableCell>
+              <TableCell>{position?.stats.st || ''}</TableCell>
+              <TableCell>{position?.stats.ag || ''}</TableCell>
+              <TableCell>{position?.stats.pa || ''}</TableCell>
+              <TableCell>{position?.stats.av || ''}</TableCell>
+              <TableCell>
+                {position
+                  ? position.traitsAndSkills
+                      .map((skill) => skill.name)
+                      .join(', ')
+                  : ''}
+              </TableCell>
+              <TableCell>{position?.cost || ''}</TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+            </TableRow>
+          );
+        })}
       </tbody>
     </MainTable>
   );
