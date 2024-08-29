@@ -8,18 +8,19 @@ import AppBar from '@/components/AppBar';
 import ContentContainer from '@/components/ContentContainer';
 import { Team } from '@/types/teams';
 import TeamBuilder from '@/components/TeamBuilder/TeamBuilder';
+import { TeamBuilderProvider } from '@/contexts/teamBuilder';
 
 const TeamPage: React.FC<{ teamData: Team }> = ({ teamData }) => {
   return (
-    <>
+    <TeamBuilderProvider>
       <Parchment />
       <AppBar />
       <Hero text={teamData.name} />
       <ContentContainer>
         <TeamDetails teamData={teamData} />
-        <TeamBuilder teamData={teamData} />
       </ContentContainer>
-    </>
+      <TeamBuilder teamData={teamData} />
+    </TeamBuilderProvider>
   );
 };
 

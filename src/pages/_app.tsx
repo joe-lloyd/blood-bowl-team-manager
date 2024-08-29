@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import '@/styles/globals.css';
-import { UserProvider } from '@/contexts/UserContext';
+import { UserProvider } from '@/contexts/userContext';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

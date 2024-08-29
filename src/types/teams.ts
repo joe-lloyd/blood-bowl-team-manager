@@ -1,4 +1,5 @@
 export interface TraitsAndSkills {
+  id: string;
   name: string;
   description: string;
 }
@@ -19,6 +20,7 @@ export interface PlayerPosition {
 }
 
 export interface Player {
+  id: string;
   quantity: number;
   position: PlayerPosition;
 }

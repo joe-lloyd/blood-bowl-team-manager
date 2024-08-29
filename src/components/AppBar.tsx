@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { auth, logout } from '@/services/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import { useUser } from '@/contexts/UserContext';
+import { useUser } from '@/contexts/userContext';
 
 const AppBar = styled.div`
   width: 100%;

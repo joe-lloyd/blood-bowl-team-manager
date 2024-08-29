@@ -1,13 +1,42 @@
-import React, { useState } from 'react';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
-import { Team, PlayerPosition } from '@/types/teams';
+import { Team } from '@/types/teams';
+import Select from '@/components/TeamBuilder/Select';
+import { useTeamBuilder } from '@/contexts/teamBuilder';
+import { customPlayer } from '@/utils/playerUtils';
+import { PlayerDataToSave } from '@/types/userData';
+
+const initialPlayerDataToSave: PlayerDataToSave = {
+  positionId: '',
+  spp: 0,
+  playerName: '',
+  number: 0,
+  missNextGame: false,
+  nigglingInjury: false,
+  tempRetirement: false,
+  statAdjust: {
+    ma: 0,
+    st: 0,
+    ag: 0,
+    pa: 0,
+    av: 0,
+  },
+  skills: [],
+};
+
+const TableWrapper = styled.div`
+  width: 100%;
+  overflow-x: auto;
+  border-left: 3px solid #1d3860;
+  border-right: 3px solid #1d3860;
+`;
 
 const MainTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   background-color: #e0f0ff;
-  border: 3px solid #1d3860;
   margin-bottom: 20px;
+  border: none;
 `;
 
 const TableHeader = styled.th`
@@ -27,96 +56,110 @@ const TableRow = styled.tr`
 const TableCell = styled.td`
   border: 1px solid #1d3860;
   text-align: center;
+  padding: 10px;
 `;
 
-const PositionDropdown = styled.select`
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: #e0f0ff;
+const NameCell = styled(TableCell)`
+  min-width: 200px;
+`;
+
+const PositionCell = styled(TableCell)`
+  min-width: 200px;
+  padding: 0;
+`;
+
+const SkillsCell = styled(TableCell)`
+  min-width: 400px;
 `;
 
 const PlayerList: React.FC<{ teamData: Team }> = ({ teamData }) => {
-  const [selectedPositions, setSelectedPositions] = useState<
-    (PlayerPosition | null)[]
-  >(Array(16).fill(null));
+  const { state, dispatch } = useTeamBuilder();
 
-  const handlePositionChange = (index: number, positionName: string) => {
-    const selectedPosition = teamData.players.find(
-      (player) => player.position.name === positionName
-    )?.position;
+  const handlePositionChange = useCallback(
+    (index: number, positionId: string) => {
+      const selectedPosition = teamData.players.find(
+        (player) => player.id === positionId
+      );
 
-    const updatedPositions = [...selectedPositions];
-    updatedPositions[index] = selectedPosition || null;
-    setSelectedPositions(updatedPositions);
-  };
+      if (selectedPosition) {
+        const player = customPlayer(teamData, {
+          ...initialPlayerDataToSave,
+          positionId: selectedPosition.id,
+        });
+
+        dispatch({
+          type: 'ADD_PLAYER',
+          payload: { index, player },
+        });
+      }
+    },
+    [dispatch, teamData]
+  );
 
   return (
-    <MainTable>
-      <thead>
-        <tr>
-          <TableHeader>#</TableHeader>
-          <TableHeader>Name</TableHeader>
-          <TableHeader>Position</TableHeader>
-          <TableHeader>MA</TableHeader>
-          <TableHeader>ST</TableHeader>
-          <TableHeader>AG</TableHeader>
-          <TableHeader>PA</TableHeader>
-          <TableHeader>AV</TableHeader>
-          <TableHeader>Skills</TableHeader>
-          <TableHeader>Hiring Fee</TableHeader>
-          <TableHeader>Unspent SPP</TableHeader>
-          <TableHeader>MNG</TableHeader>
-          <TableHeader>NI</TableHeader>
-          <TableHeader>TR</TableHeader>
-          <TableHeader>Current Value</TableHeader>
-        </tr>
-      </thead>
-      <tbody>
-        {Array.from({ length: 16 }, (_, index) => {
-          const position = selectedPositions[index];
-          return (
-            <TableRow key={index}>
-              <TableCell>{index + 1}</TableCell>
-              <TableCell></TableCell>
-              <TableCell>
-                <PositionDropdown
-                  onChange={(e) => handlePositionChange(index, e.target.value)}
-                >
-                  <option value="">Select Position</option>
-                  {teamData.players.map((player) => (
-                    <option
-                      key={player.position.name}
-                      value={player.position.name}
-                    >
-                      {player.position.name}
-                    </option>
-                  ))}
-                </PositionDropdown>
-              </TableCell>
-              <TableCell>{position?.stats.ma || ''}</TableCell>
-              <TableCell>{position?.stats.st || ''}</TableCell>
-              <TableCell>{position?.stats.ag || ''}</TableCell>
-              <TableCell>{position?.stats.pa || ''}</TableCell>
-              <TableCell>{position?.stats.av || ''}</TableCell>
-              <TableCell>
-                {position
-                  ? position.traitsAndSkills
-                      .map((skill) => skill.name)
-                      .join(', ')
-                  : ''}
-              </TableCell>
-              <TableCell>{position?.cost || ''}</TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-            </TableRow>
-          );
-        })}
-      </tbody>
-    </MainTable>
+    <TableWrapper>
+      <MainTable>
+        <thead>
+          <tr>
+            <TableHeader>#</TableHeader>
+            <TableHeader>Name</TableHeader>
+            <TableHeader>Position</TableHeader>
+            <TableHeader>MA</TableHeader>
+            <TableHeader>ST</TableHeader>
+            <TableHeader>AG</TableHeader>
+            <TableHeader>PA</TableHeader>
+            <TableHeader>AV</TableHeader>
+            <TableHeader>Skills</TableHeader>
+            <TableHeader>Hiring Fee</TableHeader>
+            <TableHeader>Unspent SPP</TableHeader>
+            <TableHeader>Miss Next Game</TableHeader>
+            <TableHeader>Niggling Injury</TableHeader>
+            <TableHeader>Temp Retirement</TableHeader>
+            <TableHeader>Current Value</TableHeader>
+          </tr>
+        </thead>
+        <tbody>
+          {Array.from({ length: 16 }, (_, index) => {
+            const player = state.players[index];
+            return (
+              <TableRow key={index}>
+                <TableCell>{index + 1}</TableCell>
+                <NameCell>{player?.playerName || ''}</NameCell>
+                <PositionCell>
+                  <Select
+                    onChange={(e) =>
+                      handlePositionChange(index, e.target.value)
+                    }
+                    options={[
+                      { value: '', label: 'Select a player' },
+                      ...teamData.players.map((playerBlueprint) => ({
+                        value: playerBlueprint.id,
+                        label: playerBlueprint.position.name,
+                      })),
+                    ]}
+                    value={player?.positionId || ''}
+                  />
+                </PositionCell>
+                <TableCell>{player?.stats.ma || ''}</TableCell>
+                <TableCell>{player?.stats.st || ''}</TableCell>
+                <TableCell>{player?.stats.ag || ''}</TableCell>
+                <TableCell>{player?.stats.pa || ''}</TableCell>
+                <TableCell>{player?.stats.av || ''}</TableCell>
+                <SkillsCell>
+                  {player ? player.traitsAndSkills.join(', ') : ''}
+                </SkillsCell>
+                <TableCell>{player?.cost || ''}</TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+              </TableRow>
+            );
+          })}
+        </tbody>
+      </MainTable>
+    </TableWrapper>
   );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useUser } from '@/contexts/UserContext';
+import { useUser } from '@/contexts/userContext';
 import ContentContainer from '@/components/ContentContainer';
 
 const Grid = styled.div`

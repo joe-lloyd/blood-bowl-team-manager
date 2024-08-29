@@ -12,6 +12,10 @@ const TopTableContainer = styled.div`
   border: 3px solid #1d3860;
 `;
 
+const TeamBuilderContainer = styled.div`
+  padding: 40px;
+`;
+
 const StyledHeading = styled.h1`
   display: inline-block;
   font-size: 3.5rem;
@@ -27,14 +31,14 @@ const StyledHeading = styled.h1`
 
 const TeamBuilder: React.FC<{ teamData: Team }> = ({ teamData }) => {
   return (
-    <div>
+    <TeamBuilderContainer>
       <TopTableContainer>
         <StyledHeading>Team Draft List</StyledHeading>
         <BaseInfo teamData={teamData} />
       </TopTableContainer>
       <PlayerList teamData={teamData} />
       <TeamMeta teamData={teamData} />
-    </div>
+    </TeamBuilderContainer>
   );
 };
 

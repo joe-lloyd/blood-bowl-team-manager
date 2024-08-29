@@ -39,12 +39,15 @@ const getTeamData = async (teamId: string): Promise<Team> => {
           positionData.traitsAndSkills.map(
             async (ruleRef: DocumentReference) => {
               const ruleDoc = await getDoc(ruleRef);
-              return ruleDoc.exists() ? ruleDoc.data() : null;
+              return ruleDoc.exists()
+                ? { id: ruleDoc.id, ...ruleDoc.data() }
+                : null;
             }
           )
         );
 
         return {
+          id: playerDoc.id,
           ...player,
           position: {
             ...positionData,
