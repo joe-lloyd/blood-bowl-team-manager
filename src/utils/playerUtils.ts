@@ -27,11 +27,11 @@ const customPlayer = (
     positionName: playerBlueprint.name,
     cost: playerBlueprint.cost,
     stats: {
-      ma: playerBlueprint.stats.ma + userCustomPlayerData.statAdjust.ma,
-      st: playerBlueprint.stats.st + userCustomPlayerData.statAdjust.st,
-      ag: playerBlueprint.stats.ag + userCustomPlayerData.statAdjust.ag,
-      pa: playerBlueprint.stats.pa + userCustomPlayerData.statAdjust.pa,
-      av: playerBlueprint.stats.av + userCustomPlayerData.statAdjust.av,
+      ma: `${parseInt(playerBlueprint.stats.ma) + userCustomPlayerData.statAdjust.ma}`,
+      st: `${parseInt(playerBlueprint.stats.st) + userCustomPlayerData.statAdjust.st}`,
+      ag: `${parseInt(playerBlueprint.stats.ag) + userCustomPlayerData.statAdjust.ag}+`,
+      pa: `${parseInt(playerBlueprint.stats.pa) + userCustomPlayerData.statAdjust.pa}+`,
+      av: `${parseInt(playerBlueprint.stats.av) + userCustomPlayerData.statAdjust.av}+`,
     },
     traitsAndSkills: [
       ...playerBlueprint.traitsAndSkills.map(({ name }) => name),

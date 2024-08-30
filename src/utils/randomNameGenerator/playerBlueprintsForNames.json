@@ -1,0 +1,2173 @@
+{
+  "goblinBruiser": {
+    "positionName": "Goblin Bruiser",
+    "primary": "A",
+    "firstName": [
+      "Grub",
+      "Snag",
+      "Urk",
+      "Nib",
+      "Glim",
+      "Snik",
+      "Pug",
+      "Skrag",
+      "Zog",
+      "Runt"
+    ],
+    "secondName": [
+      "Toothsmash",
+      "Bonesnappa",
+      "Gutrippa",
+      "Stabbah",
+      "Grubfoot",
+      "Snotlicker",
+      "Wartnose",
+      "Bugbreath"
+    ]
+  },
+  "blackOrc": {
+    "positionName": "Black Orc",
+    "primary": "GS",
+    "firstName": [
+      "Gor",
+      "Thrak",
+      "Urz",
+      "Brak",
+      "Krog",
+      "Mug",
+      "Drok",
+      "Gorg",
+      "Snag",
+      "Ruk"
+    ],
+    "secondName": [
+      "Ironclaw",
+      "Bonecrusher",
+      "Fleshtearer",
+      "Skullsplitter",
+      "Gutcruncher",
+      "Bloodfist",
+      "Darkfang",
+      "Wargrin"
+    ]
+  },
+  "trainedTroll": {
+    "positionName": "Trained Troll",
+    "primary": "S",
+    "firstName": [
+      "Grim",
+      "Bog",
+      "Thug",
+      "Murk",
+      "Grub",
+      "Throk",
+      "Grok",
+      "Zug",
+      "Rog",
+      "Blud"
+    ],
+    "secondName": [
+      "Stonefist",
+      "Ironbelly",
+      "Bonesnapper",
+      "Goremaw",
+      "Rockhide",
+      "Wartusk",
+      "Mudcruncher",
+      "Stoneskin"
+    ]
+  },
+  "eagleWarriorLinewomen": {
+    "positionName": "Eagle Warrior Linewomen",
+    "primary": "G",
+    "firstName": [
+      "Ixchel",
+      "Ahuiliztli",
+      "Yoloxochitl",
+      "Miahuaxihuitl",
+      "Xochitl",
+      "Tepin",
+      "Cuicatl",
+      "Itzel",
+      "Teyacapan",
+      "Citlalli"
+    ],
+    "secondName": [
+      "Feathered Arrow",
+      "Spear of Dawn",
+      "Windrider",
+      "Shieldbearer",
+      "Sun's Grace",
+      "Moonclaw",
+      "Stormbringer",
+      "Skyblade"
+    ]
+  },
+  "pythonWarriorThrowers": {
+    "positionName": "Python Warrior Throwers",
+    "primary": "GP",
+    "firstName": [
+      "Tezca",
+      "Atl",
+      "Cozamalotl",
+      "Izel",
+      "Cipactli",
+      "Ehecatl",
+      "Miquiztli",
+      "Nahuatl",
+      "Quetzal",
+      "Ocelotl"
+    ],
+    "secondName": [
+      "Serpent Fang",
+      "Cunning Strike",
+      "Venomous Throw",
+      "Quickstrike",
+      "Fang of Night",
+      "Scales of Justice",
+      "Venomtongue",
+      "Windwhisper"
+    ]
+  },
+  "piranhaWarriorBlitzers": {
+    "positionName": "Piranha Warrior Blitzers",
+    "primary": "AG",
+    "firstName": [
+      "Itzcoatl",
+      "Tlaloc",
+      "Tezcatlipoca",
+      "Mixcoatl",
+      "Zolin",
+      "Cuauhtemoc",
+      "Huitzilin",
+      "Ohtli",
+      "Tenoch",
+      "Miztli"
+    ],
+    "secondName": [
+      "Bloodfang",
+      "Jagged Spear",
+      "Crimson Tide",
+      "Stormchaser",
+      "Razorfin",
+      "Thundershield",
+      "Fireclaw",
+      "Skullbasher"
+    ]
+  },
+  "jaguarWarriorBlockers": {
+    "positionName": "Jaguar Warrior Blockers",
+    "primary": "GS",
+    "firstName": [
+      "Ahuatzi",
+      "Chimalma",
+      "Tlacotl",
+      "Zyanya",
+      "Tonauac",
+      "Tlanextic",
+      "Cualli",
+      "Tezcatl",
+      "Iccauhtli",
+      "Nopaltzin"
+    ],
+    "secondName": [
+      "Stoneclaw",
+      "Earthshaker",
+      "Mountainheart",
+      "Jaguar's Roar",
+      "Ironpaw",
+      "Thunderstrike",
+      "Shieldbreaker",
+      "Sunwarrior"
+    ]
+  },
+  "beastman": {
+    "positionName": "Beastman",
+    "primary": "GMS",
+    "firstName": [
+      "Gor",
+      "Morg",
+      "Throk",
+      "Bruk",
+      "Harg",
+      "Varg",
+      "Karn",
+      "Uzg",
+      "Raug",
+      "Skarn"
+    ],
+    "secondName": [
+      "Bloodhorn",
+      "Savageclaw",
+      "Gorefang",
+      "Darkhoof",
+      "Ragefist",
+      "Grimhide",
+      "Ironhorn",
+      "Skullcrusher"
+    ]
+  },
+  "chosenBlockers": {
+    "positionName": "Chosen Blockers",
+    "primary": "GMS",
+    "firstName": [
+      "Malek",
+      "Zarath",
+      "Korath",
+      "Vorth",
+      "Xarak",
+      "Yorath",
+      "Dren",
+      "Mordek",
+      "Tharn",
+      "Zarek"
+    ],
+    "secondName": [
+      "Ironfist",
+      "Stoneheart",
+      "Darkblade",
+      "Bloodshield",
+      "Warguard",
+      "Grimhammer",
+      "Deathclaw",
+      "Skullsmasher"
+    ]
+  },
+  "chaosTroll": {
+    "positionName": "Chaos Troll",
+    "primary": "MS",
+    "firstName": [
+      "Grog",
+      "Throk",
+      "Mug",
+      "Zog",
+      "Blarg",
+      "Krog",
+      "Grim",
+      "Bog",
+      "Gor",
+      "Rug"
+    ],
+    "secondName": [
+      "Ironmaw",
+      "Stoneclaw",
+      "Rockcrusher",
+      "Bloodtusk",
+      "Bonegrinder",
+      "Darkhide",
+      "Mudcruncher",
+      "Skullbasher"
+    ]
+  },
+  "chaosOgre": {
+    "positionName": "Chaos Ogre",
+    "primary": "MS",
+    "firstName": [
+      "Gor",
+      "Thog",
+      "Krug",
+      "Zar",
+      "Mog",
+      "Brak",
+      "Hruk",
+      "Tog",
+      "Vor",
+      "Grog"
+    ],
+    "secondName": [
+      "Ironfist",
+      "Bonecrusher",
+      "Bloodmaw",
+      "Darkhide",
+      "Skullbreaker",
+      "Thunderfist",
+      "Grimcrusher",
+      "Warbringer"
+    ]
+  },
+  "minotaur": {
+    "positionName": "Minotaur",
+    "primary": "MS",
+    "firstName": [
+      "Asterion",
+      "Minos",
+      "Bovos",
+      "Taurus",
+      "Arctos",
+      "Brontes",
+      "Lykos",
+      "Gorgos",
+      "Xanthos",
+      "Theron"
+    ],
+    "secondName": [
+      "Skullcrusher",
+      "Hornbreaker",
+      "Ironhoof",
+      "Bloodrage",
+      "Stonehorn",
+      "Stormbringer",
+      "Rageclaw",
+      "Thunderhoof"
+    ]
+  },
+  "hobgoblin": {
+    "positionName": "Hobgoblin",
+    "primary": "G",
+    "firstName": [
+      "Grom",
+      "Snag",
+      "Hruk",
+      "Zog",
+      "Krag",
+      "Mug",
+      "Grim",
+      "Bog",
+      "Ruk",
+      "Throg"
+    ],
+    "secondName": [
+      "Shadowclaw",
+      "Skulker",
+      "Quickblade",
+      "Darkfang",
+      "Bloodsneak",
+      "Ironfang",
+      "Nightshade",
+      "Grimshadow"
+    ]
+  },
+  "chaosDwarf": {
+    "positionName": "Chaos Dwarf",
+    "primary": "GS",
+    "firstName": [
+      "Zarhak",
+      "Durzag",
+      "Grimnir",
+      "Thorek",
+      "Balgrim",
+      "Zurn",
+      "Gharak",
+      "Drak",
+      "Varek",
+      "Krak"
+    ],
+    "secondName": [
+      "Ironhammer",
+      "Stoneheart",
+      "Bloodaxe",
+      "Darkbeard",
+      "Skullbreaker",
+      "Grimhorn",
+      "Warbringer",
+      "Thunderforge"
+    ]
+  },
+  "bullCentaur": {
+    "positionName": "Bull Centaur",
+    "primary": "GS",
+    "firstName": [
+      "Tarkhan",
+      "Drakhan",
+      "Borak",
+      "Hathor",
+      "Zarok",
+      "Korak",
+      "Gorath",
+      "Vakhan",
+      "Tharak",
+      "Xorath"
+    ],
+    "secondName": [
+      "Stormhoof",
+      "Ironclaw",
+      "Bloodrage",
+      "Skullcrusher",
+      "Thunderhorn",
+      "Grimhoof",
+      "Warbringer",
+      "Rageclaw"
+    ]
+  },
+  "enslavedMinotaur": {
+    "positionName": "Enslaved Minotaur",
+    "primary": "S",
+    "firstName": [
+      "Ragnor",
+      "Drakkar",
+      "Thulsa",
+      "Kronos",
+      "Boros",
+      "Tarak",
+      "Varn",
+      "Xerath",
+      "Ghor",
+      "Lykos"
+    ],
+    "secondName": [
+      "Ironbreaker",
+      "Skullhammer",
+      "Bloodrage",
+      "Darkhorn",
+      "Grimclaw",
+      "Warbringer",
+      "Thunderhoof",
+      "Ragefist"
+    ]
+  },
+  "renegadeLineman": {
+    "positionName": "Lineman",
+    "primary": "GM",
+    "firstName": [
+      "Varak",
+      "Drak",
+      "Thorg",
+      "Mug",
+      "Zar",
+      "Grim",
+      "Ruk",
+      "Vor",
+      "Hruk",
+      "Torg"
+    ],
+    "secondName": [
+      "Ironfist",
+      "Bloodclaw",
+      "Darkblade",
+      "Skullcrusher",
+      "Grimshade",
+      "Stormbringer",
+      "Warbringer",
+      "Thunderclaw"
+    ]
+  },
+  "renegadeThrower": {
+    "positionName": "Thrower",
+    "primary": "GMP",
+    "firstName": [
+      "Gorn",
+      "Laz",
+      "Rik",
+      "Zorn",
+      "Brak",
+      "Thul",
+      "Var",
+      "Zog",
+      "Tor",
+      "Krul"
+    ],
+    "secondName": [
+      "Swiftarm",
+      "Shadowthrow",
+      "Ironhand",
+      "Bloodstrike",
+      "Skullthrow",
+      "Grimthrow",
+      "Warthrow",
+      "Thunderarm"
+    ]
+  },
+  "renegadeGoblin": {
+    "positionName": "Goblin",
+    "primary": "AM",
+    "firstName": [
+      "Snik",
+      "Grot",
+      "Mug",
+      "Zig",
+      "Thog",
+      "Krug",
+      "Nug",
+      "Ruk",
+      "Bog",
+      "Snag"
+    ],
+    "secondName": [
+      "Quickfoot",
+      "Sneakshadow",
+      "Bloodfang",
+      "Darkwhisper",
+      "Grimfang",
+      "Nightshade",
+      "Warclaw",
+      "Ironfang"
+    ]
+  },
+  "renegadeOrc": {
+    "positionName": "Orc",
+    "primary": "GM",
+    "firstName": [
+      "Gruk",
+      "Zog",
+      "Mug",
+      "Throg",
+      "Krug",
+      "Hruk",
+      "Bog",
+      "Ruk",
+      "Torg",
+      "Zar"
+    ],
+    "secondName": [
+      "Ironjaw",
+      "Bloodfist",
+      "Skullcrusher",
+      "Darkfist",
+      "Grimcrusher",
+      "Warbringer",
+      "Thunderfist",
+      "Stormclaw"
+    ]
+  },
+  "renegadeSkaven": {
+    "positionName": "Skaven",
+    "primary": "GM",
+    "firstName": [
+      "Skrik",
+      "Vrik",
+      "Trek",
+      "Nrik",
+      "Snik",
+      "Grik",
+      "Drik",
+      "Frak",
+      "Rik",
+      "Zik"
+    ],
+    "secondName": [
+      "Quickclaw",
+      "Shadowfang",
+      "Ironwhisker",
+      "Bloodclaw",
+      "Darkwhisker",
+      "Grimclaw",
+      "Warclaw",
+      "Thunderwhisker"
+    ]
+  },
+  "renegadeDarkElf": {
+    "positionName": "Dark Elf",
+    "primary": "AGM",
+    "firstName": [
+      "Malek",
+      "Drak",
+      "Zarek",
+      "Thar",
+      "Khael",
+      "Vorak",
+      "Laz",
+      "Nar",
+      "Sar",
+      "Zar"
+    ],
+    "secondName": [
+      "Shadowblade",
+      "Darkwhisper",
+      "Ironclaw",
+      "Bloodfang",
+      "Skullshadow",
+      "Grimwhisper",
+      "Warblade",
+      "Thunderfang"
+    ]
+  },
+  "renegadeTroll": {
+    "positionName": "Renegade Troll",
+    "primary": "S",
+    "firstName": [
+      "Groth",
+      "Thog",
+      "Mug",
+      "Krug",
+      "Bog",
+      "Hruk",
+      "Ruk",
+      "Zog",
+      "Torg",
+      "Vor"
+    ],
+    "secondName": [
+      "Ironhide",
+      "Bloodcrusher",
+      "Skullbreaker",
+      "Darkmaw",
+      "Grimcrusher",
+      "Warbringer",
+      "Thunderhide",
+      "Stormcrusher"
+    ]
+  },
+  "renegadeOgre": {
+    "positionName": "Renegade Ogre",
+    "primary": "S",
+    "firstName": [
+      "Thog",
+      "Groth",
+      "Mog",
+      "Zog",
+      "Brak",
+      "Vor",
+      "Ruk",
+      "Thrag",
+      "Krug",
+      "Hruk"
+    ],
+    "secondName": [
+      "Ironfist",
+      "Bloodmaw",
+      "Skullcrusher",
+      "Darkhide",
+      "Grimcrusher",
+      "Warbringer",
+      "Thunderfist",
+      "Stormmaw"
+    ]
+  },
+  "renegadeMinotaur": {
+    "positionName": "Renegade Minotaur",
+    "primary": "S",
+    "firstName": [
+      "Tauron",
+      "Minos",
+      "Gorgos",
+      "Kratos",
+      "Arctos",
+      "Brontes",
+      "Lykos",
+      "Theron",
+      "Xanthos",
+      "Zar"
+    ],
+    "secondName": [
+      "Ironhorn",
+      "Bloodrage",
+      "Skullcrusher",
+      "Darkhorn",
+      "Grimclaw",
+      "Warbringer",
+      "Thunderhoof",
+      "Stormhorn"
+    ]
+  },
+  "renegadeRatOgre": {
+    "positionName": "Renegade Rat Ogre",
+    "primary": "S",
+    "firstName": [
+      "Skrak",
+      "Vrath",
+      "Grak",
+      "Thrak",
+      "Zrik",
+      "Frak",
+      "Nrik",
+      "Drak",
+      "Rik",
+      "Snak"
+    ],
+    "secondName": [
+      "Ironclaw",
+      "Bloodfang",
+      "Skullbreaker",
+      "Darkwhisker",
+      "Grimclaw",
+      "Warclaw",
+      "Thunderwhisker",
+      "Stormfang"
+    ]
+  },
+  "darkElfLineman": {
+    "positionName": "Lineman",
+    "primary": "AG",
+    "firstName": [
+      "Malek",
+      "Zarek",
+      "Drak",
+      "Khael",
+      "Vorak",
+      "Thar",
+      "Sar",
+      "Nar",
+      "Laz",
+      "Zar"
+    ],
+    "secondName": [
+      "Shadowblade",
+      "Darkwhisper",
+      "Ironclaw",
+      "Bloodfang",
+      "Skullshadow",
+      "Grimwhisper",
+      "Warblade",
+      "Thunderfang"
+    ]
+  },
+  "darkElfRunner": {
+    "positionName": "Runner",
+    "primary": "AGP",
+    "firstName": [
+      "Lir",
+      "Xar",
+      "Driz",
+      "Malek",
+      "Zarek",
+      "Nar",
+      "Thar",
+      "Sar",
+      "Vorak",
+      "Khael"
+    ],
+    "secondName": [
+      "Swiftshadow",
+      "Darkrunner",
+      "Bloodfang",
+      "Ironblade",
+      "Grimrunner",
+      "Shadowrunner",
+      "Warblade",
+      "Thunderfang"
+    ]
+  },
+  "darkElfBlitzer": {
+    "positionName": "Blitzer",
+    "primary": "AG",
+    "firstName": [
+      "Kael",
+      "Drak",
+      "Thar",
+      "Zar",
+      "Vorak",
+      "Nar",
+      "Khael",
+      "Laz",
+      "Sar",
+      "Zarek"
+    ],
+    "secondName": [
+      "Ironstrike",
+      "Bloodblade",
+      "Darkshadow",
+      "Skullbreaker",
+      "Grimblade",
+      "Warstrike",
+      "Thunderblade",
+      "Stormfang"
+    ]
+  },
+  "darkElfAssassin": {
+    "positionName": "Assassin",
+    "primary": "AG",
+    "firstName": [
+      "Nar",
+      "Thar",
+      "Drak",
+      "Malek",
+      "Zar",
+      "Vorak",
+      "Khael",
+      "Sar",
+      "Laz",
+      "Zarek"
+    ],
+    "secondName": [
+      "Shadowfang",
+      "Bloodshadow",
+      "Darkblade",
+      "Skullfang",
+      "Grimfang",
+      "Warfang",
+      "Thunderstrike",
+      "Stormshadow"
+    ]
+  },
+  "darkElfWitchElf": {
+    "positionName": "Witch Elf",
+    "primary": "AG",
+    "firstName": [
+      "Lir",
+      "Malek",
+      "Zarek",
+      "Nar",
+      "Thar",
+      "Sar",
+      "Vorak",
+      "Drak",
+      "Khael",
+      "Zar"
+    ],
+    "secondName": [
+      "Ironclaw",
+      "Bloodfang",
+      "Darkwhisper",
+      "Skullblade",
+      "Grimclaw",
+      "Warclaw",
+      "Thunderfang",
+      "Stormblade"
+    ]
+  },
+  "dwarfLineman": {
+    "positionName": "Lineman",
+    "primary": "GS",
+    "firstName": [
+      "Thorin",
+      "Durin",
+      "Borin",
+      "Gimli",
+      "Balin",
+      "Dwalin",
+      "Oin",
+      "Gloin",
+      "Thrain",
+      "Fundin"
+    ],
+    "secondName": [
+      "Ironhammer",
+      "Stoneheart",
+      "Bloodaxe",
+      "Darkbeard",
+      "Skullbreaker",
+      "Grimbeard",
+      "Warbringer",
+      "Thunderforge"
+    ]
+  },
+  "dwarfRunner": {
+    "positionName": "Runner",
+    "primary": "GP",
+    "firstName": [
+      "Thrain",
+      "Fundin",
+      "Gloin",
+      "Oin",
+      "Dwalin",
+      "Balin",
+      "Gimli",
+      "Borin",
+      "Durin",
+      "Thorin"
+    ],
+    "secondName": [
+      "Ironfoot",
+      "Bloodrunner",
+      "Stoneheart",
+      "Darkfoot",
+      "Grimrunner",
+      "Warfoot",
+      "Thunderfoot",
+      "Stormrunner"
+    ]
+  },
+  "dwarfBlitzer": {
+    "positionName": "Blitzer",
+    "primary": "GS",
+    "firstName": [
+      "Gimli",
+      "Borin",
+      "Durin",
+      "Thorin",
+      "Fundin",
+      "Thrain",
+      "Gloin",
+      "Oin",
+      "Dwalin",
+      "Balin"
+    ],
+    "secondName": [
+      "Ironstrike",
+      "Bloodaxe",
+      "Stonebreaker",
+      "Darkstrike",
+      "Grimstrike",
+      "Warstrike",
+      "Thunderstrike",
+      "Stormaxe"
+    ]
+  },
+  "trollSlayer": {
+    "positionName": "Troll Slayer",
+    "primary": "GS",
+    "firstName": [
+      "Gotrek",
+      "Snorri",
+      "Drong",
+      "Brok",
+      "Thane",
+      "Thrain",
+      "Grimm",
+      "Drek",
+      "Krag",
+      "Zag"
+    ],
+    "secondName": [
+      "Ironfist",
+      "Bloodaxe",
+      "Stonecrusher",
+      "Darkfist",
+      "Grimaxe",
+      "Warslayer",
+      "Thunderslayer",
+      "Stormfist"
+    ]
+  },
+  "deathroller": {
+    "positionName": "Deathroller",
+    "primary": "S",
+    "firstName": [
+      "Grond",
+      "Bor",
+      "Thar",
+      "Krag",
+      "Dur",
+      "Brak",
+      "Dorn",
+      "Brok",
+      "Thrum",
+      "Drum"
+    ],
+    "secondName": [
+      "Ironcrusher",
+      "Bloodroller",
+      "Stonebreaker",
+      "Darkcrusher",
+      "Grimroller",
+      "Warroller",
+      "Thunderroller",
+      "Stormcrusher"
+    ]
+  },
+  "elvenUnionLineman": {
+    "positionName": "Lineman",
+    "primary": "AG",
+    "firstName": [
+      "Elrond",
+      "Legolas",
+      "Thranduil",
+      "Finrod",
+      "Glorfindel",
+      "Fingolfin",
+      "Erestor",
+      "Gil-galad",
+      "Gildor",
+      "Haldir"
+    ],
+    "secondName": [
+      "Swiftblade",
+      "Lightfoot",
+      "Silverleaf",
+      "Starshine",
+      "Sunrunner",
+      "Moonwhisper",
+      "Starwalker",
+      "Lightbringer"
+    ]
+  },
+  "elvenUnionThrower": {
+    "positionName": "Thrower",
+    "primary": "AGP",
+    "firstName": [
+      "Legolas",
+      "Elrond",
+      "Glorfindel",
+      "Thranduil",
+      "Finrod",
+      "Fingolfin",
+      "Erestor",
+      "Gil-galad",
+      "Gildor",
+      "Haldir"
+    ],
+    "secondName": [
+      "Lightthrow",
+      "Starwhisper",
+      "Swiftarm",
+      "Silverleaf",
+      "Moonwhisper",
+      "Starwalker",
+      "Sunthrow",
+      "Lightbringer"
+    ]
+  },
+  "elvenUnionCatcher": {
+    "positionName": "Catcher",
+    "primary": "AG",
+    "firstName": [
+      "Finrod",
+      "Legolas",
+      "Elrond",
+      "Glorfindel",
+      "Thranduil",
+      "Fingolfin",
+      "Erestor",
+      "Gil-galad",
+      "Gildor",
+      "Haldir"
+    ],
+    "secondName": [
+      "Swiftcatch",
+      "Lightfoot",
+      "Silverleaf",
+      "Starcatcher",
+      "Mooncatcher",
+      "Starwhisper",
+      "Sunrunner",
+      "Lightcatch"
+    ]
+  },
+  "elvenUnionBlitzer": {
+    "positionName": "Blitzer",
+    "primary": "AG",
+    "firstName": [
+      "Gil-galad",
+      "Glorfindel",
+      "Legolas",
+      "Elrond",
+      "Thranduil",
+      "Finrod",
+      "Fingolfin",
+      "Erestor",
+      "Gildor",
+      "Haldir"
+    ],
+    "secondName": [
+      "Swiftstrike",
+      "Lightblade",
+      "Starstrike",
+      "Silverstrike",
+      "Moonstrike",
+      "Starwalker",
+      "Sunstrike",
+      "Lightbringer"
+    ]
+  },
+  "gnomeLineman": {
+    "positionName": "Gnome Linemen",
+    "primary": "A",
+    "firstName": [
+      "Bink",
+      "Zook",
+      "Nim",
+      "Fizban",
+      "Gimble",
+      "Tink",
+      "Fidget",
+      "Milo",
+      "Orrin",
+      "Waldo"
+    ],
+    "secondName": [
+      "Quickfoot",
+      "Tinkertop",
+      "Nimblefingers",
+      "Gearslinger",
+      "Clocksmith",
+      "Wrenchwhistle",
+      "Gadgeteer",
+      "Boltshaper"
+    ]
+  },
+  "gnomeIllusionist": {
+    "positionName": "Gnome Illusionist",
+    "primary": "AP",
+    "firstName": [
+      "Nim",
+      "Fizban",
+      "Gimble",
+      "Tink",
+      "Fidget",
+      "Milo",
+      "Orrin",
+      "Waldo",
+      "Zook",
+      "Bink"
+    ],
+    "secondName": [
+      "Shadowweaver",
+      "Lightspinner",
+      "Glimmerveil",
+      "Trickster",
+      "Gleamcaster",
+      "Illusionwhisper",
+      "Dreamweaver",
+      "Veilbinder"
+    ]
+  },
+  "woodlandFox": {
+    "positionName": "Woodland Fox",
+    "primary": "-",
+    "firstName": [
+      "Fira",
+      "Sorrel",
+      "Larka",
+      "Ember",
+      "Vixen",
+      "Roka",
+      "Tala",
+      "Sable",
+      "Nova",
+      "Willow"
+    ],
+    "secondName": [
+      "Swiftpaw",
+      "Shadowtail",
+      "Brightfur",
+      "Firefang",
+      "Whisperwind",
+      "Lightstep",
+      "Silentpaw",
+      "Quickshadow"
+    ]
+  },
+  "gnomeBeastmaster": {
+    "positionName": "Gnome Beastmaster",
+    "primary": "A",
+    "firstName": [
+      "Grimble",
+      "Thimble",
+      "Tarn",
+      "Bramble",
+      "Fizzle",
+      "Dorn",
+      "Nimble",
+      "Quill",
+      "Bram",
+      "Grizzle"
+    ],
+    "secondName": [
+      "Beastwhisper",
+      "Wolfrider",
+      "Bearclaw",
+      "Falconeye",
+      "Lionsheart",
+      "Stagfoot",
+      "Hawkfury",
+      "Ravenclaw"
+    ]
+  },
+  "alternForestTreeman": {
+    "positionName": "Altern Forest Treeman",
+    "primary": "S",
+    "firstName": [
+      "Oakheart",
+      "Barkroot",
+      "Thornbranch",
+      "Ironbark",
+      "Leafshade",
+      "Stonesprout",
+      "Pineclaw",
+      "Rootbreaker",
+      "Elmroot",
+      "Cedarshade"
+    ],
+    "secondName": [
+      "Deepwood",
+      "Ironwood",
+      "Grimbranch",
+      "Stonebark",
+      "Shadowgrove",
+      "Thornroot",
+      "Wolfsbane",
+      "Darkforest"
+    ]
+  },
+  "goblin": {
+    "positionName": "Goblin",
+    "primary": "A",
+    "firstName": [
+      "Snag",
+      "Mug",
+      "Bog",
+      "Ruk",
+      "Zog",
+      "Thog",
+      "Krug",
+      "Nug",
+      "Snik",
+      "Grot"
+    ],
+    "secondName": [
+      "Quickfoot",
+      "Sneakshadow",
+      "Bloodfang",
+      "Darkwhisper",
+      "Grimfang",
+      "Nightshade",
+      "Warclaw",
+      "Ironfang"
+    ]
+  },
+  "bomma": {
+    "positionName": "Bomma",
+    "primary": "AP",
+    "firstName": [
+      "Blag",
+      "Fizzle",
+      "Crank",
+      "Grizzle",
+      "Zap",
+      "Boom",
+      "Crash",
+      "Bang",
+      "Thud",
+      "Smash"
+    ],
+    "secondName": [
+      "Explodah",
+      "Fireblast",
+      "Boomwhizz",
+      "Kaboom",
+      "Flashbang",
+      "Thunderboom",
+      "Sparkblast",
+      "Whizzbang"
+    ]
+  },
+  "looney": {
+    "positionName": "Looney",
+    "primary": "A",
+    "firstName": [
+      "Rik",
+      "Frik",
+      "Mik",
+      "Zik",
+      "Vik",
+      "Trek",
+      "Snag",
+      "Grot",
+      "Snik",
+      "Nug"
+    ],
+    "secondName": [
+      "Bladefury",
+      "Chainslash",
+      "Ripsaw",
+      "Bloodrazor",
+      "Grimblade",
+      "Skullsplitter",
+      "Warblade",
+      "Ironrazor"
+    ]
+  },
+  "fanatic": {
+    "positionName": "Fanatic",
+    "primary": "S",
+    "firstName": [
+      "Skrak",
+      "Grak",
+      "Thrak",
+      "Rik",
+      "Zrik",
+      "Frak",
+      "Nrik",
+      "Drak",
+      "Snak",
+      "Krak"
+    ],
+    "secondName": [
+      "Whirlwind",
+      "Skullcrusher",
+      "Bloodrage",
+      "Ironspin",
+      "Darkwhirl",
+      "Grimspin",
+      "Warspin",
+      "Thunderwhirl"
+    ]
+  },
+  "pogoer": {
+    "positionName": "Pogoer",
+    "primary": "A",
+    "firstName": [
+      "Snik",
+      "Mik",
+      "Frik",
+      "Rik",
+      "Zik",
+      "Vik",
+      "Trek",
+      "Grot",
+      "Nug",
+      "Snag"
+    ],
+    "secondName": [
+      "Highjumper",
+      "Springfoot",
+      "Skywhirl",
+      "Leapspark",
+      "Skyjumper",
+      "Cloudhopper",
+      "Airtwist",
+      "Stormjumper"
+    ]
+  },
+  "ooligan": {
+    "positionName": "'Ooligan",
+    "primary": "A",
+    "firstName": [
+      "Frik",
+      "Rik",
+      "Zik",
+      "Nrik",
+      "Grak",
+      "Snik",
+      "Mik",
+      "Trek",
+      "Snag",
+      "Grot"
+    ],
+    "secondName": [
+      "Quickstrike",
+      "Darkwhisper",
+      "Bloodfang",
+      "Ironclaw",
+      "Grimstrike",
+      "Skullsplitter",
+      "Warwhisper",
+      "Shadowfang"
+    ]
+  },
+  "doomDiver": {
+    "positionName": "Doom Diver",
+    "primary": "A",
+    "firstName": [
+      "Blag",
+      "Fizzle",
+      "Crank",
+      "Grizzle",
+      "Zap",
+      "Boom",
+      "Crash",
+      "Bang",
+      "Thud",
+      "Smash"
+    ],
+    "secondName": [
+      "Skybreaker",
+      "Doomwhizz",
+      "Starwhirl",
+      "Cometfall",
+      "Skycrusher",
+      "Thunderfall",
+      "Starwhizz",
+      "Stormdive"
+    ]
+  },
+  "highElfLineman": {
+    "positionName": "Lineman",
+    "primary": "AG",
+    "firstName": [
+      "Elrond",
+      "Legolas",
+      "Thranduil",
+      "Finrod",
+      "Glorfindel",
+      "Fingolfin",
+      "Erestor",
+      "Gil-galad",
+      "Gildor",
+      "Haldir"
+    ],
+    "secondName": [
+      "Swiftblade",
+      "Lightfoot",
+      "Silverleaf",
+      "Starshine",
+      "Sunrunner",
+      "Moonwhisper",
+      "Starwalker",
+      "Lightbringer"
+    ]
+  },
+  "highElfThrower": {
+    "positionName": "Thrower",
+    "primary": "AGP",
+    "firstName": [
+      "Legolas",
+      "Elrond",
+      "Glorfindel",
+      "Thranduil",
+      "Finrod",
+      "Fingolfin",
+      "Erestor",
+      "Gil-galad",
+      "Gildor",
+      "Haldir"
+    ],
+    "secondName": [
+      "Lightthrow",
+      "Starwhisper",
+      "Swiftarm",
+      "Silverleaf",
+      "Moonwhisper",
+      "Starwalker",
+      "Sunthrow",
+      "Lightbringer"
+    ]
+  },
+  "highElfCatcher": {
+    "positionName": "Catcher",
+    "primary": "AG",
+    "firstName": [
+      "Finrod",
+      "Legolas",
+      "Elrond",
+      "Glorfindel",
+      "Thranduil",
+      "Fingolfin",
+      "Erestor",
+      "Gil-galad",
+      "Gildor",
+      "Haldir"
+    ],
+    "secondName": [
+      "Swiftcatch",
+      "Lightfoot",
+      "Silverleaf",
+      "Starcatcher",
+      "Mooncatcher",
+      "Starwhisper",
+      "Sunrunner",
+      "Lightcatch"
+    ]
+  },
+  "highElfBlitzer": {
+    "positionName": "Blitzer",
+    "primary": "AG",
+    "firstName": [
+      "Gil-galad",
+      "Glorfindel",
+      "Legolas",
+      "Elrond",
+      "Thranduil",
+      "Finrod",
+      "Fingolfin",
+      "Erestor",
+      "Gildor",
+      "Haldir"
+    ],
+    "secondName": [
+      "Swiftstrike",
+      "Lightblade",
+      "Starstrike",
+      "Silverstrike",
+      "Moonstrike",
+      "Starwalker",
+      "Sunstrike",
+      "Lightbringer"
+    ]
+  },
+  "hopeful": {
+    "positionName": "Hopeful",
+    "primary": "A",
+    "firstName": [
+      "Pip",
+      "Merry",
+      "Sam",
+      "Frodo",
+      "Bilbo",
+      "Tom",
+      "Will",
+      "Ted",
+      "Hob",
+      "Dando"
+    ],
+    "secondName": [
+      "Brightfoot",
+      "Quickstep",
+      "Swiftleaf",
+      "Stoutheart",
+      "Fairbairn",
+      "Goodchild",
+      "Longbottom",
+      "Took"
+    ]
+  },
+  "hefty": {
+    "positionName": "Hefty",
+    "primary": "AP",
+    "firstName": [
+      "Gorbul",
+      "Thrain",
+      "Brog",
+      "Hafur",
+      "Durin",
+      "Varr",
+      "Rurik",
+      "Thane",
+      "Bori",
+      "Dwalin"
+    ],
+    "secondName": [
+      "Ironshield",
+      "Stonefist",
+      "Darkhammer",
+      "Grimforge",
+      "Bloodaxe",
+      "Warhammer",
+      "Thundershield",
+      "Stormfist"
+    ]
+  },
+  "catcher": {
+    "positionName": "Catcher",
+    "primary": "A",
+    "firstName": ["Lini", "Fini", "Sini", "Rini", "Tini", "Mini", "Bini", "Dini", "Kini", "Zini"],
+    "secondName": ["Quickfoot", "Lightcatch", "Silverleaf", "Starwhisper", "Mooncatcher", "Swiftcatch", "Sunrunner", "Lightbringer"]
+
+  },
+  "humanLineman": {
+    "positionName": "Lineman",
+    "primary": "G",
+    "firstName": ["John", "Robert", "William", "James", "Edward", "Henry", "Thomas", "George", "Richard", "Charles"],
+    "secondName": ["Ironfoot", "Strongarm", "Swiftstrike", "Stoneheart", "Bloodfist", "Grimblade", "Warbringer", "Thunderstrike"]
+
+  },
+  "humanThrower": {
+    "positionName": "Thrower",
+    "primary": "GP",
+    "firstName": ["Michael", "David", "Paul", "Mark", "Steven", "Daniel", "Matthew", "Kevin", "Christopher", "Brian"],
+    "secondName": ["Lightthrow", "Quickarm", "Starstrike", "Swiftthrow", "Silverhand", "Bloodthrow", "Warthrow", "Thunderthrow"]
+
+  },
+  "humanCatcher": {
+    "positionName": "Catcher",
+    "primary": "AG",
+    "firstName": ["John", "James", "Robert", "William", "Richard", "Thomas", "Charles", "Edward", "Henry", "George"],
+    "secondName": ["Swiftcatch", "Lightfoot", "Silverleaf", "Starcatcher", "Mooncatcher", "Starwhisper", "Sunrunner", "Lightcatch"]
+
+  },
+  "humanBlitzer": {
+    "positionName": "Blitzer",
+    "primary": "GS",
+    "firstName": ["William", "Robert", "James", "John", "Charles", "Edward", "Henry", "Thomas", "George", "Richard"],
+    "secondName": ["Ironstrike", "Bloodblade", "Swiftstrike", "Stonebreaker", "Darkstrike", "Grimstrike", "Warstrike", "Thunderstrike"]
+
+  },
+  "humanHalfling": {
+    "positionName": "Halfling",
+    "primary": "A",
+    "firstName": ["Pip", "Merry", "Sam", "Frodo", "Bilbo", "Tom", "Will", "Ted", "Hob", "Dando"],
+    "secondName": ["Brightfoot", "Quickstep", "Swiftleaf", "Stoutheart", "Fairbairn", "Goodchild", "Longbottom", "Took"]
+
+  },
+  "humanOgre": {
+    "positionName": "Ogre",
+    "primary": "S",
+    "firstName": ["Thog", "Groth", "Mog", "Zog", "Brak", "Vor", "Ruk", "Thrag", "Krug", "Hruk"],
+    "secondName": ["Ironfist", "Bloodmaw", "Skullcrusher", "Darkhide", "Grimcrusher", "Warbringer", "Thunderfist", "Stormmaw"]
+
+  },
+  "retainerLineman": {
+    "positionName": "Retainer Lineman",
+    "primary": "G",
+    "firstName": ["John", "Robert", "William", "James", "Edward", "Henry", "Thomas", "George", "Richard", "Charles"],
+    "secondName": ["Ironfoot", "Strongarm", "Swiftstrike", "Stoneheart", "Bloodfist", "Grimblade", "Warbringer", "Thunderstrike"]
+
+  },
+  "imperialThrower": {
+    "positionName": "Thrower",
+    "primary": "GP",
+    "firstName": ["Michael", "David", "Paul", "Mark", "Steven", "Daniel", "Matthew", "Kevin", "Christopher", "Brian"],
+    "secondName": ["Lightthrow", "Quickarm", "Starstrike", "Swiftthrow", "Silverhand", "Bloodthrow", "Warthrow", "Thunderthrow"]
+
+  },
+  "nobleBlitzer": {
+    "positionName": "Noble Blitzer",
+    "primary": "AG",
+    "firstName": ["William", "Robert", "James", "John", "Charles", "Edward", "Henry", "Thomas", "George", "Richard"],
+    "secondName": ["Ironstrike", "Bloodblade", "Swiftstrike", "Stonebreaker", "Darkstrike", "Grimstrike", "Warstrike", "Thunderstrike"]
+
+  },
+  "bodyguard": {
+    "positionName": "Bodyguard",
+    "primary": "GS",
+    "firstName": ["Gorbul", "Thrain", "Brog", "Hafur", "Durin", "Varr", "Rurik", "Thane", "Bori", "Dwalin"],
+    "secondName": ["Ironshield", "Stonefist", "Darkhammer", "Grimforge", "Bloodaxe", "Warhammer", "Thundershield", "Stormfist"]
+
+  },
+  "imperialOgre": {
+    "positionName": "Ogre",
+    "primary": "S",
+    "firstName": ["Thog", "Groth", "Mog", "Zog", "Brak", "Vor", "Ruk", "Thrag", "Krug", "Hruk"],
+    "secondName": ["Ironfist", "Bloodmaw", "Skullcrusher", "Darkhide", "Grimcrusher", "Warbringer", "Thunderfist", "Stormmaw"]
+
+  },
+  "skeleton": {
+    "positionName": "Skeleton",
+    "primary": "G",
+    "firstName": ["Rattles", "Bones", "Clatter", "Dust", "Shiver", "Skully", "Crumbly", "Rattle", "Crack", "Snap"],
+    "secondName": ["Boneshard", "Dustwhisper", "Skullrattle", "Bonecrusher", "Shiverblade", "Darkbone", "Warbone", "Thunderbone"]
+
+  },
+  "anointedThrower": {
+    "positionName": "Anointed Thrower",
+    "primary": "GP",
+    "firstName": ["Zakar", "Akhor", "Nekhar", "Mekhet", "Thokar", "Khalis", "Setep", "Horus", "Ramose", "Thutmos"],
+    "secondName": ["Lightthrow", "Sunstrike", "Swiftarm", "Ironhand", "Bloodthrow", "Warthrow", "Thunderthrow", "Stormthrow"]
+
+  },
+  "anointedBlitzer": {
+    "positionName": "Anointed Blitzer",
+    "primary": "GS",
+    "firstName": ["Ramose", "Thutmos", "Khalis", "Setep", "Horus", "Thokar", "Mekhet", "Nekhar", "Akhor", "Zakar"],
+    "secondName": ["Ironstrike", "Bloodblade", "Swiftstrike", "Stonebreaker", "Darkstrike", "Grimstrike", "Warstrike", "Thunderstrike"]
+
+  },
+  "tombGuardian": {
+    "positionName": "Tomb Guardian",
+    "primary": "S",
+    "firstName": ["Set", "Osiris", "Ra", "Horus", "Thoth", "Anubis", "Amun", "Khnum", "Sekhmet", "Ptah"],
+    "secondName": ["Ironshield", "Bloodguardian", "Stonefist", "Darkhammer", "Grimguardian", "Warguardian", "Thunderfist", "Stormshield"]
+
+  },
+  "bloodbornMarauderLineman": {
+    "positionName": "Bloodborn Marauder Lineman",
+    "primary": "GM",
+    "firstName": ["Khorak", "Thorg", "Grim", "Vorak", "Zar", "Hrak", "Krul", "Mug", "Zog", "Torg"],
+    "secondName": ["Bloodfist", "Ironclaw", "Skullcrusher", "Darkblade", "Grimshade", "Warbringer", "Thunderclaw", "Stormcrusher"]
+
+  },
+  "khornagor": {
+    "positionName": "Khornagor",
+    "primary": "GMS",
+    "firstName": ["Khorak", "Thorg", "Grim", "Vorak", "Zar", "Hrak", "Krul", "Mug", "Zog", "Torg"],
+    "secondName": ["Bloodhorn", "Ironclaw", "Skullcrusher", "Darkhorn", "Grimhorn", "Warhorn", "Thunderhorn", "Stormclaw"]
+
+  },
+  "bloodseeker": {
+    "positionName": "Bloodseeker",
+    "primary": "GMS",
+    "firstName": ["Thorg", "Khorak", "Grim", "Vorak", "Zar", "Hrak", "Krul", "Mug", "Zog", "Torg"],
+    "secondName": ["Bloodseeker", "Ironclaw", "Skullcrusher", "Darkblade", "Grimseeker", "Warbringer", "Thunderclaw", "Stormcrusher"]
+
+  },
+  "bloodspawn": {
+    "positionName": "Bloodspawn",
+    "primary": "MS",
+    "firstName": ["Zar", "Thorg", "Khorak", "Grim", "Vorak", "Hrak", "Krul", "Mug", "Zog", "Torg"],
+    "secondName": ["Bloodspawn", "Ironclaw", "Skullcrusher", "Darkspawn", "Grimspawn", "Warbringer", "Thunderclaw", "Stormcrusher"]
+
+  },
+  "skink": {
+    "positionName": "Skink",
+    "primary": "A",
+    "firstName": ["Tik", "Tak", "Zot", "Pak", "Rak", "Skrik", "Trok", "Drak", "Snak", "Krik"],
+    "secondName": ["Quickscale", "Swiftclaw", "Lighttail", "Brightscale", "Darkclaw", "Grimscale", "Warclaw", "Thunderclaw"]
+
+  },
+  "chameleonSkink": {
+    "positionName": "Chameleon Skink",
+    "primary": "A",
+    "firstName": ["Tak", "Zot", "Tik", "Pak", "Rak", "Skrik", "Trok", "Drak", "Snak", "Krik"],
+    "secondName": ["Shadowtail", "Swiftclaw", "Camotail", "Brightscale", "Darkclaw", "Grimscale", "Warclaw", "Thunderclaw"]
+
+  },
+  "saurus": {
+    "positionName": "Saurus",
+    "primary": "GS",
+    "firstName": ["Krox", "Zot", "Tik", "Pak", "Rak", "Skrik", "Trok", "Drak", "Snak", "Krik"],
+    "secondName": ["Ironclaw", "Bloodscale", "Skullcrusher", "Darkscale", "Grimclaw", "Warscale", "Thunderclaw", "Stormscale"]
+
+  },
+  "kroxigor": {
+    "positionName": "Kroxigor",
+    "primary": "S",
+    "firstName": ["Krox", "Thorg", "Zot", "Tik", "Pak", "Rak", "Skrik", "Trok", "Drak", "Snak"],
+    "secondName": ["Ironhide", "Bloodscale", "Skullcrusher", "Darkscale", "Grimclaw", "Warscale", "Thunderclaw", "Stormscale"]
+
+  },
+  "zombie": {
+    "positionName": "Zombie",
+    "primary": "G",
+    "firstName": ["Rot", "Mold", "Decay", "Stench", "Grave", "Bone", "Corpse", "Dust", "Maggot", "Rotgut"],
+    "secondName": ["Bonewalker", "Gravewalker", "Rotspine", "Decayflesh", "Stenchwalker", "Darkbone", "Warrot", "Thunderbone"]
+
+  },
+  "ghoulRunner": {
+    "positionName": "Ghoul Runner",
+    "primary": "AG",
+    "firstName": ["Gore", "Bile", "Sludge", "Corpse", "Flesh", "Grave", "Rot", "Stench", "Mold", "Decay"],
+    "secondName": ["Swiftgrave", "Darkrunner", "Bloodflesh", "Shadowrunner", "Grimwalker", "Wargrave", "Thunderflesh", "Stormgrave"]
+
+  },
+  "wraith": {
+    "positionName": "Wraith",
+    "primary": "GS",
+    "firstName": ["Spectre", "Phantom", "Shade", "Ghost", "Wraith", "Spirit", "Haunt", "Eidolon", "Apparition", "Shadow"],
+    "secondName": ["Ironshade", "Bloodwraith", "Skullphantom", "Darkwraith", "Grimshade", "Warwraith", "Thunderwraith", "Stormshade"]
+
+  },
+  "werewolf": {
+    "positionName": "Werewolf",
+    "primary": "AG",
+    "firstName": ["Fang", "Claw", "Howl", "Bite", "Growl", "Snarl", "Lupus", "Wolf", "Rage", "Moon"],
+    "secondName": ["Bloodfang", "Shadowclaw", "Darkhowl", "Skullbite", "Grimfang", "Warclaw", "Thunderhowl", "Stormfang"]
+
+  },
+  "fleshGolem": {
+    "positionName": "Flesh Golem",
+    "primary": "GS",
+    "firstName": ["Rot", "Gore", "Muck", "Stench", "Grave", "Bone", "Maggot", "Mold", "Decay", "Flesh"],
+    "secondName": ["Ironflesh", "Bloodgolem", "Skullcrusher", "Darkflesh", "Grimgolem", "Wargolem", "Thunderflesh", "Stormgolem"]
+
+  },
+  "norseRaiderLineman": {
+    "positionName": "Norse Raider Lineman",
+    "primary": "G",
+    "firstName": ["Bjorn", "Erik", "Ragnar", "Leif", "Sven", "Hakon", "Olaf", "Sigurd", "Thor", "Ulf"],
+    "secondName": ["Ironaxe", "Bloodshield", "Stormbreaker", "Darkblade", "Grimbeard", "Warbringer", "Thunderhammer", "Stormshield"]
+
+  },
+  "beerBoar": {
+    "positionName": "Beer Boars",
+    "primary": "-",
+    "firstName": ["Snout", "Grog", "Ale", "Pork", "Hog", "Swill", "Oink", "Squeal", "Bacon", "Ham"],
+    "secondName": ["Oatstout", "Maltbrew", "Hogswill", "Alefoot", "Grainbelly", "Warthog", "Thunderswill", "Stormbrew"]
+
+  },
+  "norseBerserker": {
+    "positionName": "Norse Berserker",
+    "primary": "GS",
+    "firstName": ["Bjorn", "Erik", "Ragnar", "Leif", "Sven", "Hakon", "Olaf", "Sigurd", "Thor", "Ulf"],
+    "secondName": ["Bloodaxe", "Ironshield", "Stormbringer", "Darkblade", "Grimbeard", "Warbringer", "Thunderstrike", "Stormhammer"]
+
+  },
+  "valkyrie": {
+    "positionName": "Valkyrie",
+    "primary": "AGP",
+    "firstName": ["Freya", "Sif", "Idunn", "Eir", "Helga", "Astrid", "Hilda", "Liv", "Thora", "Sigrid"],
+    "secondName": ["Ironmaiden", "Bloodwing", "Stormbringer", "Darkshield", "Grimshield", "Warwing", "Thunderwing", "Stormmaiden"]
+
+  },
+  "ulfwerener": {
+    "positionName": "Ulfwerener",
+    "primary": "GS",
+    "firstName": ["Fang", "Claw", "Howl", "Bite", "Growl", "Snarl", "Lupus", "Wolf", "Rage", "Moon"],
+    "secondName": ["Bloodfang", "Shadowclaw", "Darkhowl", "Skullbite", "Grimfang", "Warclaw", "Thunderhowl", "Stormfang"]
+
+  },
+  "yheteeSnowTroll": {
+    "positionName": "Yhetee / Snow Troll",
+    "primary": "S",
+    "firstName": ["Thog", "Groth", "Mog", "Zog", "Brak", "Vor", "Ruk", "Thrag", "Krug", "Hruk"],
+    "secondName": ["Frosthide", "Bloodmaw", "Skullcrusher", "Darkhide", "Grimcrusher", "Warbringer", "Thunderhide", "Stormmaw"]
+
+  },
+  "rotter": {
+    "positionName": "Rotter",
+    "primary": "GM",
+    "firstName": ["Rot", "Mold", "Decay", "Stench", "Grave", "Bone", "Corpse", "Dust", "Maggot", "Rotgut"],
+    "secondName": ["Bonewalker", "Gravewalker", "Rotspine", "Decayflesh", "Stenchwalker", "Darkbone", "Warrot", "Thunderbone"]
+
+  },
+  "pestigor": {
+    "positionName": "Pestigor",
+    "primary": "GMS",
+    "firstName": ["Gore", "Bile", "Sludge", "Corpse", "Flesh", "Grave", "Rot", "Stench", "Mold", "Decay"],
+    "secondName": ["Swiftgrave", "Darkrunner", "Bloodflesh", "Shadowrunner", "Grimwalker", "Wargrave", "Thunderflesh", "Stormgrave"]
+
+  },
+  "bloater": {
+    "positionName": "Bloater",
+    "primary": "GMS",
+    "firstName": ["Rot", "Gore", "Muck", "Stench", "Grave", "Bone", "Maggot", "Mold", "Decay", "Flesh"],
+    "secondName": ["Ironflesh", "Bloodgolem", "Skullcrusher", "Darkflesh", "Grimgolem", "Wargolem", "Thunderflesh", "Stormgolem"]
+
+  },
+  "rotspawn": {
+    "positionName": "Rotspawn",
+    "primary": "S",
+    "firstName": ["Thog", "Groth", "Mog", "Zog", "Brak", "Vor", "Ruk", "Thrag", "Krug", "Hruk"],
+    "secondName": ["Ironspawn", "Bloodspawn", "Skullcrusher", "Darkspawn", "Grimspawn", "Warspawn", "Thunderspawn", "Stormspawn"]
+
+  },
+  "gnoblar": {
+    "positionName": "Gnoblar",
+    "primary": "A",
+    "firstName": ["Snag", "Mug", "Bog", "Ruk", "Zog", "Thog", "Krug", "Nug", "Snik", "Grot"],
+    "secondName": ["Quickfoot", "Sneakshadow", "Bloodfang", "Darkwhisper", "Grimfang", "Nightshade", "Warclaw", "Ironfang"]
+
+  },
+  "runtPunter": {
+    "positionName": "Runt Punter",
+    "primary": "PS",
+    "firstName": ["Blag", "Fizzle", "Crank", "Grizzle", "Zap", "Boom", "Crash", "Bang", "Thud", "Smash"],
+    "secondName": ["Kickblast", "Footcrash", "Puntspark", "Legcrusher", "Bloodkick", "Thunderkick", "Stormpunt", "Warboot"]
+
+  },
+  "ogre": {
+    "positionName": "Ogre",
+    "primary": "S",
+    "firstName": ["Thog", "Groth", "Mog", "Zog", "Brak", "Vor", "Ruk", "Thrag", "Krug", "Hruk"],
+    "secondName": ["Ironfist", "Bloodmaw", "Skullcrusher", "Darkhide", "Grimcrusher", "Warbringer", "Thunderfist", "Stormmaw"]
+
+  },
+  "owaHumanThrower": {
+    "positionName": "Human Thrower",
+    "primary": "GP",
+    "firstName": ["Michael", "David", "Paul", "Mark", "Steven", "Daniel", "Matthew", "Kevin", "Christopher", "Brian"],
+    "secondName": ["Lightthrow", "Quickarm", "Starstrike", "Swiftthrow", "Silverhand", "Bloodthrow", "Warthrow", "Thunderthrow"]
+
+  },
+  "owaHumanCatcher": {
+    "positionName": "Human Catcher",
+    "primary": "AG",
+    "firstName": ["John", "James", "Robert", "William", "Richard", "Thomas", "Charles", "Edward", "Henry", "George"],
+    "secondName": ["Swiftcatch", "Lightfoot", "Silverleaf", "Starcatcher", "Mooncatcher", "Starwhisper", "Sunrunner", "Lightcatch"]
+
+  },
+  "owaHumanBlitzer": {
+    "positionName": "Human Blitzer",
+    "primary": "GS",
+    "firstName": ["William", "Robert", "James", "John", "Charles", "Edward", "Henry", "Thomas", "George", "Richard"],
+    "secondName": ["Ironstrike", "Bloodblade", "Swiftstrike", "Stonebreaker", "Darkstrike", "Grimstrike", "Warstrike", "Thunderstrike"]
+
+  },
+  "owaDwarfBlocker": {
+    "positionName": "Dwarf Blocker",
+    "primary": "GS",
+    "firstName": ["Thorin", "Durin", "Borin", "Gimli", "Balin", "Dwalin", "Oin", "Gloin", "Thrain", "Fundin"],
+    "secondName": ["Ironhammer", "Stoneheart", "Bloodaxe", "Darkbeard", "Skullbreaker", "Grimbeard", "Warbringer", "Thunderforge"]
+
+  },
+  "owaDwarfRunner": {
+    "positionName": "Dwarf Runner",
+    "primary": "GP",
+    "firstName": ["Thrain", "Fundin", "Gloin", "Oin", "Dwalin", "Balin", "Gimli", "Borin", "Durin", "Thorin"],
+    "secondName": ["Ironfoot", "Bloodrunner", "Stoneheart", "Darkfoot", "Grimrunner", "Warfoot", "Thunderfoot", "Stormrunner"]
+
+  },
+  "owaDwarfBlitzer": {
+    "positionName": "Dwarf Blitzer",
+    "primary": "GS",
+    "firstName": ["Gimli", "Borin", "Durin", "Thorin", "Fundin", "Thrain", "Gloin", "Oin", "Dwalin", "Balin"],
+    "secondName": ["Ironstrike", "Bloodaxe", "Stonebreaker", "Darkstrike", "Grimstrike", "Warstrike", "Thunderstrike", "Stormaxe"]
+
+  },
+  "owaTrollSlayer": {
+    "positionName": "Troll Slayer",
+    "primary": "GS",
+    "firstName": ["Gotrek", "Snorri", "Drong", "Brok", "Thane", "Thrain", "Grimm", "Drek", "Krag", "Zag"],
+    "secondName": ["Ironfist", "Bloodaxe", "Stonecrusher", "Darkfist", "Grimaxe", "Warslayer", "Thunderslayer", "Stormfist"]
+
+  },
+  "owaHalfling": {
+    "positionName": "Halfling",
+    "primary": "A",
+    "firstName": ["Pip", "Merry", "Sam", "Frodo", "Bilbo", "Tom", "Will", "Ted", "Hob", "Dando"],
+    "secondName": ["Brightfoot", "Quickstep", "Swiftleaf", "Stoutheart", "Fairbairn", "Goodchild", "Longbottom", "Took"]
+
+  },
+  "owaAlternForestTreeman": {
+    "positionName": "Altern Forest Treeman",
+    "primary": "S",
+    "firstName": ["Oakheart", "Barkroot", "Thornbranch", "Ironbark", "Leafshade", "Stonesprout", "Pineclaw", "Rootbreaker", "Elmroot", "Cedarshade"],
+    "secondName": ["Deepwood", "Ironwood", "Grimbranch", "Stonebark", "Shadowgrove", "Thornroot", "Wolfsbane", "Darkforest"]
+
+  },
+  "orcLineman": {
+    "positionName": "Lineman",
+    "primary": "G",
+    "firstName": ["Gruk", "Zog", "Mug", "Throg", "Krug", "Hruk", "Bog", "Ruk", "Torg", "Zar"],
+    "secondName": ["Ironjaw", "Bloodfist", "Skullcrusher", "Darkfist", "Grimcrusher", "Warbringer", "Thunderfist", "Stormclaw"]
+
+  },
+  "orcThrower": {
+    "positionName": "Thrower",
+    "primary": "GP",
+    "firstName": ["Gorn", "Laz", "Rik", "Zorn", "Brak", "Thul", "Var", "Zog", "Tor", "Krul"],
+    "secondName": ["Swiftarm", "Shadowthrow", "Ironhand", "Bloodstrike", "Skullthrow", "Grimthrow", "Warthrow", "Thunderarm"]
+
+  },
+  "orcBlitzer": {
+    "positionName": "Blitzer",
+    "primary": "GS",
+    "firstName": ["Kael", "Drak", "Thar", "Zar", "Vorak", "Nar", "Khael", "Laz", "Sar", "Zarek"],
+    "secondName": ["Ironstrike", "Bloodblade", "Darkshadow", "Skullbreaker", "Grimblade", "Warstrike", "Thunderblade", "Stormfang"]
+
+  },
+  "bigUn": {
+    "positionName": "Big Un",
+    "primary": "GS",
+    "firstName": ["Thog", "Groth", "Mog", "Zog", "Brak", "Vor", "Ruk", "Thrag", "Krug", "Hruk"],
+    "secondName": ["Ironfist", "Bloodmaw", "Skullcrusher", "Darkhide", "Grimcrusher", "Warbringer", "Thunderfist", "Stormmaw"]
+
+  },
+  "orcGoblin": {
+    "positionName": "Goblin",
+    "primary": "A",
+    "firstName": ["Snik", "Grot", "Mug", "Zig", "Thog", "Krug", "Nug", "Ruk", "Bog", "Snag"],
+    "secondName": ["Quickfoot", "Sneakshadow", "Bloodfang", "Darkwhisper", "Grimfang", "Nightshade", "Warclaw", "Ironfang"]
+
+  },
+  "untrainedTroll": {
+    "positionName": "Untrained Troll",
+    "primary": "S",
+    "firstName": ["Groth", "Thog", "Mug", "Krug", "Bog", "Hruk", "Ruk", "Zog", "Torg", "Vor"],
+    "secondName": ["Ironhide", "Bloodcrusher", "Skullbreaker", "Darkmaw", "Grimcrusher", "Warbringer", "Thunderhide", "Stormcrusher"]
+
+  },
+  "shamblingSkeleton": {
+    "positionName": "Skeleton",
+    "primary": "G",
+    "firstName": ["Rattles", "Bones", "Clatter", "Dust", "Shiver", "Skully", "Crumbly", "Rattle", "Crack", "Snap"],
+    "secondName": ["Boneshard", "Dustwhisper", "Skullrattle", "Bonecrusher", "Shiverblade", "Darkbone", "Warbone", "Thunderbone"]
+
+  },
+  "shamblingZombie": {
+    "positionName": "Zombie",
+    "primary": "G",
+    "firstName": ["Rot", "Mold", "Decay", "Stench", "Grave", "Bone", "Corpse", "Dust", "Maggot", "Rotgut"],
+    "secondName": ["Bonewalker", "Gravewalker", "Rotspine", "Decayflesh", "Stenchwalker", "Darkbone", "Warrot", "Thunderbone"]
+
+  },
+  "shamblingGhoul": {
+    "positionName": "Ghoul",
+    "primary": "AG",
+    "firstName": ["Gore", "Bile", "Sludge", "Corpse", "Flesh", "Grave", "Rot", "Stench", "Mold", "Decay"],
+    "secondName": ["Swiftgrave", "Darkrunner", "Bloodflesh", "Shadowrunner", "Grimwalker", "Wargrave", "Thunderflesh", "Stormgrave"]
+
+  },
+  "shamblingWight": {
+    "positionName": "Wight",
+    "primary": "GS",
+    "firstName": ["Spectre", "Phantom", "Shade", "Ghost", "Wraith", "Spirit", "Haunt", "Eidolon", "Apparition", "Shadow"],
+    "secondName": ["Ironshade", "Bloodwraith", "Skullphantom", "Darkwraith", "Grimshade", "Warwraith", "Thunderwraith", "Stormshade"]
+
+  },
+  "shamblingMummy": {
+    "positionName": "Mummy",
+    "primary": "S",
+    "firstName": ["Set", "Osiris", "Ra", "Horus", "Thoth", "Anubis", "Amun", "Khnum", "Sekhmet", "Ptah"],
+    "secondName": ["Ironshield", "Bloodguardian", "Stonefist", "Darkhammer", "Grimguardian", "Warguardian", "Thunderfist", "Stormshield"]
+
+  },
+  "skavenLineman": {
+    "positionName": "Lineman",
+    "primary": "G",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Quickclaw", "Shadowfang", "Ironwhisker", "Bloodclaw", "Darkwhisker", "Grimclaw", "Warclaw", "Thunderwhisker"]
+
+  },
+  "skavenThrower": {
+    "positionName": "Thrower",
+    "primary": "GP",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Swiftwhisker", "Shadowthrow", "Ironclaw", "Bloodthrow", "Darkwhisker", "Grimthrow", "Warwhisker", "Thunderthrow"]
+  },
+  "skavenGutterRunner": {
+    "positionName": "Gutter Runner",
+    "primary": "AG",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Quickclaw", "Shadowrunner", "Swiftwhisker", "Bloodrunner", "Darkrunner", "Grimclaw", "Warwhisker", "Thunderrunner"]
+
+  },
+  "skavenBlitzer": {
+    "positionName": "Blitzer",
+    "primary": "GS",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Ironfang", "Bloodstrike", "Shadowclaw", "Darkstrike", "Grimstrike", "Warstrike", "Thunderstrike", "Stormclaw"]
+
+  },
+  "skavenRatOgre": {
+    "positionName": "Rat Ogre",
+    "primary": "S",
+    "firstName": ["Skrak", "Vrath", "Grak", "Thrak", "Zrik", "Frak", "Nrik", "Drak", "Rik", "Snak"],
+    "secondName": ["Ironclaw", "Bloodfang", "Skullcrusher", "Darkwhisker", "Grimclaw", "Warclaw", "Thunderwhisker", "Stormfang"]
+
+  },
+  "slannLineman": {
+    "positionName": "Lineman",
+    "primary": "G",
+    "firstName": ["Tik", "Tak", "Zot", "Pak", "Rak", "Skrik", "Trok", "Drak", "Snak", "Krik"],
+    "secondName": ["Quickscale", "Swiftclaw", "Lighttail", "Brightscale", "Darkclaw", "Grimscale", "Warclaw", "Thunderclaw"]
+
+  },
+  "slannCatcher": {
+    "positionName": "Catcher",
+    "primary": "AG",
+    "firstName": ["Tak", "Zot", "Tik", "Pak", "Rak", "Skrik", "Trok", "Drak", "Snak", "Krik"],
+    "secondName": ["Shadowtail", "Swiftclaw", "Camotail", "Brightscale", "Darkclaw", "Grimscale", "Warclaw", "Thunderclaw"]
+
+  },
+  "slannBlitzer": {
+    "positionName": "Blitzer",
+    "primary": "AGS",
+    "firstName": ["Krox", "Zot", "Tik", "Pak", "Rak", "Skrik", "Trok", "Drak", "Snak", "Krik"],
+    "secondName": ["Ironclaw", "Bloodscale", "Skullcrusher", "Darkscale", "Grimclaw", "Warscale", "Thunderclaw", "Stormscale"]
+
+  },
+  "slannKroxigor": {
+    "positionName": "Kroxigor",
+    "primary": "S",
+    "firstName": ["Krox", "Thorg", "Zot", "Tik", "Pak", "Rak", "Skrik", "Trok", "Drak", "Snak"],
+    "secondName": ["Ironhide", "Bloodscale", "Skullcrusher", "Darkscale", "Grimclaw", "Warscale", "Thunderclaw", "Stormscale"]
+
+  },
+  "snotlingSnotling": {
+    "positionName": "Snotling",
+    "primary": "A",
+    "firstName": ["Snik", "Grot", "Mug", "Zig", "Thog", "Krug", "Nug", "Ruk", "Bog", "Snag"],
+    "secondName": ["Quickfoot", "Sneakshadow", "Bloodfang", "Darkwhisper", "Grimfang", "Nightshade", "Warclaw", "Ironfang"]
+
+  },
+  "snotlingFungusFlinga": {
+    "positionName": "Fungus Flinga",
+    "primary": "AP",
+    "firstName": ["Blag", "Fizzle", "Crank", "Grizzle", "Zap", "Boom", "Crash", "Bang", "Thud", "Smash"],
+    "secondName": ["Explodah", "Fireblast", "Boomwhizz", "Kaboom", "Flashbang", "Thunderboom", "Sparkblast", "Whizzbang"]
+
+  },
+  "snotlingFunhoppa": {
+    "positionName": "Funhoppa",
+    "primary": "A",
+    "firstName": ["Rik", "Frik", "Mik", "Zik", "Vik", "Trek", "Snag", "Grot", "Snik", "Nug"],
+    "secondName": ["Highjumper", "Springfoot", "Skywhirl", "Leapspark", "Skyjumper", "Cloudhopper", "Airtwist", "Stormjumper"]
+
+  },
+  "snotlingStiltyRunna": {
+    "positionName": "Stilty Runna",
+    "primary": "A",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Quickclaw", "Shadowrunner", "Swiftwhisker", "Bloodrunner", "Darkrunner", "Grimclaw", "Warwhisker", "Thunderrunner"]
+
+  },
+  "snotlingPumpWagon": {
+    "positionName": "Pump Wagon",
+    "primary": "S",
+    "firstName": ["Blag", "Fizzle", "Crank", "Grizzle", "Zap", "Boom", "Crash", "Bang", "Thud", "Smash"],
+    "secondName": ["Ironroller", "Bloodcrusher", "Skullcrusher", "Darkwheel", "Grimroller", "Warwheel", "Thunderroller", "Stormcrusher"]
+
+  },
+  "snotlingTrainedTroll": {
+    "positionName": "Trained Troll",
+    "primary": "S",
+    "firstName": ["Thog", "Groth", "Mog", "Zog", "Brak", "Vor", "Ruk", "Thrag", "Krug", "Hruk"],
+    "secondName": ["Ironhide", "Bloodcrusher", "Skullbreaker", "Darkmaw", "Grimcrusher", "Warbringer", "Thunderhide", "Stormcrusher"]
+
+  },
+  "underworldGoblin": {
+    "positionName": "Goblin",
+    "primary": "AM",
+    "firstName": ["Snik", "Grot", "Mug", "Zig", "Thog", "Krug", "Nug", "Ruk", "Bog", "Snag"],
+    "secondName": ["Quickfoot", "Sneakshadow", "Bloodfang", "Darkwhisper", "Grimfang", "Nightshade", "Warclaw", "Ironfang"]
+
+  },
+  "underworldSnotling": {
+    "positionName": "Snotling",
+    "primary": "AM",
+    "firstName": ["Snag", "Mug", "Bog", "Ruk", "Zog", "Thog", "Krug", "Nug", "Snik", "Grot"],
+    "secondName": ["Quickfoot", "Sneakshadow", "Bloodfang", "Darkwhisper", "Grimfang", "Nightshade", "Warclaw", "Ironfang"]
+
+  },
+  "underworldSkavenClanrat": {
+    "positionName": "Skaven Clanrat",
+    "primary": "GM",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Quickclaw", "Shadowfang", "Ironwhisker", "Bloodclaw", "Darkwhisker", "Grimclaw", "Warclaw", "Thunderwhisker"]
+
+  },
+  "underworldSkavenThrower": {
+    "positionName": "Skaven Thrower",
+    "primary": "GMP",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Swiftwhisker", "Shadowthrow", "Ironclaw", "Bloodthrow", "Darkwhisker", "Grimthrow", "Warwhisker", "Thunderthrow"]
+
+  },
+  "underworldGutterRunner": {
+    "positionName": "Gutter Runner",
+    "primary": "AGM",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Quickclaw", "Shadowrunner", "Swiftwhisker", "Bloodrunner", "Darkrunner", "Grimclaw", "Warwhisker", "Thunderrunner"]
+
+  },
+  "underworldSkavenBlitzer": {
+    "positionName": "Skaven Blitzer",
+    "primary": "GMS",
+    "firstName": ["Skrik", "Vrik", "Trek", "Nrik", "Snik", "Grik", "Drik", "Frak", "Rik", "Zik"],
+    "secondName": ["Ironfang", "Bloodstrike", "Shadowclaw", "Darkstrike", "Grimstrike", "Warstrike", "Thunderstrike", "Stormclaw"]
+
+  },
+  "underworldTroll": {
+    "positionName": "Underworld Troll",
+    "primary": "MS",
+    "firstName": ["Groth", "Thog", "Mug", "Krug", "Bog", "Hruk", "Ruk", "Zog", "Torg", "Vor"],
+    "secondName": ["Ironhide", "Bloodcrusher", "Skullbreaker", "Darkmaw", "Grimcrusher", "Warbringer", "Thunderhide", "Stormcrusher"]
+
+  },
+  "underworldMutantRatOgre": {
+    "positionName": "Mutant Rat Ogre",
+    "primary": "MS",
+    "firstName": ["Skrak", "Vrath", "Grak", "Thrak", "Zrik", "Frak", "Nrik", "Drak", "Rik", "Snak"],
+    "secondName": ["Ironclaw", "Bloodfang", "Skullcrusher", "Darkwhisker", "Grimclaw", "Warclaw", "Thunderwhisker", "Stormfang"]
+
+  },
+  "vampireThrall": {
+    "positionName": "Thrall",
+    "primary": "G",
+    "firstName": ["Lucien", "Viktor", "Sergei", "Gabriel", "Alexei", "Dimitri", "Stefan", "Vladimir", "Boris", "Ivan"],
+    "secondName": ["Bloodthrall", "Shadowfang", "Darkservant", "Ironfang", "Grimfang", "Warservant", "Thunderfang", "Stormfang"]
+
+  },
+  "vampireThrower": {
+    "positionName": "Vampire Thrower",
+    "primary": "AGP",
+    "firstName": ["Draven", "Lucien", "Viktor", "Sergei", "Gabriel", "Alexei", "Dimitri", "Stefan", "Vladimir", "Boris"],
+    "secondName": ["Bloodthrow", "Shadowthrow", "Darkfang", "Ironthrow", "Grimthrow", "Warthrow", "Thunderthrow", "Stormthrow"]
+
+  },
+  "vampireBlitzer": {
+    "positionName": "Vampire Blitzer",
+    "primary": "AGS",
+    "firstName": ["Viktor", "Lucien", "Draven", "Sergei", "Gabriel", "Alexei", "Dimitri", "Stefan", "Vladimir", "Boris"],
+    "secondName": ["Bloodstrike", "Shadowstrike", "Darkfang", "Ironstrike", "Grimstrike", "Warstrike", "Thunderstrike", "Stormstrike"]
+
+  },
+  "vampireRunner": {
+    "positionName": "Vampire Runner",
+    "primary": "AG",
+    "firstName": ["Gabriel", "Lucien", "Viktor", "Draven", "Sergei", "Alexei", "Dimitri", "Stefan", "Vladimir", "Boris"],
+    "secondName": ["Bloodrunner", "Shadowrunner", "Darkfang", "Ironrunner", "Grimrunner", "Warrunner", "Thunderrunner", "Stormrunner"]
+
+  },
+  "vampireVargheist": {
+    "positionName": "Vargheist",
+    "primary": "S",
+    "firstName": ["Nosferatu", "Dracula", "Lestat", "Alucard", "Vlad", "Strahd", "Kain", "Morbius", "Orlok", "Mordred"],
+    "secondName": ["Bloodfang", "Shadowfang", "Darkfang", "Ironfang", "Grimfang", "Warfang", "Thunderfang", "Stormfang"]
+
+  },
+  "woodElfLineman": {
+    "positionName": "Lineman",
+    "primary": "AG",
+    "firstName": ["Elrond", "Legolas", "Thranduil", "Finrod", "Glorfindel", "Fingolfin", "Erestor", "Gil-galad", "Gildor", "Haldir"],
+    "secondName": ["Swiftblade", "Lightfoot", "Silverleaf", "Starshine", "Sunrunner", "Moonwhisper", "Starwalker", "Lightbringer"]
+
+  },
+  "woodElfThrower": {
+    "positionName": "Thrower",
+    "primary": "AGP",
+    "firstName": ["Legolas", "Elrond", "Glorfindel", "Thranduil", "Finrod", "Fingolfin", "Erestor", "Gil-galad", "Gildor", "Haldir"],
+    "secondName": ["Lightthrow", "Starwhisper", "Swiftarm", "Silverleaf", "Moonwhisper", "Starwalker", "Sunthrow", "Lightbringer"]
+
+  },
+  "woodElfCatcher": {
+    "positionName": "Catcher",
+    "primary": "AG",
+    "firstName": ["Finrod", "Legolas", "Elrond", "Glorfindel", "Thranduil", "Fingolfin", "Erestor", "Gil-galad", "Gildor", "Haldir"],
+    "secondName": ["Swiftcatch", "Lightfoot", "Silverleaf", "Starcatcher", "Mooncatcher", "Starwhisper", "Sunrunner", "Lightcatch"]
+
+  },
+  "woodElfWardancer": {
+    "positionName": "Wardancer",
+    "primary": "AG",
+    "firstName": ["Gil-galad", "Glorfindel", "Legolas", "Elrond", "Thranduil", "Finrod", "Fingolfin", "Erestor", "Gildor", "Haldir"],
+    "secondName": ["Swiftstrike", "Lightblade", "Starstrike", "Silverstrike", "Moonstrike", "Starwalker", "Sunstrike", "Lightbringer"]
+
+  },
+  "woodElfLorenForestTreeman": {
+    "positionName": "Loren Forest Treeman",
+    "primary": "S",
+    "firstName": ["Oakheart", "Barkroot", "Thornbranch", "Ironbark", "Leafshade", "Stonesprout", "Pineclaw", "Rootbreaker", "Elmroot", "Cedarshade"],
+    "secondName": ["Deepwood", "Ironwood", "Grimbranch", "Stonebark", "Shadowgrove", "Thornroot", "Wolfsbane", "Darkforest"]
+  }
+}

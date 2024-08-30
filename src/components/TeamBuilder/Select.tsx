@@ -9,21 +9,18 @@ interface SelectProps {
   height?: string;
 }
 
-// Wrapper for the select and custom arrow
 const SelectWrapper = styled.div<{ width?: string }>`
   position: relative;
   width: ${(props) => props.width || '100%'};
 `;
 
-// The styled select element
 const StyledSelect = styled.select<{ height?: string }>`
   width: 100%;
   height: ${(props) => props.height || '40px'};
-  padding-right: 30px;
+  padding: 5px 30px 5px 10px;
   appearance: none;
-  background-color: #e0f0ff;
-  border: 1px solid #1d3860;
-  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
   font-size: 16px;
   color: #1d3860;
 `;
@@ -55,8 +52,8 @@ const Select: React.FC<SelectProps> = ({
           </option>
         ))}
       </StyledSelect>
-      <Arrow viewBox="0 0 260 245" xmlns="http://www.w3.org/2000/svg">
-        <path d="m56,237 74-228 74,228L10,96h240" />
+      <Arrow viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 50 75 L 25 25 L 75 25 Z" />
       </Arrow>
     </SelectWrapper>
   );

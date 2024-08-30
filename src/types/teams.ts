@@ -8,11 +8,11 @@ export interface PlayerPosition {
   name: string;
   cost: number;
   stats: {
-    ma: number;
-    st: number;
-    ag: number;
-    pa: number;
-    av: number;
+    ma: string;
+    st: string;
+    ag: string;
+    pa: string;
+    av: string;
   };
   traitsAndSkills: TraitsAndSkills[];
   primary: string;
