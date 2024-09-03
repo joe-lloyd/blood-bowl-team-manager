@@ -38,6 +38,23 @@ interface CustomTeam {
   apothecary: boolean;
 }
 
+interface TeamDataToSave {
+  id: string;
+  teamId: string;
+  teamName: string;
+  coachName: string;
+  players: (PlayerDataToSave | undefined)[];
+  treasury: number;
+  dedicatedFans: number;
+  totalTouchdowns: number;
+  totalCasualties: number;
+  leaguePoints: number;
+  rerolls: number;
+  assistantCoaches: number;
+  cheerleaders: number;
+  apothecary: boolean;
+}
+
 interface PlayerDataToSave {
   positionId: string;
   spp: number;
@@ -59,4 +76,10 @@ interface StatAdjust {
   av: number;
 }
 
-export type { CustomTeam, CustomPlayer, PlayerDataToSave, StatAdjust };
+export type {
+  CustomTeam,
+  CustomPlayer,
+  TeamDataToSave,
+  PlayerDataToSave,
+  StatAdjust,
+};

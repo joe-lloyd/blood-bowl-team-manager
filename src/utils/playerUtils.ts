@@ -1,5 +1,55 @@
 import { Team } from '@/types/teams';
-import { CustomPlayer, PlayerDataToSave } from '@/types/userData';
+import {
+  CustomPlayer,
+  PlayerDataToSave,
+  TeamDataToSave,
+} from '@/types/userData';
+import generateRandomName from '@/utils/randomNameGenerator/randomNameGenerator';
+import { v4 as uuidv4 } from 'uuid';
+
+const createNewTeam = (teamId: string, teamName: string): TeamDataToSave => {
+  const uniqueTeamInstanceId = uuidv4();
+
+  return {
+    id: uniqueTeamInstanceId,
+    teamId: teamId,
+    teamName: '',
+    coachName: '',
+    players: Array(16).fill(undefined) as PlayerDataToSave[],
+    treasury: 1000000,
+    dedicatedFans: 0,
+    totalTouchdowns: 0,
+    totalCasualties: 0,
+    leaguePoints: 0,
+    rerolls: 0,
+    assistantCoaches: 0,
+    cheerleaders: 0,
+    apothecary: false,
+  };
+};
+
+const createNewPlayer = (
+  positionId: string,
+  index: number
+): PlayerDataToSave => {
+  return {
+    positionId: positionId,
+    spp: 0,
+    playerName: generateRandomName(positionId),
+    number: index + 1,
+    missNextGame: false,
+    nigglingInjury: false,
+    tempRetirement: false,
+    statAdjust: {
+      ma: 0,
+      st: 0,
+      ag: 0,
+      pa: 0,
+      av: 0,
+    },
+    skills: [],
+  };
+};
 
 /**
  * This function takes the blueprint data for a player ( base skills, MA, ST etc ) type and adds the
@@ -9,7 +59,7 @@ import { CustomPlayer, PlayerDataToSave } from '@/types/userData';
  * @param teamBluePrint
  * @param userCustomPlayerData
  */
-const customPlayer = (
+const combineBaseDataWithUserData = (
   teamBluePrint: Team,
   userCustomPlayerData: PlayerDataToSave
 ): CustomPlayer => {
@@ -25,6 +75,7 @@ const customPlayer = (
   return {
     positionId: positionId,
     positionName: playerBlueprint.name,
+    playerName: userCustomPlayerData.playerName,
     cost: playerBlueprint.cost,
     stats: {
       ma: `${parseInt(playerBlueprint.stats.ma) + userCustomPlayerData.statAdjust.ma}`,
@@ -40,7 +91,6 @@ const customPlayer = (
     primary: playerBlueprint.primary,
     secondary: playerBlueprint.secondary,
     spp: userCustomPlayerData.spp,
-    playerName: userCustomPlayerData.playerName,
     number: userCustomPlayerData.number,
     missNextGame: userCustomPlayerData.missNextGame,
     nigglingInjury: userCustomPlayerData.nigglingInjury,
@@ -51,4 +101,4 @@ const customPlayer = (
   };
 };
 
-export { customPlayer };
+export { createNewPlayer, createNewTeam, combineBaseDataWithUserData };

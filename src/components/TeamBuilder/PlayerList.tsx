@@ -3,26 +3,10 @@ import styled from 'styled-components';
 import { Team } from '@/types/teams';
 import Select from '@/components/TeamBuilder/Select';
 import { useTeamBuilder } from '@/contexts/teamBuilder';
-import { customPlayer } from '@/utils/playerUtils';
-import { PlayerDataToSave } from '@/types/userData';
-
-const initialPlayerDataToSave: PlayerDataToSave = {
-  positionId: '',
-  spp: 0,
-  playerName: '',
-  number: 0,
-  missNextGame: false,
-  nigglingInjury: false,
-  tempRetirement: false,
-  statAdjust: {
-    ma: 0,
-    st: 0,
-    ag: 0,
-    pa: 0,
-    av: 0,
-  },
-  skills: [],
-};
+import {
+  combineBaseDataWithUserData,
+  createNewPlayer,
+} from '@/utils/playerUtils';
 
 const TableWrapper = styled.div`
   width: 100%;
@@ -82,10 +66,8 @@ const PlayerList: React.FC<{ teamData: Team }> = ({ teamData }) => {
       );
 
       if (selectedPosition) {
-        const player = customPlayer(teamData, {
-          ...initialPlayerDataToSave,
-          positionId: selectedPosition.id,
-        });
+        const newPlayer = createNewPlayer(selectedPosition.id, index);
+        const player = combineBaseDataWithUserData(teamData, newPlayer);
 
         dispatch({
           type: 'ADD_PLAYER',

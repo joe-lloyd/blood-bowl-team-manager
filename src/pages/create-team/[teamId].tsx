@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getTeamData, fetchTeamsList } from '@/utils/teamUtils';
 import Hero from '@/components/Hero';
@@ -47,4 +47,5 @@ export const getStaticProps = (async ({ params }) => {
     },
   };
 }) satisfies GetStaticProps<{ teamData: Team }>;
+
 export default TeamPage;

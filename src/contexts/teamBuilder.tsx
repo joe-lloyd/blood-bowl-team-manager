@@ -1,4 +1,10 @@
-import React, { createContext, useReducer, useContext, ReactNode } from 'react';
+import React, {
+  createContext,
+  useReducer,
+  useContext,
+  ReactNode,
+  useEffect,
+} from 'react';
 import { CustomPlayer, CustomTeam } from '@/types/userData';
 
 type ActionType =
@@ -10,7 +16,8 @@ type ActionType =
       type: 'UPDATE_PLAYER';
       payload: { index: number; player: CustomPlayer };
     }
-  | { type: 'UPDATE_META'; payload: Partial<CustomTeam> };
+  | { type: 'UPDATE_META'; payload: Partial<CustomTeam> }
+  | { type: 'INITIALIZE_TEAM'; payload: CustomTeam };
 
 const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
   switch (action.type) {
@@ -20,7 +27,6 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
       return { ...state, coachName: action.payload };
     case 'ADD_PLAYER': {
       const newPlayers = [...state.players];
-      console.log(action.payload.index, action.payload.player);
       newPlayers[action.payload.index] = { ...action.payload.player };
       return { ...state, players: newPlayers };
     }
@@ -33,13 +39,12 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
       const updatedPlayers = state.players.map((player, index) =>
         index === action.payload.index ? { ...action.payload.player } : player
       );
-      console.log(updatedPlayers);
-      const bruh = { ...state, players: updatedPlayers };
-      console.log(bruh);
-      return bruh;
+      return { ...state, players: updatedPlayers };
     }
     case 'UPDATE_META':
       return { ...state, ...action.payload };
+    case 'INITIALIZE_TEAM':
+      return { ...action.payload };
     default:
       return state;
   }
@@ -53,27 +58,35 @@ const TeamBuilderContext = createContext<
   | undefined
 >(undefined);
 
-const TeamBuilderProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
-  const initialTeamState: CustomTeam = {
-    id: '',
-    teamId: '',
-    teamName: '',
-    coachName: '',
-    players: new Array(16),
-    treasury: 0,
-    dedicatedFans: 0,
-    totalTouchdowns: 0,
-    totalCasualties: 0,
-    leaguePoints: 0,
-    rerolls: 0,
-    assistantCoaches: 0,
-    cheerleaders: 0,
-    apothecary: false,
-  };
+const TeamBuilderProvider: React.FC<{
+  children: ReactNode;
+  initialTeamState?: CustomTeam;
+}> = ({ children, initialTeamState }) => {
+  const [state, dispatch] = useReducer(
+    teamReducer,
+    initialTeamState || {
+      id: '',
+      teamId: '',
+      teamName: '',
+      coachName: '',
+      players: new Array(16),
+      treasury: 0,
+      dedicatedFans: 0,
+      totalTouchdowns: 0,
+      totalCasualties: 0,
+      leaguePoints: 0,
+      rerolls: 0,
+      assistantCoaches: 0,
+      cheerleaders: 0,
+      apothecary: false,
+    }
+  );
 
-  const [state, dispatch] = useReducer(teamReducer, initialTeamState);
+  useEffect(() => {
+    if (initialTeamState) {
+      dispatch({ type: 'INITIALIZE_TEAM', payload: initialTeamState });
+    }
+  }, [initialTeamState]);
 
   return (
     <TeamBuilderContext.Provider value={{ state, dispatch }}>
