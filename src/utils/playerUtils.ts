@@ -5,28 +5,21 @@ import {
   TeamDataToSave,
 } from '@/types/userData';
 import generateRandomName from '@/utils/randomNameGenerator/randomNameGenerator';
-import { v4 as uuidv4 } from 'uuid';
-
-const createNewTeam = (teamId: string, teamName: string): TeamDataToSave => {
-  const uniqueTeamInstanceId = uuidv4();
-
-  return {
-    id: uniqueTeamInstanceId,
-    teamId: teamId,
-    teamName: '',
-    coachName: '',
-    players: Array(16).fill(undefined) as PlayerDataToSave[],
-    treasury: 1000000,
-    dedicatedFans: 0,
-    totalTouchdowns: 0,
-    totalCasualties: 0,
-    leaguePoints: 0,
-    rerolls: 0,
-    assistantCoaches: 0,
-    cheerleaders: 0,
-    apothecary: false,
-  };
-};
+const createNewTeam = (teamId: string): TeamDataToSave => ({
+  teamId: teamId,
+  teamName: '',
+  coachName: '',
+  players: Array(16).fill(null) as PlayerDataToSave[],
+  treasury: 1000000,
+  dedicatedFans: 0,
+  totalTouchdowns: 0,
+  totalCasualties: 0,
+  leaguePoints: 0,
+  rerolls: 0,
+  assistantCoaches: 0,
+  cheerleaders: 0,
+  apothecary: false,
+});
 
 const createNewPlayer = (
   positionId: string,

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { getTeamData, fetchTeamsList } from '@/utils/teamUtils';
+import React from 'react';
+import { GetServerSideProps } from 'next';
+import { getTeamData } from '@/utils/teamUtils';
 import Hero from '@/components/Hero';
 import Parchment from '@/components/Parchment';
 import TeamDetails from '@/components/TeamDetails';
@@ -10,7 +10,11 @@ import { Team } from '@/types/teams';
 import TeamBuilder from '@/components/TeamBuilder/TeamBuilder';
 import { TeamBuilderProvider } from '@/contexts/teamBuilder';
 
-const TeamPage: React.FC<{ teamData: Team }> = ({ teamData }) => {
+// The dynamic page component
+const TeamPage: React.FC<{ teamData: Team; uid: string }> = ({
+  teamData,
+  uid,
+}) => {
   return (
     <TeamBuilderProvider>
       <Parchment />
@@ -19,33 +23,31 @@ const TeamPage: React.FC<{ teamData: Team }> = ({ teamData }) => {
       <ContentContainer>
         <TeamDetails teamData={teamData} />
       </ContentContainer>
-      <TeamBuilder teamData={teamData} />
+      <TeamBuilder teamData={teamData} uid={uid} />
     </TeamBuilderProvider>
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const teams = await fetchTeamsList();
+// The dynamic data fetching
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const { teamId, uid } = params as { teamId: string; uid: string };
 
-  const paths = Object.keys(teams).map((teamId) => ({
-    params: { teamId },
-  }));
-
-  return {
-    paths,
-    fallback: false, // Return 404 if the teamId does not exist
-  };
-};
-
-export const getStaticProps = (async ({ params }) => {
-  const { teamId } = params as { teamId: string };
+  // Fetch the team data dynamically
   const teamData = await getTeamData(teamId);
+
+  // If the team data is not found, return a 404 page
+  if (!teamData) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
-      teamData,
+      teamData: { ...teamData, teamId },
+      uid,
     },
   };
-}) satisfies GetStaticProps<{ teamData: Team }>;
+};
 
 export default TeamPage;

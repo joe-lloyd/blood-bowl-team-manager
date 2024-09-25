@@ -39,7 +39,6 @@ interface CustomTeam {
 }
 
 interface TeamDataToSave {
-  id: string;
   teamId: string;
   teamName: string;
   coachName: string;

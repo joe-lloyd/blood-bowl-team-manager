@@ -20,11 +20,16 @@ const LinkText = styled.span`
 const TeamLinkList: React.FC<{
   teams: TeamsList;
   rootPath: string;
-}> = ({ teams, rootPath }) => {
+  uid?: string;
+}> = ({ teams, rootPath, uid }) => {
   return (
     <div>
       {Object.entries(teams).map(([teamId, teamName]) => (
-        <Link href={`/${rootPath}/${teamId}`} key={teamId} passHref>
+        <Link
+          href={`/${rootPath}/${teamId}${!!uid ? `/${uid}` : ''}`}
+          key={teamId}
+          passHref
+        >
           <LinkText>{teamName}</LinkText>
         </Link>
       ))}

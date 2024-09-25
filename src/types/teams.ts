@@ -31,6 +31,7 @@ export interface TeamSpecialRules {
 }
 
 export interface Team {
+  teamId: string;
   name: string;
   players: Player[];
   rerollCost: number;

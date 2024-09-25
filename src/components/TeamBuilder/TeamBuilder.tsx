@@ -6,9 +6,10 @@ import styled from 'styled-components';
 import { Team } from '@/types/teams';
 import { useTeamBuilder } from '@/contexts/teamBuilder';
 import { createNewTeam } from '@/utils/playerUtils';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore'; // Import getDoc to check Firestore
 import { db } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';
+import SaveButton from '@/components/TeamBuilder/SaveButton';
 
 const TopTableContainer = styled.div`
   display: flex;
@@ -34,8 +35,10 @@ const StyledHeading = styled.h1`
   transform-origin: bottom left;
 `;
 
-const TeamBuilder: React.FC<{ teamData: Team }> = ({ teamData }) => {
-  console.log('FIRESTORE', db);
+const TeamBuilder: React.FC<{ teamData: Team; uid: string }> = ({
+  teamData,
+  uid,
+}) => {
   const user = useUser();
   const { state, dispatch } = useTeamBuilder();
 
@@ -47,37 +50,20 @@ const TeamBuilder: React.FC<{ teamData: Team }> = ({ teamData }) => {
           return;
         }
 
-        let uniqueTeamInstanceId = localStorage.getItem('uniqueTeamInstanceId');
+        const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
+        const teamSnapshot = await getDoc(teamDocRef);
 
-        if (!uniqueTeamInstanceId) {
-          const newTeam = createNewTeam(teamData.id, teamData.name);
-          uniqueTeamInstanceId = newTeam.id;
-
-          console.log('Attempting to save new team:', newTeam);
-          console.log(
-            'Saving to Firestore path:',
-            `users/${user.id}/teams/${uniqueTeamInstanceId}`
-          );
-
-          await setDoc(
-            doc(db, 'users', user.id, 'teams', uniqueTeamInstanceId),
-            newTeam
-          );
-
-          localStorage.setItem('uniqueTeamInstanceId', uniqueTeamInstanceId);
-          dispatch({ type: 'UPDATE_META', payload: newTeam });
+        if (teamSnapshot.exists()) {
+          const existingTeam = teamSnapshot.data() as Team;
+          console.log('Existing team loaded:', existingTeam);
+          dispatch({ type: 'UPDATE_META', payload: existingTeam });
         } else {
-          console.log('Loading existing team:', uniqueTeamInstanceId);
-          const teamDoc = await getDoc(
-            doc(db, 'users', user.id, 'teams', uniqueTeamInstanceId)
-          );
-          if (teamDoc.exists()) {
-            console.log('Existing team found:', teamDoc.data());
-            dispatch({ type: 'UPDATE_META', payload: teamDoc.data() });
-          } else {
-            console.warn('No existing team found, resetting local storage.');
-            localStorage.removeItem('uniqueTeamInstanceId');
-          }
+          const newTeam = createNewTeam(teamData.teamId); // Using uid as teamId if necessary
+          console.log('Creating new team:', newTeam);
+
+          await setDoc(teamDocRef, newTeam);
+
+          dispatch({ type: 'UPDATE_META', payload: newTeam });
         }
       } catch (error) {
         console.error('Error during Firestore operation:', error);
@@ -85,7 +71,7 @@ const TeamBuilder: React.FC<{ teamData: Team }> = ({ teamData }) => {
     };
 
     initializeTeam();
-  }, [user, teamData.id, teamData.name, dispatch]);
+  }, [user, uid]);
 
   return (
     <TeamBuilderContainer>
@@ -95,6 +81,7 @@ const TeamBuilder: React.FC<{ teamData: Team }> = ({ teamData }) => {
       </TopTableContainer>
       <PlayerList teamData={teamData} />
       <TeamMeta teamData={teamData} />
+      <SaveButton />
     </TeamBuilderContainer>
   );
 };
