@@ -10,7 +10,6 @@ import { Team } from '@/types/teams';
 import TeamBuilder from '@/components/TeamBuilder/TeamBuilder';
 import { TeamBuilderProvider } from '@/contexts/teamBuilder';
 
-// The dynamic page component
 const TeamPage: React.FC<{ teamData: Team; uid: string }> = ({
   teamData,
   uid,
@@ -28,14 +27,11 @@ const TeamPage: React.FC<{ teamData: Team; uid: string }> = ({
   );
 };
 
-// The dynamic data fetching
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { teamId, uid } = params as { teamId: string; uid: string };
 
-  // Fetch the team data dynamically
   const teamData = await getTeamData(teamId);
 
-  // If the team data is not found, return a 404 page
   if (!teamData) {
     return {
       notFound: true,

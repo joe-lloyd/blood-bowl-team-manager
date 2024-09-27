@@ -5,7 +5,9 @@ import React, {
   ReactNode,
   useEffect,
 } from 'react';
-import { CustomPlayer, CustomTeam } from '@/types/userData';
+import { CustomPlayer, CustomTeam, TeamDataToSave } from '@/types/userData';
+import { Team } from '@/types/teams';
+import { combineBaseDataWithUserData } from '@/utils/playerUtils';
 
 type ActionType =
   | { type: 'SET_TEAM_NAME'; payload: string }
@@ -17,6 +19,10 @@ type ActionType =
       payload: { index: number; player: CustomPlayer };
     }
   | { type: 'UPDATE_META'; payload: Partial<CustomTeam> }
+  | {
+      type: 'LOAD_TEAM_INTO_STATE';
+      payload: Partial<{ coachData: TeamDataToSave; teamData: Team }>;
+    }
   | { type: 'INITIALIZE_TEAM'; payload: CustomTeam };
 
 const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
@@ -43,6 +49,35 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
     }
     case 'UPDATE_META':
       return { ...state, ...action.payload };
+    case 'LOAD_TEAM_INTO_STATE': {
+      const { coachData, teamData } = action.payload;
+      if (!coachData || !teamData) {
+        console.error('No coach or team data found');
+        return state;
+      }
+      const mergedPlayers = coachData.players.map((savedPlayerData, index) => {
+        if (!savedPlayerData) {
+          return null;
+        }
+        return combineBaseDataWithUserData(teamData, savedPlayerData);
+      });
+
+      return {
+        ...state,
+        players: mergedPlayers,
+        teamName: coachData?.teamName || teamData.name,
+        coachName: coachData?.coachName || '',
+        treasury: coachData?.treasury || 0,
+        dedicatedFans: coachData?.dedicatedFans || 0,
+        totalTouchdowns: coachData?.totalTouchdowns || 0,
+        totalCasualties: coachData?.totalCasualties || 0,
+        leaguePoints: coachData?.leaguePoints || 0,
+        rerolls: coachData?.rerolls || teamData.rerollCost,
+        assistantCoaches: coachData?.assistantCoaches || 0,
+        cheerleaders: coachData?.cheerleaders || 0,
+        apothecary: coachData?.apothecary || teamData.apothecary,
+      };
+    }
     case 'INITIALIZE_TEAM':
       return { ...action.payload };
     default:

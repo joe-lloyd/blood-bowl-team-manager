@@ -10,6 +10,7 @@ import { doc, getDoc, setDoc } from 'firebase/firestore'; // Import getDoc to ch
 import { db } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';
 import SaveButton from '@/components/TeamBuilder/SaveButton';
+import { TeamDataToSave } from '@/types/userData';
 
 const TopTableContainer = styled.div`
   display: flex;
@@ -54,16 +55,16 @@ const TeamBuilder: React.FC<{ teamData: Team; uid: string }> = ({
         const teamSnapshot = await getDoc(teamDocRef);
 
         if (teamSnapshot.exists()) {
-          const existingTeam = teamSnapshot.data() as Team;
-          console.log('Existing team loaded:', existingTeam);
-          dispatch({ type: 'UPDATE_META', payload: existingTeam });
+          const coachData = teamSnapshot.data() as TeamDataToSave;
+          console.log('Existing team loaded:', coachData);
+          dispatch({
+            type: 'LOAD_TEAM_INTO_STATE',
+            payload: { coachData, teamData },
+          });
         } else {
-          const newTeam = createNewTeam(teamData.teamId); // Using uid as teamId if necessary
-          console.log('Creating new team:', newTeam);
-
-          await setDoc(teamDocRef, newTeam);
-
-          dispatch({ type: 'UPDATE_META', payload: newTeam });
+          const teamBlueprintData = createNewTeam(teamData.teamId);
+          dispatch({ type: 'UPDATE_META', payload: teamBlueprintData });
+          await setDoc(teamDocRef, teamBlueprintData);
         }
       } catch (error) {
         console.error('Error during Firestore operation:', error);
@@ -79,7 +80,7 @@ const TeamBuilder: React.FC<{ teamData: Team; uid: string }> = ({
         <StyledHeading>Team Draft List</StyledHeading>
         <BaseInfo teamData={teamData} />
       </TopTableContainer>
-      <PlayerList teamData={teamData} />
+      <PlayerList teamData={teamData} uid={uid} />
       <TeamMeta teamData={teamData} />
       <SaveButton />
     </TeamBuilderContainer>

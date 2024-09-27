@@ -42,7 +42,7 @@ interface TeamDataToSave {
   teamId: string;
   teamName: string;
   coachName: string;
-  players: (PlayerDataToSave | undefined)[];
+  players: (PlayerDataToSave | null)[];
   treasury: number;
   dedicatedFans: number;
   totalTouchdowns: number;

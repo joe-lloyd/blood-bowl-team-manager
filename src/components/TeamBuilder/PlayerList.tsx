@@ -7,6 +7,9 @@ import {
   combineBaseDataWithUserData,
   createNewPlayer,
 } from '@/utils/playerUtils';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { db } from '@/services/firebase';
+import { useUser } from '@/contexts/userContext';
 
 const TableWrapper = styled.div`
   width: 100%;
@@ -56,26 +59,54 @@ const SkillsCell = styled(TableCell)`
   min-width: 400px;
 `;
 
-const PlayerList: React.FC<{ teamData: Team }> = ({ teamData }) => {
+const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
+  teamData,
+  uid,
+}) => {
+  const user = useUser();
   const { state, dispatch } = useTeamBuilder();
 
   const handlePositionChange = useCallback(
-    (index: number, positionId: string) => {
-      const selectedPosition = teamData.players.find(
-        (player) => player.id === positionId
-      );
+    async (index: number, positionId: string) => {
+      try {
+        if (!user) {
+          console.error('User not found');
+          return;
+        }
 
-      if (selectedPosition) {
-        const newPlayer = createNewPlayer(selectedPosition.id, index);
-        const player = combineBaseDataWithUserData(teamData, newPlayer);
+        const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
+        const teamSnapshot = await getDoc(teamDocRef);
+        const teamDataFromFirebase = teamSnapshot.data();
 
-        dispatch({
-          type: 'ADD_PLAYER',
-          payload: { index, player },
-        });
+        if (!teamDataFromFirebase) {
+          console.error('Team not found');
+          return;
+        }
+
+        const selectedPosition = teamData.players.find(
+          (player) => player.id === positionId
+        );
+
+        if (selectedPosition) {
+          const newPlayer = createNewPlayer(selectedPosition.id, index);
+          const players = [...teamDataFromFirebase.players];
+          players.splice(index, 1, newPlayer);
+          const player = combineBaseDataWithUserData(teamData, newPlayer);
+
+          dispatch({
+            type: 'ADD_PLAYER',
+            payload: { index, player },
+          });
+
+          await updateDoc(teamDocRef, {
+            players: players,
+          });
+        }
+      } catch (error) {
+        console.error('Error adding player:', error);
       }
     },
-    [dispatch, teamData]
+    [dispatch, teamData, uid, user]
   );
 
   return (
@@ -103,6 +134,7 @@ const PlayerList: React.FC<{ teamData: Team }> = ({ teamData }) => {
         <tbody>
           {Array.from({ length: 16 }, (_, index) => {
             const player = state.players[index];
+            console.log(player);
             return (
               <TableRow key={index}>
                 <TableCell>{index + 1}</TableCell>
