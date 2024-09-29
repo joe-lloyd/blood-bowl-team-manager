@@ -25,14 +25,16 @@ interface CustomTeam {
   id: string;
   teamId: string;
   teamName: string;
+  customTeamName: string;
   coachName: string;
-  players: CustomPlayer[];
+  players: (CustomPlayer | null)[];
   treasury: number;
   dedicatedFans: number;
   totalTouchdowns: number;
   totalCasualties: number;
   leaguePoints: number;
   rerolls: number;
+  rerollCost: number;
   assistantCoaches: number;
   cheerleaders: number;
   apothecary: boolean;

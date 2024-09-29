@@ -28,7 +28,7 @@ type ActionType =
 const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
   switch (action.type) {
     case 'SET_TEAM_NAME':
-      return { ...state, teamName: action.payload };
+      return { ...state, customTeamName: action.payload };
     case 'SET_COACH_NAME':
       return { ...state, coachName: action.payload };
     case 'ADD_PLAYER': {
@@ -65,16 +65,19 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
       return {
         ...state,
         players: mergedPlayers,
-        teamName: coachData?.teamName || teamData.name,
-        coachName: coachData?.coachName || '',
-        treasury: coachData?.treasury || 0,
-        dedicatedFans: coachData?.dedicatedFans || 0,
-        totalTouchdowns: coachData?.totalTouchdowns || 0,
-        totalCasualties: coachData?.totalCasualties || 0,
-        leaguePoints: coachData?.leaguePoints || 0,
+        teamId: teamData.teamId,
+        teamName: teamData.name,
+        customTeamName: coachData?.teamName,
+        coachName: coachData?.coachName,
+        treasury: coachData?.treasury,
+        dedicatedFans: coachData?.dedicatedFans,
+        totalTouchdowns: coachData?.totalTouchdowns,
+        totalCasualties: coachData?.totalCasualties,
+        leaguePoints: coachData?.leaguePoints,
         rerolls: coachData?.rerolls || teamData.rerollCost,
-        assistantCoaches: coachData?.assistantCoaches || 0,
-        cheerleaders: coachData?.cheerleaders || 0,
+        rerollCost: teamData.rerollCost,
+        assistantCoaches: coachData?.assistantCoaches,
+        cheerleaders: coachData?.cheerleaders,
         apothecary: coachData?.apothecary || teamData.apothecary,
       };
     }

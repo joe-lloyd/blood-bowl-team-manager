@@ -56,7 +56,6 @@ const TeamBuilder: React.FC<{ teamData: Team; uid: string }> = ({
 
         if (teamSnapshot.exists()) {
           const coachData = teamSnapshot.data() as TeamDataToSave;
-          console.log('Existing team loaded:', coachData);
           dispatch({
             type: 'LOAD_TEAM_INTO_STATE',
             payload: { coachData, teamData },
@@ -78,7 +77,7 @@ const TeamBuilder: React.FC<{ teamData: Team; uid: string }> = ({
     <TeamBuilderContainer>
       <TopTableContainer>
         <StyledHeading>Team Draft List</StyledHeading>
-        <BaseInfo teamData={teamData} />
+        <BaseInfo teamData={teamData} uid={uid} />
       </TopTableContainer>
       <PlayerList teamData={teamData} uid={uid} />
       <TeamMeta teamData={teamData} />

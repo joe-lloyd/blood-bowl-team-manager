@@ -134,7 +134,6 @@ const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
         <tbody>
           {Array.from({ length: 16 }, (_, index) => {
             const player = state.players[index];
-            console.log(player);
             return (
               <TableRow key={index}>
                 <TableCell>{index + 1}</TableCell>

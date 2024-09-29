@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { doc, updateDoc } from 'firebase/firestore'; // Firestore imports
+import { db } from '@/services/firebase';
 import { Team } from '@/types/teams';
+import { useTeamBuilder } from '@/contexts/teamBuilder';
+import { useUser } from '@/contexts/userContext';
+import { CustomTeam } from '@/types/userData';
 
 const TopTableContainer = styled.div`
   display: inline-grid;
@@ -25,15 +30,70 @@ const InputField = styled.input`
   min-width: 200px;
 `;
 
-const BaseInfo: React.FC<{ teamData: Team }> = ({ teamData }) => {
+const BaseInfo: React.FC<{ uid: string }> = ({ uid }) => {
+  const { state, dispatch } = useTeamBuilder(); // Use the context
+  const user = useUser();
+
+  const handleTeamNameChange = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newTeamName = e.target.value;
+
+    if (!user) {
+      console.error('User not found');
+      return;
+    }
+
+    // Update context
+    dispatch({ type: 'SET_TEAM_NAME', payload: newTeamName });
+
+    // Firestore document reference
+    const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
+
+    // Update Firestore
+    await updateDoc(teamDocRef, {
+      teamName: newTeamName,
+    });
+  };
+
+  // Handle coach name change
+  const handleCoachNameChange = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newCoachName = e.target.value;
+
+    if (!user) {
+      console.error('User not found');
+      return;
+    }
+
+    // Update context
+    dispatch({ type: 'SET_COACH_NAME', payload: newCoachName });
+    // Firestore document reference
+    const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
+
+    // Update Firestore
+    await updateDoc(teamDocRef, {
+      coachName: newCoachName,
+    });
+  };
+
   return (
     <TopTableContainer>
       <Label>TEAM NAME:</Label>
-      <InputField type="text" />
+      <InputField
+        type="text"
+        value={state.customTeamName || ''}
+        onChange={handleTeamNameChange}
+      />
       <Label>TEAM ROSTER:</Label>
-      <InputField type="text" value={teamData.name} disabled={true} />
+      <InputField type="text" value={state.teamName} disabled={true} />
       <Label>COACH:</Label>
-      <InputField type="text" />
+      <InputField
+        type="text"
+        value={state.coachName || ''}
+        onChange={handleCoachNameChange}
+      />
     </TopTableContainer>
   );
 };
