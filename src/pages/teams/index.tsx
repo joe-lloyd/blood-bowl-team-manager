@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { fetchTeamsList } from '@/utils/teamUtils';
 import Parchment from '@/components/Parchment';
 import Hero from '@/components/Hero';

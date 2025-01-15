@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Parchment from '@/components/Parchment';
 import HomeContent from '@/components/HomeContent';
 import AppBar from '@/components/AppBar';

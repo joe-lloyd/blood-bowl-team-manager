@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useUser } from '@/contexts/userContext';
 import ContentContainer from '@/components/ContentContainer';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   grid-gap: 20px;
-`;
 
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  @media (min-width: 1441px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1440px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 788px) {
+    grid-template-columns: 1fr;
+  }
+`;
 const Card = styled.div<{ disabled?: boolean }>`
   position: relative;
   border-radius: 8px;
@@ -71,6 +83,24 @@ const CardTitle = styled.h3`
 // @TODO: Replace the `unknown` type with the correct type
 const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
   const user = useUser();
+  const [userTeams, setUserTeams] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (user) {
+      const fetchTeams = async () => {
+        const db = getFirestore();
+        const teamsCollection = collection(db, `users/${user.uid}/teams`);
+        const teamsSnapshot = await getDocs(teamsCollection);
+        const teamsList = teamsSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setUserTeams(teamsList);
+      };
+
+      fetchTeams();
+    }
+  }, [user]);
 
   const handleDisabledClick = (
     event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
@@ -143,7 +173,7 @@ const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
           </>
         )}
 
-        {!!user && userContent?.teams?.length > 0 && (
+        {!!user && userTeams.length > 0 && (
           <Link href="/my-teams">
             <Card>
               <Overlay>

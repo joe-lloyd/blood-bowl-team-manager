@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { doc, updateDoc } from 'firebase/firestore'; // Firestore imports
+import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/services/firebase';
-import { Team } from '@/types/teams';
 import { useTeamBuilder } from '@/contexts/teamBuilder';
 import { useUser } from '@/contexts/userContext';
-import { CustomTeam } from '@/types/userData';
 
 const TopTableContainer = styled.div`
   display: inline-grid;

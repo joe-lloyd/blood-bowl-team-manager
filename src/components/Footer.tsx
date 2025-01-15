@@ -7,6 +7,7 @@ const FooterText = styled.h1`
   color: #eaaa02;
   margin: auto;
   padding: 20px;
+  font-size: 1.4rem;
 `;
 
 const FooterContainer = styled.div`
@@ -38,7 +39,7 @@ const StyledImage = styled(Image)`
 
 const Footer = () => {
   return (
-    <>
+    <div>
       <FooterContainer>
         <svg
           viewBox="0 0 300 150"
@@ -48,7 +49,10 @@ const Footer = () => {
         >
           <polygon points="300,0 300,150 0,150" style={{ fill: '#1d3860' }} />
         </svg>
-        <FooterText>Some text for the footer</FooterText>
+        <FooterText>
+          I am not affiliated with GW in any way, this was built for fun and for
+          the love of the game
+        </FooterText>
         <StyledImage
           src="/BBLogoIcon.png"
           alt="logo"
@@ -57,7 +61,7 @@ const Footer = () => {
         />
       </FooterContainer>
       <FooterAccent />
-    </>
+    </div>
   );
 };
 

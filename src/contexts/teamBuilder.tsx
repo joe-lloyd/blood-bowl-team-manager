@@ -38,6 +38,8 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
     }
     case 'REMOVE_PLAYER': {
       const updatedPlayers = [...state.players];
+      // @TODO why is this undefined and not null?
+      // @ts-ignore
       updatedPlayers[action.payload] = undefined;
       return { ...state, players: updatedPlayers };
     }
@@ -84,7 +86,7 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
     case 'INITIALIZE_TEAM':
       return { ...action.payload };
     default:
-      return state;
+      throw new Error(`Unhandled action type: ${(action as any).type}`);
   }
 };
 
@@ -102,22 +104,24 @@ const TeamBuilderProvider: React.FC<{
 }> = ({ children, initialTeamState }) => {
   const [state, dispatch] = useReducer(
     teamReducer,
-    initialTeamState || {
-      id: '',
-      teamId: '',
-      teamName: '',
-      coachName: '',
-      players: new Array(16),
-      treasury: 0,
-      dedicatedFans: 0,
-      totalTouchdowns: 0,
-      totalCasualties: 0,
-      leaguePoints: 0,
-      rerolls: 0,
-      assistantCoaches: 0,
-      cheerleaders: 0,
-      apothecary: false,
-    }
+    initialTeamState ||
+      ({
+        id: '',
+        teamId: '',
+        teamName: '',
+        customTeamName: '',
+        coachName: '',
+        players: new Array(16).fill(null),
+        treasury: 0,
+        dedicatedFans: 0,
+        totalTouchdowns: 0,
+        totalCasualties: 0,
+        leaguePoints: 0,
+        rerolls: 0,
+        assistantCoaches: 0,
+        cheerleaders: 0,
+        apothecary: false,
+      } as CustomTeam)
   );
 
   useEffect(() => {
