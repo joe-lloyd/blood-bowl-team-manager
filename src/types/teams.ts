@@ -21,7 +21,7 @@ export interface PlayerPosition {
 
 export interface Player {
   id: string;
-  quantity: number;
+  quantity: string;
   position: PlayerPosition;
 }
 

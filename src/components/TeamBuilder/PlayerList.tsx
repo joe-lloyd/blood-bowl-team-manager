@@ -22,7 +22,6 @@ const MainTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   background-color: #e0f0ff;
-  margin-bottom: 20px;
   border: none;
 `;
 

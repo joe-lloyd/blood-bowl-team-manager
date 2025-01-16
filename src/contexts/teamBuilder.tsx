@@ -71,6 +71,7 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
         teamName: teamData.name,
         customTeamName: coachData?.teamName,
         coachName: coachData?.coachName,
+        startingTreasury: coachData?.startingTreasury,
         treasury: coachData?.treasury,
         dedicatedFans: coachData?.dedicatedFans,
         totalTouchdowns: coachData?.totalTouchdowns,

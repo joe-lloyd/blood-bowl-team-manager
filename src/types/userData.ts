@@ -28,6 +28,7 @@ interface CustomTeam {
   customTeamName: string;
   coachName: string;
   players: (CustomPlayer | null)[];
+  startingTreasury: number;
   treasury: number;
   dedicatedFans: number;
   totalTouchdowns: number;
@@ -45,6 +46,7 @@ interface TeamDataToSave {
   teamName: string;
   coachName: string;
   players: (PlayerDataToSave | null)[];
+  startingTreasury: number;
   treasury: number;
   dedicatedFans: number;
   totalTouchdowns: number;

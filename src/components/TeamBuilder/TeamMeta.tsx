@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Team } from '@/types/teams';
+import { doc, updateDoc } from 'firebase/firestore';
+import { useTeamBuilder } from '@/contexts/teamBuilder';
+import { useUser } from '@/contexts/userContext';
+import { db } from '@/services/firebase';
 
 const BottomTableContainer = styled.div`
   display: grid;
@@ -14,6 +17,7 @@ const BottomTableContainer = styled.div`
 const BottomRow = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px;
 `;
 
@@ -22,61 +26,130 @@ const Label = styled.label`
   color: #1d3860;
 `;
 
-const Value = styled.span`
+const InputField = styled.input`
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #1d3860;
+  border-radius: 4px;
   color: #1d3860;
 `;
 
-const TeamMeta: React.FC<{ teamData: Team }> = ({ teamData }) => {
-  const { rerollCost, apothecary } = teamData;
-  const reRollCostMidSeason = rerollCost * 2;
+const TeamMeta: React.FC<{ uid: string }> = ({ uid }) => {
+  const { state, dispatch } = useTeamBuilder();
+  const user = useUser();
+
+  const handleMetaChange = async (
+    key: keyof typeof state,
+    value: string | number
+  ) => {
+    if (!user) {
+      console.error('User not found');
+      return;
+    }
+
+    // Update context
+    dispatch({ type: 'UPDATE_META', payload: { [key]: value } });
+
+    // Firestore document reference
+    const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
+
+    // Update Firestore
+    await updateDoc(teamDocRef, {
+      [key]: value,
+    });
+  };
 
   return (
     <BottomTableContainer>
       <BottomRow>
         <Label>Treasury:</Label>
-        <Value>100,000 GP</Value>
+        <InputField
+          type="number"
+          value={state.treasury}
+          onChange={(e) =>
+            handleMetaChange('treasury', parseInt(e.target.value))
+          }
+        />
       </BottomRow>
       <BottomRow>
         <Label>Dedicated Fans:</Label>
-        <Value>3</Value>
+        <InputField
+          type="number"
+          value={state.dedicatedFans}
+          onChange={(e) =>
+            handleMetaChange('dedicatedFans', parseInt(e.target.value))
+          }
+        />
       </BottomRow>
       <BottomRow>
         <Label>Total Touchdowns:</Label>
-        <Value>0</Value>
+        <InputField
+          type="number"
+          value={state.totalTouchdowns}
+          onChange={(e) =>
+            handleMetaChange('totalTouchdowns', parseInt(e.target.value))
+          }
+        />
       </BottomRow>
       <BottomRow>
         <Label>Total Casualties:</Label>
-        <Value>0</Value>
+        <InputField
+          type="number"
+          value={state.totalCasualties}
+          onChange={(e) =>
+            handleMetaChange('totalCasualties', parseInt(e.target.value))
+          }
+        />
       </BottomRow>
       <BottomRow>
         <Label>League Points:</Label>
-        <Value>0</Value>
-      </BottomRow>
-      <BottomRow>
-        <Label>Team Badge:</Label>
-        <Value></Value>
+        <InputField
+          type="number"
+          value={state.leaguePoints}
+          onChange={(e) =>
+            handleMetaChange('leaguePoints', parseInt(e.target.value))
+          }
+        />
       </BottomRow>
       <BottomRow>
         <Label>Team Re-Rolls:</Label>
-        <Value>3</Value>
+        <InputField
+          type="number"
+          value={state.rerolls}
+          onChange={(e) =>
+            handleMetaChange('rerolls', parseInt(e.target.value))
+          }
+        />
       </BottomRow>
       <BottomRow>
         <Label>Assistant Coaches:</Label>
-        <Value>1</Value>
+        <InputField
+          type="number"
+          value={state.assistantCoaches}
+          onChange={(e) =>
+            handleMetaChange('assistantCoaches', parseInt(e.target.value))
+          }
+        />
       </BottomRow>
       <BottomRow>
         <Label>Cheerleaders:</Label>
-        <Value>0</Value>
+        <InputField
+          type="number"
+          value={state.cheerleaders}
+          onChange={(e) =>
+            handleMetaChange('cheerleaders', parseInt(e.target.value))
+          }
+        />
       </BottomRow>
-      {apothecary && (
-        <BottomRow>
-          <Label>Apothecary:</Label>
-          <Value>Yes</Value>
-        </BottomRow>
-      )}
       <BottomRow>
-        <Label>Team Value:</Label>
-        <Value>1,000,000 GP</Value>
+        <Label>Apothecary:</Label>
+        <InputField
+          type="checkbox"
+          checked={state.apothecary}
+          onChange={(e) =>
+            handleMetaChange('apothecary', e.target.checked ? 'true' : 'false')
+          }
+        />
       </BottomRow>
     </BottomTableContainer>
   );

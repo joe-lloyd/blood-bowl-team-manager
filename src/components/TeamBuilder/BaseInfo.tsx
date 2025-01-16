@@ -32,6 +32,7 @@ const BaseInfo: React.FC<{ uid: string }> = ({ uid }) => {
   const { state, dispatch } = useTeamBuilder(); // Use the context
   const user = useUser();
 
+  // Handle team name change
   const handleTeamNameChange = async (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -67,12 +68,48 @@ const BaseInfo: React.FC<{ uid: string }> = ({ uid }) => {
 
     // Update context
     dispatch({ type: 'SET_COACH_NAME', payload: newCoachName });
+
     // Firestore document reference
     const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
 
     // Update Firestore
     await updateDoc(teamDocRef, {
       coachName: newCoachName,
+    });
+  };
+
+  // Handle starting treasury change
+  const handleStartingTreasuryChange = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newStartingTreasury = parseInt(e.target.value, 10);
+
+    if (!user) {
+      console.error('User not found');
+      return;
+    }
+
+    if (state.players.some(Boolean)) {
+      console.error('Cannot modify starting treasury after players are added.');
+      return;
+    }
+
+    // Update context
+    dispatch({
+      type: 'UPDATE_META',
+      payload: {
+        startingTreasury: newStartingTreasury,
+        treasury: newStartingTreasury,
+      },
+    });
+
+    // Firestore document reference
+    const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
+
+    // Update Firestore
+    await updateDoc(teamDocRef, {
+      startingTreasury: newStartingTreasury,
+      treasury: newStartingTreasury,
     });
   };
 
@@ -91,6 +128,13 @@ const BaseInfo: React.FC<{ uid: string }> = ({ uid }) => {
         type="text"
         value={state.coachName || ''}
         onChange={handleCoachNameChange}
+      />
+      <Label>STARTING TREASURY:</Label>
+      <InputField
+        type="number"
+        value={state.startingTreasury || ''}
+        onChange={handleStartingTreasuryChange}
+        disabled={state.players.some((player) => player !== null)}
       />
     </TopTableContainer>
   );

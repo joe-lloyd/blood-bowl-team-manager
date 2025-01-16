@@ -10,6 +10,7 @@ const createNewTeam = (teamId: string): TeamDataToSave => ({
   teamName: '',
   coachName: '',
   players: Array(16).fill(null) as PlayerDataToSave[],
+  startingTreasury: 1000000,
   treasury: 1000000,
   dedicatedFans: 0,
   totalTouchdowns: 0,

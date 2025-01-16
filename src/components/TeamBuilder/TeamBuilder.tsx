@@ -6,10 +6,9 @@ import styled from 'styled-components';
 import { Team } from '@/types/teams';
 import { useTeamBuilder } from '@/contexts/teamBuilder';
 import { createNewTeam } from '@/utils/playerUtils';
-import { doc, getDoc, setDoc } from 'firebase/firestore'; // Import getDoc to check Firestore
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';
-import SaveButton from '@/components/TeamBuilder/SaveButton';
 import { TeamDataToSave } from '@/types/userData';
 
 const TopTableContainer = styled.div`
@@ -77,11 +76,10 @@ const TeamBuilder: React.FC<{ teamData: Team; uid: string }> = ({
     <TeamBuilderContainer>
       <TopTableContainer>
         <StyledHeading>Team Draft List</StyledHeading>
-        <BaseInfo teamData={teamData} uid={uid} />
+        <BaseInfo uid={uid} />
       </TopTableContainer>
       <PlayerList teamData={teamData} uid={uid} />
-      <TeamMeta teamData={teamData} />
-      <SaveButton />
+      <TeamMeta uid={uid} />
     </TeamBuilderContainer>
   );
 };

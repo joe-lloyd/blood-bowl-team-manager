@@ -9,21 +9,25 @@ import ContentContainer from '@/components/ContentContainer';
 import { Team } from '@/types/teams';
 import TeamBuilder from '@/components/TeamBuilder/TeamBuilder';
 import { TeamBuilderProvider } from '@/contexts/teamBuilder';
+import Footer from '@/components/Footer';
 
 const TeamPage: React.FC<{ teamData: Team; uid: string }> = ({
   teamData,
   uid,
 }) => {
   return (
-    <TeamBuilderProvider>
-      <Parchment />
-      <AppBar />
-      <Hero text={teamData.name} />
-      <ContentContainer>
-        <TeamDetails teamData={teamData} />
-      </ContentContainer>
-      <TeamBuilder teamData={teamData} uid={uid} />
-    </TeamBuilderProvider>
+    <>
+      <TeamBuilderProvider>
+        <Parchment />
+        <AppBar />
+        <Hero text={teamData.name} />
+        <ContentContainer>
+          <TeamDetails teamData={teamData} />
+        </ContentContainer>
+        <TeamBuilder teamData={teamData} uid={uid} />
+      </TeamBuilderProvider>
+      <Footer />
+    </>
   );
 };
 
