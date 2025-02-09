@@ -100,7 +100,6 @@ const EditButton = styled.a`
   text-align: center;
   text-decoration: none;
   border-radius: 4px;
-  font-family: sans-serif;
   background-color: ${blueColor};
 
   &:hover {

@@ -5,7 +5,10 @@ import TeamMeta from './TeamMeta';
 import styled from 'styled-components';
 import { Team } from '@/types/teams';
 import { useTeamBuilder } from '@/contexts/teamBuilder';
-import { createNewTeam } from '@/utils/playerUtils';
+import {
+  combineBaseTeamDataWithUserTeamData,
+  createNewTeam,
+} from '@/utils/playerUtils';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';
@@ -61,7 +64,11 @@ const TeamBuilder: React.FC<{ teamData: Team; uid: string }> = ({
           });
         } else {
           const teamBlueprintData = createNewTeam(teamData.teamId);
-          dispatch({ type: 'UPDATE_META', payload: teamBlueprintData });
+          const customTeamData = combineBaseTeamDataWithUserTeamData(
+            teamData,
+            teamBlueprintData
+          );
+          dispatch({ type: 'UPDATE_META', payload: customTeamData });
           await setDoc(teamDocRef, teamBlueprintData);
         }
       } catch (error) {

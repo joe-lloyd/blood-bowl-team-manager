@@ -1,24 +1,21 @@
 import { CustomTeam } from '@/types/userData';
-import { Team } from '@/types/teams';
+import { Player, Team } from '@/types/teams';
 
 type ValidationResult = { success: true } | { success: false; error: string };
 
 const validatePositionLimit = (
   state: CustomTeam,
-  positionId: string,
-  teamData: Team
+  position: Player
 ): ValidationResult => {
-  const position = teamData.players.find((p) => p.id === positionId);
-  if (!position) return { success: false, error: 'Invalid position ID' };
-
   const positionMax = parseInt(position.quantity.split('-')[1]);
 
   const count = state.players.filter(
-    (player) => player?.positionId === positionId
+    (player) => player?.positionId === position.id
   ).length;
   if (count >= positionMax) {
     return {
       success: false,
+      // @TODO print this error, rething errors as values.
       error: `Position limit reached for ${position.id}`,
     };
   }
@@ -28,15 +25,13 @@ const validatePositionLimit = (
 
 const validateTreasury = (
   state: CustomTeam,
-  positionId: string,
-  teamData: Team
+  position: Player
 ): ValidationResult => {
-  const position = teamData.players.find((p) => p.id === positionId);
-  if (!position) return { success: false, error: 'Invalid position ID' };
-
   if (state.treasury < position.position.cost) {
     return { success: false, error: 'Not enough gold in treasury' };
   }
 
   return { success: true };
 };
+
+export { validatePositionLimit, validateTreasury };

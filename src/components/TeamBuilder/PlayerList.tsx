@@ -1,15 +1,18 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { Team } from '@/types/teams';
 import Select from '@/components/TeamBuilder/Select';
 import { useTeamBuilder } from '@/contexts/teamBuilder';
 import {
-  combineBaseDataWithUserData,
+  combineBasePlayerDataWithUserPlayerData,
   createNewPlayer,
 } from '@/utils/playerUtils';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';
+import { validatePositionLimit, validateTreasury } from '@/utils/validations';
+import { payForPlayer } from '@/utils/accountant';
+import PlayerManagementPopup from './PlayerManagementPopup';
 
 const TableWrapper = styled.div`
   width: 100%;
@@ -33,9 +36,15 @@ const TableHeader = styled.th`
   border: 1px solid #1d3860;
 `;
 
-const TableRow = styled.tr`
+const TableRow = styled.tr<{ $hasPlayer: boolean }>`
   &:nth-child(even) {
     background-color: #f9f9f9;
+  }
+
+  &:hover {
+    cursor: ${({ $hasPlayer }) => ($hasPlayer ? 'pointer' : 'default')};
+    background-color: ${({ $hasPlayer }) =>
+      $hasPlayer ? '#d4e8ff' : 'currentBackgroundColor'};
   }
 `;
 
@@ -47,6 +56,7 @@ const TableCell = styled.td`
 
 const NameCell = styled(TableCell)`
   min-width: 200px;
+  cursor: pointer;
 `;
 
 const PositionCell = styled(TableCell)`
@@ -64,6 +74,9 @@ const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
 }) => {
   const user = useUser();
   const { state, dispatch } = useTeamBuilder();
+  const [selectedPlayerIndex, setSelectedPlayerIndex] = useState<number | null>(
+    null
+  );
 
   const handlePositionChange = useCallback(
     async (index: number, positionId: string) => {
@@ -87,25 +100,40 @@ const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
         );
 
         if (selectedPosition) {
+          if (!validatePositionLimit(state, selectedPosition).success) {
+            console.error('Too many players in this position');
+            return;
+          }
+
+          if (!validateTreasury(state, selectedPosition).success) {
+            console.error('Not enough gold in treasury');
+            return;
+          }
+
           const newPlayer = createNewPlayer(selectedPosition.id, index);
           const players = [...teamDataFromFirebase.players];
           players.splice(index, 1, newPlayer);
-          const player = combineBaseDataWithUserData(teamData, newPlayer);
+          const player = combineBasePlayerDataWithUserPlayerData(
+            teamData,
+            newPlayer
+          );
 
           dispatch({
             type: 'ADD_PLAYER',
             payload: { index, player },
           });
 
-          await updateDoc(teamDocRef, {
-            players: players,
-          });
+          const { teamValue, treasury } = payForPlayer(state, selectedPosition);
+
+          dispatch({ type: 'UPDATE_META', payload: { teamValue, treasury } });
+
+          await updateDoc(teamDocRef, { teamValue, treasury, players });
         }
       } catch (error) {
         console.error('Error adding player:', error);
       }
     },
-    [dispatch, teamData, uid, user]
+    [dispatch, teamData, uid, user, state]
   );
 
   return (
@@ -134,7 +162,11 @@ const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
           {Array.from({ length: 16 }, (_, index) => {
             const player = state.players[index];
             return (
-              <TableRow key={index}>
+              <TableRow
+                key={index}
+                onClick={() => player && setSelectedPlayerIndex(index)}
+                $hasPlayer={!!player}
+              >
                 <TableCell>{index + 1}</TableCell>
                 <NameCell>{player?.playerName || ''}</NameCell>
                 <PositionCell>
@@ -150,6 +182,7 @@ const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
                       })),
                     ]}
                     value={player?.positionId || ''}
+                    disabled={!!player}
                   />
                 </PositionCell>
                 <TableCell>{player?.stats.ma || ''}</TableCell>
@@ -161,16 +194,25 @@ const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
                   {player ? player.traitsAndSkills.join(', ') : ''}
                 </SkillsCell>
                 <TableCell>{player?.cost || ''}</TableCell>
-                <TableCell></TableCell>
-                <TableCell></TableCell>
-                <TableCell></TableCell>
-                <TableCell></TableCell>
-                <TableCell></TableCell>
+                <TableCell>{player?.spp || 0}</TableCell>
+                <TableCell>{player?.missNextGame ? 'yes' : 'no'}</TableCell>
+                <TableCell>{player?.nigglingInjury ? 'yes' : 'no'}</TableCell>
+                <TableCell>{player?.tempRetirement ? 'yes' : 'no'}</TableCell>
+                <TableCell>{player?.currentValue || ''}</TableCell>
               </TableRow>
             );
           })}
         </tbody>
       </MainTable>
+      {selectedPlayerIndex !== null && state.players[selectedPlayerIndex] && (
+        <PlayerManagementPopup
+          team={teamData}
+          player={state.players[selectedPlayerIndex]}
+          index={selectedPlayerIndex}
+          onClose={() => setSelectedPlayerIndex(null)}
+          uid={uid}
+        />
+      )}
     </TableWrapper>
   );
 };

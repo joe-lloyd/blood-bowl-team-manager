@@ -7,6 +7,7 @@ interface SelectProps {
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   width?: string;
   height?: string;
+  disabled?: boolean;
 }
 
 const SelectWrapper = styled.div<{ width?: string }>`
@@ -42,10 +43,16 @@ const Select: React.FC<SelectProps> = ({
   onChange,
   width,
   height,
+  disabled,
 }) => {
   return (
     <SelectWrapper width={width}>
-      <StyledSelect value={value} onChange={onChange} height={height}>
+      <StyledSelect
+        value={value}
+        onChange={onChange}
+        height={height}
+        disabled={disabled}
+      >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}

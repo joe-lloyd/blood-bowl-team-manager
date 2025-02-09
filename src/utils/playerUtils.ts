@@ -1,6 +1,7 @@
 import { Team } from '@/types/teams';
 import {
   CustomPlayer,
+  CustomTeam,
   PlayerDataToSave,
   TeamDataToSave,
 } from '@/types/userData';
@@ -20,6 +21,7 @@ const createNewTeam = (teamId: string): TeamDataToSave => ({
   assistantCoaches: 0,
   cheerleaders: 0,
   apothecary: false,
+  teamValue: 0,
 });
 
 const createNewPlayer = (
@@ -53,7 +55,7 @@ const createNewPlayer = (
  * @param teamBluePrint
  * @param userCustomPlayerData
  */
-const combineBaseDataWithUserData = (
+const combineBasePlayerDataWithUserPlayerData = (
   teamBluePrint: Team,
   userCustomPlayerData: PlayerDataToSave
 ): CustomPlayer => {
@@ -76,7 +78,7 @@ const combineBaseDataWithUserData = (
       st: `${parseInt(playerBlueprint.stats.st) + userCustomPlayerData.statAdjust.st}`,
       ag: `${parseInt(playerBlueprint.stats.ag) + userCustomPlayerData.statAdjust.ag}+`,
       pa: `${parseInt(playerBlueprint.stats.pa) + userCustomPlayerData.statAdjust.pa}+`,
-      av: `${parseInt(playerBlueprint.stats.av) + userCustomPlayerData.statAdjust.av}+`,
+      av: `${parseInt(playerBlueprint.stats.av) + userCustomPlayerData.statAdjust.av}+`, // @TODO av is backwards
     },
     traitsAndSkills: [
       ...playerBlueprint.traitsAndSkills.map(({ name }) => name),
@@ -95,4 +97,75 @@ const combineBaseDataWithUserData = (
   };
 };
 
-export { createNewPlayer, createNewTeam, combineBaseDataWithUserData };
+/**
+ * This function does the opposite of combineBaseDataWithUserData. It takes a player CustomPlayer data
+ * and strips it back to blueprint data and PlayerDataToSave. This is to get the data ready to be saved
+ */
+const stripUserDataFromPlayer = (
+  teamBluePrint: Team,
+  player: CustomPlayer
+): PlayerDataToSave => {
+  const playerBlueprint = teamBluePrint.players.find(
+    ({ id }) => id === player.positionId
+  )?.position;
+
+  if (!playerBlueprint) {
+    throw 'playerBlueprint not found';
+  }
+
+  return {
+    positionId: player.positionId,
+    playerName: player.playerName,
+    number: player.number,
+    missNextGame: player.missNextGame,
+    nigglingInjury: player.nigglingInjury,
+    tempRetirement: player.tempRetirement,
+    statAdjust: {
+      ma: parseInt(player.stats.ma) - parseInt(playerBlueprint.stats.ma),
+      st: parseInt(player.stats.st) - parseInt(playerBlueprint.stats.st),
+      ag: parseInt(player.stats.ag) - parseInt(playerBlueprint.stats.ag),
+      pa: parseInt(player.stats.pa) - parseInt(playerBlueprint.stats.pa),
+      av: parseInt(player.stats.av) - parseInt(playerBlueprint.stats.av), // @TODO av is backwards
+    },
+    skills: [],
+    spp: player.spp,
+  };
+};
+
+const combineBaseTeamDataWithUserTeamData = (
+  teamBluePrint: Team,
+  userCustomTeamData: TeamDataToSave
+): CustomTeam => {
+  const players = userCustomTeamData.players.map((playerData) =>
+    combineBasePlayerDataWithUserPlayerData(teamBluePrint, playerData)
+  );
+
+  return {
+    id: '',
+    teamName: userCustomTeamData.teamName,
+    customTeamName: userCustomTeamData.teamName,
+    rerollCost: teamBluePrint.rerollCost,
+    teamId: userCustomTeamData.teamId,
+    coachName: userCustomTeamData.coachName,
+    players: players,
+    treasury: userCustomTeamData.treasury,
+    startingTreasury: userCustomTeamData.startingTreasury,
+    dedicatedFans: userCustomTeamData.dedicatedFans,
+    totalTouchdowns: userCustomTeamData.totalTouchdowns,
+    totalCasualties: userCustomTeamData.totalCasualties,
+    leaguePoints: userCustomTeamData.leaguePoints,
+    rerolls: userCustomTeamData.rerolls,
+    assistantCoaches: userCustomTeamData.assistantCoaches,
+    cheerleaders: userCustomTeamData.cheerleaders,
+    apothecary: userCustomTeamData.apothecary,
+    teamValue: userCustomTeamData.teamValue,
+  };
+};
+
+export {
+  createNewPlayer,
+  createNewTeam,
+  combineBasePlayerDataWithUserPlayerData,
+  combineBaseTeamDataWithUserTeamData,
+  stripUserDataFromPlayer,
+};

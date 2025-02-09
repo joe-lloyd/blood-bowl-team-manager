@@ -30,6 +30,7 @@ interface CustomTeam {
   players: (CustomPlayer | null)[];
   startingTreasury: number;
   treasury: number;
+  teamValue: number;
   dedicatedFans: number;
   totalTouchdowns: number;
   totalCasualties: number;
@@ -48,6 +49,7 @@ interface TeamDataToSave {
   players: (PlayerDataToSave | null)[];
   startingTreasury: number;
   treasury: number;
+  teamValue: number;
   dedicatedFans: number;
   totalTouchdowns: number;
   totalCasualties: number;

@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import { CustomPlayer, CustomTeam, TeamDataToSave } from '@/types/userData';
 import { Team } from '@/types/teams';
-import { combineBaseDataWithUserData } from '@/utils/playerUtils';
+import { combineBasePlayerDataWithUserPlayerData } from '@/utils/playerUtils';
 
 type ActionType =
   | { type: 'SET_TEAM_NAME'; payload: string }
@@ -61,7 +61,10 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
         if (!savedPlayerData) {
           return null;
         }
-        return combineBaseDataWithUserData(teamData, savedPlayerData);
+        return combineBasePlayerDataWithUserPlayerData(
+          teamData,
+          savedPlayerData
+        );
       });
 
       return {

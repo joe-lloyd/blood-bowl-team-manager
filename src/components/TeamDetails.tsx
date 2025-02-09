@@ -8,7 +8,6 @@ export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-family: 'Arial', sans-serif;
 `;
 
 export const TableTitle = styled.h2`
@@ -16,7 +15,6 @@ export const TableTitle = styled.h2`
   margin-bottom: 1px;
   border-bottom: 5px solid #1d3860;
   color: #922d26;
-  font-family: 'Arial', sans-serif;
 
   &:before {
     content: url('/triangle.svg');
