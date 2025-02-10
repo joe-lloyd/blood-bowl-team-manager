@@ -58,7 +58,9 @@ const createNewPlayer = (
 const combineBasePlayerDataWithUserPlayerData = (
   teamBluePrint: Team,
   userCustomPlayerData: PlayerDataToSave
-): CustomPlayer => {
+): CustomPlayer | null => {
+  if (!userCustomPlayerData) return null;
+
   const { positionId } = userCustomPlayerData;
   const playerBlueprint = teamBluePrint.players.find(
     ({ id }) => id === positionId
