@@ -143,8 +143,8 @@ const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
 
         {!!user && (
           <>
-            <Link href="/create-league" onClick={handleDisabledClick}>
-              <Card disabled>
+            <Link href="/create-league">
+              <Card>
                 <Image
                   src="/coming-soon.webp"
                   style={{ objectFit: 'cover' }}
@@ -152,7 +152,7 @@ const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
                   alt="Coming Soon"
                 />
                 <Overlay>
-                  <CardTitle>Coming Soon: Join a League</CardTitle>
+                  <CardTitle>Create a League</CardTitle>
                 </Overlay>
               </Card>
             </Link>
