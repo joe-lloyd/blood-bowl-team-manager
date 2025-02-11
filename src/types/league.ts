@@ -1,7 +1,7 @@
 import { TeamDataToSave } from '@/types/userData';
 
 interface League {
-  leagueId: string;
+  id: string;
   leagueName: string;
   description: string;
   createdBy: string;

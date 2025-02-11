@@ -84,6 +84,7 @@ const CardTitle = styled.h3`
 const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
   const user = useUser();
   const [userTeams, setUserTeams] = useState<any[]>([]);
+  const [userLeagues, setUserLeagues] = useState<any[]>([]);
 
   useEffect(() => {
     if (user) {
@@ -97,7 +98,18 @@ const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
         }));
         setUserTeams(teamsList);
       };
+      const fetchLeagues = async () => {
+        const db = getFirestore();
+        const leaguesCollection = collection(db, `users/${user.uid}/leagues`);
+        const leaguesSnapshot = await getDocs(leaguesCollection);
+        const leaguesList = leaguesSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setUserLeagues(leaguesList);
+      };
 
+      fetchLeagues();
       fetchTeams();
     }
   }, [user]);
@@ -183,9 +195,9 @@ const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
           </Link>
         )}
 
-        {!!user && userContent?.leagues?.length > 0 && (
-          <Link href="/my-leagues" onClick={handleDisabledClick}>
-            <Card disabled>
+        {!!user && userLeagues.length > 0 && (
+          <Link href="/my-leagues">
+            <Card>
               <Image
                 src="/coming-soon.webp"
                 style={{ objectFit: 'cover' }}
@@ -193,7 +205,7 @@ const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
                 alt="Coming Soon"
               />
               <Overlay>
-                <CardTitle>Coming Soon: See Your Leagues</CardTitle>
+                <CardTitle>See Your Leagues</CardTitle>
               </Overlay>
             </Card>
           </Link>
