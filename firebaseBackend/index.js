@@ -17,7 +17,7 @@ const db = admin.firestore();
  */
 const convertReferences = (value) => {
   const referencePattern =
-    /^(specialRules\/[a-zA-Z0-9_-]+|playerBlueprints\/[a-zA-Z0-9_-]+)$/;
+    /^(traitsAndSkills\/[a-zA-Z0-9_-]+|teamSpecialRules\/[a-zA-Z0-9_-]+|playerBlueprints\/[a-zA-Z0-9_-]+)$/;
 
   if (typeof value === 'string' && referencePattern.test(value)) {
     return db.doc(value); // Convert to Firestore document reference
@@ -77,10 +77,15 @@ const uploadDataToFirestore = async (filePath, collectionName, dataKey) => {
 
 // Example Usage:
 (async () => {
-  const specialRulesCount = await uploadDataToFirestore(
-    'data/specialRules.json',
-    'specialRules',
-    'specialRules'
+  const teamSpecialRulesCount = await uploadDataToFirestore(
+    'data/teamSpecialRules.json',
+    'teamSpecialRules',
+    'teamSpecialRules'
+  );
+  const traitsAndSkillsCount = await uploadDataToFirestore(
+    'data/traitsAndSkills.json',
+    'traitsAndSkills',
+    'traitsAndSkills'
   );
   const playerBlueprintsCount = await uploadDataToFirestore(
     'data/playerBlueprints.json',

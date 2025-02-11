@@ -1,22 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useUser } from '@/contexts/UserContext';
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-`;
+import { useUser } from '@/contexts/userContext';
+import ContentContainer from '@/components/ContentContainer';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   grid-gap: 20px;
-`;
 
-const Card = styled.div`
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  @media (min-width: 1441px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1440px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 788px) {
+    grid-template-columns: 1fr;
+  }
+`;
+const Card = styled.div<{ disabled?: boolean }>`
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -73,23 +80,56 @@ const CardTitle = styled.h3`
   color: #eaaa02;
 `;
 
-const HomeContent = ({ userContent }) => {
+// @TODO: Replace the `unknown` type with the correct type
+const HomeContent: React.FC<{ userContent: unknown }> = ({ userContent }) => {
   const user = useUser();
+  const [userTeams, setUserTeams] = useState<any[]>([]);
+  const [userLeagues, setUserLeagues] = useState<any[]>([]);
 
-  const handleDisabledClick = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    if (user) {
+      const fetchTeams = async () => {
+        const db = getFirestore();
+        const teamsCollection = collection(db, `users/${user.uid}/teams`);
+        const teamsSnapshot = await getDocs(teamsCollection);
+        const teamsList = teamsSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setUserTeams(teamsList);
+      };
+      const fetchLeagues = async () => {
+        const db = getFirestore();
+        const leaguesCollection = collection(db, `users/${user.uid}/leagues`);
+        const leaguesSnapshot = await getDocs(leaguesCollection);
+        const leaguesList = leaguesSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setUserLeagues(leaguesList);
+      };
+
+      fetchLeagues();
+      fetchTeams();
+    }
+  }, [user]);
+
+  const handleDisabledClick = (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => {
+    event.preventDefault();
   };
 
   return (
-    <Container>
+    <ContentContainer>
       <Grid>
         <Link href="/teams">
           <Card>
             <Image
               src="/teams.webp"
-              layout="fill"
-              objectFit="cover"
               alt="Teams"
+              style={{ objectFit: 'cover' }}
+              fill
             />
             <Overlay>
               <CardTitle>See Teams</CardTitle>
@@ -101,8 +141,8 @@ const HomeContent = ({ userContent }) => {
           <Card>
             <Image
               src="/create-team.webp"
-              layout="fill"
-              objectFit="cover"
+              style={{ objectFit: 'cover' }}
+              fill
               alt="Create Team"
             />
             <Overlay>
@@ -115,16 +155,16 @@ const HomeContent = ({ userContent }) => {
 
         {!!user && (
           <>
-            <Link href="/create-league" onClick={handleDisabledClick}>
-              <Card disabled>
+            <Link href="/create-league">
+              <Card>
                 <Image
                   src="/coming-soon.webp"
-                  layout="fill"
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
+                  fill
                   alt="Coming Soon"
                 />
                 <Overlay>
-                  <CardTitle>Coming Soon: Join a League</CardTitle>
+                  <CardTitle>Create a League</CardTitle>
                 </Overlay>
               </Card>
             </Link>
@@ -133,8 +173,8 @@ const HomeContent = ({ userContent }) => {
               <Card disabled>
                 <Image
                   src="/coming-soon.webp"
-                  layout="fill"
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
+                  fill
                   alt="Coming Soon"
                 />
                 <Overlay>
@@ -145,7 +185,7 @@ const HomeContent = ({ userContent }) => {
           </>
         )}
 
-        {!!user && userContent?.teams?.length > 0 && (
+        {!!user && userTeams.length > 0 && (
           <Link href="/my-teams">
             <Card>
               <Overlay>
@@ -155,17 +195,17 @@ const HomeContent = ({ userContent }) => {
           </Link>
         )}
 
-        {!!user && userContent?.leagues?.length > 0 && (
-          <Link href="/my-leagues" onClick={handleDisabledClick}>
-            <Card disabled>
+        {!!user && userLeagues.length > 0 && (
+          <Link href="/my-leagues">
+            <Card>
               <Image
                 src="/coming-soon.webp"
-                layout="fill"
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
+                fill
                 alt="Coming Soon"
               />
               <Overlay>
-                <CardTitle>Coming Soon: See Your Leagues</CardTitle>
+                <CardTitle>See Your Leagues</CardTitle>
               </Overlay>
             </Card>
           </Link>
@@ -176,8 +216,8 @@ const HomeContent = ({ userContent }) => {
             <Card disabled>
               <Image
                 src="/coming-soon.webp"
-                layout="fill"
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
+                fill
                 alt="Coming Soon"
               />
               <Overlay>
@@ -187,7 +227,7 @@ const HomeContent = ({ userContent }) => {
           </Link>
         )}
       </Grid>
-    </Container>
+    </ContentContainer>
   );
 };
 

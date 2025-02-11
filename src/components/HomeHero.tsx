@@ -52,24 +52,87 @@ const ShineWrapper = styled.div`
   mask-position: center;
 `;
 
+const TaglineContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+const Tagline = styled.h2`
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 10px;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+`;
+
+const StarIcon = styled.svg`
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+  position: relative;
+  top: -3px;
+  margin: 0 5px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+`;
+
+const HeroContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #922d26;
+  padding: 80px 0;
+  margin-bottom: 100px;
+  flex-direction: column;
+`;
+
 const HomeHero = () => {
   return (
-    <LogoContainer>
-      <ShineWrapper>
-        <Image
-          src="/bb-logo.png"
-          alt="blood bowl logo"
-          layout="responsive"
-          width={1441}
-          height={289}
-          sizes="(max-width: 600px) 100vw,
+    <HeroContainer>
+      <LogoContainer>
+        <ShineWrapper>
+          <Image
+            src="/bb-logo.png"
+            alt="blood bowl logo"
+            width={1441}
+            height={289}
+            sizes="(max-width: 600px) 100vw,
                      (max-width: 1024px) 80vw,
                      1441px"
-          objectFit="contain"
-          priority={true}
-        />
-      </ShineWrapper>
-    </LogoContainer>
+            style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
+            priority={true}
+          />
+        </ShineWrapper>
+      </LogoContainer>
+      <TaglineContainer>
+        <StarIcon>
+          <svg viewBox="0 0 260 245" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m56,237 74-228 74,228L10,96h240"
+              style={{
+                fill: '#fff',
+              }}
+            />
+          </svg>
+        </StarIcon>
+        <Tagline>THE GAME OF FANTASY FOOTBALL</Tagline>
+        <StarIcon>
+          <svg viewBox="0 0 260 245" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m56,237 74-228 74,228L10,96h240"
+              style={{
+                fill: '#fff',
+                filter: 'drop-shadow(2px 2px 2px rgba(0,0,0,0.5))',
+              }}
+            />
+          </svg>
+        </StarIcon>
+      </TaglineContainer>
+    </HeroContainer>
   );
 };
 

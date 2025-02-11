@@ -1,28 +1,43 @@
+export interface TraitsAndSkills {
+  id: string;
+  name: string;
+  description: string;
+}
+
 export interface PlayerPosition {
   name: string;
   cost: number;
   stats: {
-    ma: number;
-    st: number;
-    ag: number;
-    pa: number;
-    av: number;
+    ma: string;
+    st: string;
+    ag: string;
+    pa: string;
+    av: string;
   };
-  specialRules: Array<{ name: string }>;
+  traitsAndSkills: TraitsAndSkills[];
   primary: string;
   secondary: string;
 }
 
 export interface Player {
-  quantity: number;
+  id: string;
+  quantity: string;
   position: PlayerPosition;
 }
 
+export interface TeamSpecialRules {
+  name: string;
+  description: string;
+}
+
 export interface Team {
+  teamId: string;
   name: string;
   players: Player[];
   rerollCost: number;
   tier: string;
-  specialRules: string[];
+  teamSpecialRules: TeamSpecialRules[];
   apothecary: boolean;
 }
+
+export type TeamsList = { [key: string]: string };

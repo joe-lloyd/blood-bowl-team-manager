@@ -1,20 +1,14 @@
 import { db } from '@/services/firebase';
-import { collection, getDoc, getDocs, doc } from 'firebase/firestore';
+import {
+  collection,
+  doc,
+  DocumentReference,
+  getDoc,
+  getDocs,
+} from 'firebase/firestore';
+import { Player, Team, TeamSpecialRules, TraitsAndSkills } from '@/types/teams';
 
-const teamVersion = 1;
-
-// Fetches and enriches team data
-const getTeamData = async (teamId) => {
-  const localData = localStorage.getItem(`team_${teamId}`);
-
-  if (localData) {
-    const parsedData = JSON.parse(localData);
-    if (parsedData.version === teamVersion) {
-      return parsedData.data;
-    }
-  }
-
-  // If no local data or version mismatch, fetch from Firebase
+const getTeamData = async (teamId: string): Promise<Team> => {
   const teamDoc = await getDoc(doc(db, 'teamBlueprints', teamId));
   const team = teamDoc.exists() ? teamDoc.data() : null;
 
@@ -22,83 +16,69 @@ const getTeamData = async (teamId) => {
     throw new Error(`Team with ID ${teamId} not found`);
   }
 
-  const playersWithBlueprints = await Promise.all(
-    team.players.map(async (player) => {
-      const playerDoc = await getDoc(player.position);
-      const positionData = playerDoc.exists() ? playerDoc.data() : null;
-
-      const specialRules = await Promise.all(
-        positionData.specialRules.map(async (ruleRef) => {
-          const ruleDoc = await getDoc(ruleRef);
-          return ruleDoc.exists() ? ruleDoc.data() : null;
-        })
-      );
-
-      return {
-        ...player,
-        position: {
-          ...positionData,
-          specialRules,
-        },
-      };
+  const teamSpecialRules: TeamSpecialRules[] = await Promise.all(
+    team.teamSpecialRules.map(async (ruleRef: DocumentReference) => {
+      const ruleDoc = await getDoc(ruleRef);
+      return ruleDoc.exists() ? ruleDoc.data() : null;
     })
   );
 
-  const teamData = {
-    ...team,
-    players: playersWithBlueprints,
-  };
+  const playersWithBlueprints: Player[] = await Promise.all(
+    team.players.map(
+      async (player: { position: DocumentReference; quantity: number }) => {
+        const playerDoc = await getDoc(player.position as DocumentReference);
+        const positionData = playerDoc.exists() ? playerDoc.data() : null;
 
-  // Save to local storage with version
-  localStorage.setItem(
-    `team_${teamId}`,
-    JSON.stringify({ version: teamVersion, data: teamData })
+        if (!positionData) {
+          throw new Error(
+            `Player position not found for ${player.position.path}`
+          );
+        }
+
+        const traitsAndSkills: TraitsAndSkills[] = await Promise.all(
+          positionData.traitsAndSkills.map(
+            async (ruleRef: DocumentReference) => {
+              const ruleDoc = await getDoc(ruleRef);
+              return ruleDoc.exists()
+                ? { id: ruleDoc.id, ...ruleDoc.data() }
+                : null;
+            }
+          )
+        );
+
+        return {
+          id: playerDoc.id,
+          ...player,
+          position: {
+            ...positionData,
+            traitsAndSkills,
+          },
+        };
+      }
+    )
   );
 
-  return teamData;
+  return {
+    teamId: teamId,
+    name: team.name,
+    rerollCost: team.rerollCost,
+    tier: team.tier,
+    apothecary: team.apothecary,
+    teamSpecialRules,
+    players: playersWithBlueprints,
+  };
 };
 
-// Fetches the list of teams and checks the meta version
-const fetchTeamsList = async () => {
-  const storedTeamList = JSON.parse(localStorage.getItem('teamList'));
-  const storedMeta = JSON.parse(localStorage.getItem('meta'));
-
-  if (storedTeamList && storedMeta) {
-    const metaDoc = await getDoc(doc(db, 'meta', 'dataInfo'));
-    const firestoreMeta = metaDoc.exists() ? metaDoc.data() : null;
-
-    if (firestoreMeta && firestoreMeta.lastUpdated === storedMeta.lastUpdated) {
-      return storedTeamList;
-    } else {
-      clearTeamDataFromLocalStorage();
-    }
-  }
-
+const fetchTeamsList = async (): Promise<{ [key: string]: string }> => {
   const teamsCollection = await getDocs(collection(db, 'teamBlueprints'));
-  const fullTeamList = teamsCollection.docs.reduce((acc, doc) => {
-    acc[doc.id] = doc.data().name;
-    return acc;
-  }, {});
 
-  const metaDoc = await getDoc(doc(db, 'meta', 'dataInfo'));
-  const firestoreMeta = metaDoc.exists() ? metaDoc.data() : null;
-
-  localStorage.setItem('teamList', JSON.stringify(fullTeamList));
-  if (firestoreMeta) {
-    localStorage.setItem('meta', JSON.stringify(firestoreMeta));
-  }
-
-  return fullTeamList;
+  return teamsCollection.docs.reduce(
+    (acc, doc) => {
+      acc[doc.id] = doc.data().name as string;
+      return acc;
+    },
+    {} as { [key: string]: string }
+  );
 };
 
-// Clears specific team-related data from localStorage
-const clearTeamDataFromLocalStorage = () => {
-  const keysToRemove = ['teamList', 'meta'];
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith('team_') || keysToRemove.includes(key)) {
-      localStorage.removeItem(key);
-    }
-  });
-};
-
-export { getTeamData, fetchTeamsList, clearTeamDataFromLocalStorage };
+export { getTeamData, fetchTeamsList };

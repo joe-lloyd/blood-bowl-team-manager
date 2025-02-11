@@ -30,7 +30,7 @@ const StyledStar = styled.div`
   }
 `;
 
-const Container = styled.div`
+const StarsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,9 +41,9 @@ const Container = styled.div`
 
 const Stars = () => {
   return (
-    <Container>
+    <StarsContainer>
       <StyledStar />
-    </Container>
+    </StarsContainer>
   );
 };
 
