@@ -5,6 +5,7 @@ import { db } from '@/services/firebase';
 import { doc, setDoc, collection, getDocs } from 'firebase/firestore';
 import { League, Season } from '@/types/league';
 import { uuidv4 } from '@firebase/util';
+import { useRouter } from 'next/router';
 
 const FormWrapper = styled.div`
   padding: 20px;
@@ -35,20 +36,51 @@ const Select = styled.select`
   border: 2px solid #1d3860;
 `;
 
+const SelectedTeamsList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+`;
+
+const SelectedTeamItem = styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #1d3860;
+  background-color: #f0f8ff;
+`;
+
+const RemoveButton = styled.button`
+  background-color: #922d26;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+`;
+
 interface TeamSelect {
   label: string;
   value: string;
 }
 
 const LeagueForm: React.FC<{ leagueId: string }> = ({ leagueId }) => {
+  const router = useRouter();
   const user = useUser();
-  const [leagueName, setLeagueName] = useState('');
-  const [description, setDescription] = useState('');
+  const [leagueName, setLeagueName] = useState('New League');
+  const [description, setDescription] = useState('My League');
   const [seasonName, setSeasonName] = useState('Season 1');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  const today = new Date().toISOString().split('T')[0];
+  const oneYearFromToday = new Date(
+    new Date().setFullYear(new Date().getFullYear() + 1)
+  )
+    .toISOString()
+    .split('T')[0];
+
+  const [startDate, setStartDate] = useState(today);
+  const [endDate, setEndDate] = useState(oneYearFromToday);
   const [teams, setTeams] = useState<TeamSelect[]>([]);
-  const [selectedTeam, setSelectedTeam] = useState<string>('');
+  const [selectedTeams, setSelectedTeams] = useState<TeamSelect[]>([]);
 
   useEffect(() => {
     if (user) {
@@ -68,6 +100,21 @@ const LeagueForm: React.FC<{ leagueId: string }> = ({ leagueId }) => {
     }
   }, [user]);
 
+  const handleAddTeam = (selectedTeam) => {
+    const teamToAdd = teams.find((team) => team.value === selectedTeam);
+    if (
+      teamToAdd &&
+      !selectedTeams.some((team) => team.value === selectedTeam)
+    ) {
+      setSelectedTeams([...selectedTeams, teamToAdd]);
+      // setSelectedTeam('');
+    }
+  };
+
+  const handleRemoveTeam = (teamValue: string) => {
+    setSelectedTeams(selectedTeams.filter((team) => team.value !== teamValue));
+  };
+
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -82,7 +129,7 @@ const LeagueForm: React.FC<{ leagueId: string }> = ({ leagueId }) => {
       seasonName,
       startDate,
       endDate,
-      teams: selectedTeam ? [selectedTeam] : [],
+      teams: selectedTeams.map((team) => team.value),
       games: [],
     };
 
@@ -97,9 +144,9 @@ const LeagueForm: React.FC<{ leagueId: string }> = ({ leagueId }) => {
 
     try {
       await setDoc(doc(db, 'users', user.uid, 'leagues', leagueId), leagueData);
-      alert('League and first season created successfully!');
+      router.push(`/my-leagues/${leagueId}`);
     } catch (error) {
-      console.error('Error creating league:', error);
+      alert(`Error creating league: ${error}`);
     }
   };
 
@@ -157,8 +204,10 @@ const LeagueForm: React.FC<{ leagueId: string }> = ({ leagueId }) => {
         <label>
           Select Existing Team:
           <Select
-            value={selectedTeam}
-            onChange={(e) => setSelectedTeam(e.target.value)}
+            value={''}
+            onChange={(e) => {
+              handleAddTeam(e.target.value);
+            }}
           >
             <option value="">Select a team</option>
             {teams.map((team) => (
@@ -168,6 +217,16 @@ const LeagueForm: React.FC<{ leagueId: string }> = ({ leagueId }) => {
             ))}
           </Select>
         </label>
+        <SelectedTeamsList>
+          {selectedTeams.map((team) => (
+            <SelectedTeamItem key={team.value}>
+              {team.label}
+              <RemoveButton onClick={() => handleRemoveTeam(team.value)}>
+                Remove
+              </RemoveButton>
+            </SelectedTeamItem>
+          ))}
+        </SelectedTeamsList>
         <Button type="submit">Create League</Button>
       </form>
     </FormWrapper>
