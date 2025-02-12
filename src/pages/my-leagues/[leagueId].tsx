@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { getFirestore, onSnapshot } from 'firebase/firestore';
 import { useUser } from '@/contexts/userContext';
-import Parchment from '@/components/Parchment';
+import Parchment from '@/components/ComponentWarehouse/Parchment';
 import Hero from '@/components/Hero';
 import AppBar from '@/components/AppBar';
 import Footer from '@/components/Footer';
-import ContentContainer from '@/components/ContentContainer';
-import MinHeightContainer from '@/components/MinHeightContainer';
+import ContentContainer from '@/components/ComponentWarehouse/ContentContainer';
+import MinHeightContainer from '@/components/ComponentWarehouse/MinHeightContainer';
 import { GetServerSideProps } from 'next';
 import { League } from '@/types/league';
 import LeagueDetails from '@/components/LeagueDetails';

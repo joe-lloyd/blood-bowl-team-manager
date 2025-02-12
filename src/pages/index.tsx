@@ -1,5 +1,5 @@
 import React from 'react';
-import Parchment from '@/components/Parchment';
+import Parchment from '@/components/ComponentWarehouse/Parchment';
 import HomeContent from '@/components/HomeContent';
 import AppBar from '@/components/AppBar';
 import HomeHero from '@/components/HomeHero';

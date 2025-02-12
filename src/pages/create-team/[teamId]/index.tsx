@@ -1,12 +1,12 @@
 import React from 'react';
-import Parchment from '@/components/Parchment';
+import Parchment from '@/components/ComponentWarehouse/Parchment';
 import TeamDetails from '@/components/TeamDetails';
 import Hero from '@/components/Hero';
 import AppBar from '@/components/AppBar';
 import { getTeamData, fetchTeamsList } from '@/utils/teamUtils';
 import styled from 'styled-components';
 import Footer from '@/components/Footer';
-import ContentContainer from '@/components/ContentContainer';
+import ContentContainer from '@/components/ComponentWarehouse/ContentContainer';
 import { Team, TeamId } from '@/types/teams';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import TeamPreSetup from '@/components/TeamBuilder/TeamPreSetup';

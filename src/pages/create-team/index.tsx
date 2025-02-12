@@ -1,13 +1,13 @@
 import React from 'react';
 import { fetchTeamsList } from '@/utils/teamUtils';
-import Parchment from '@/components/Parchment';
+import Parchment from '@/components/ComponentWarehouse/Parchment';
 import Hero from '@/components/Hero';
 import AppBar from '@/components/AppBar';
 import Footer from '@/components/Footer';
 import TeamLinkList from '@/components/TeamLinkList';
-import ContentContainer from '@/components/ContentContainer';
+import ContentContainer from '@/components/ComponentWarehouse/ContentContainer';
 import { TeamsList } from '@/types/teams';
-import MinHeightContainer from '@/components/MinHeightContainer';
+import MinHeightContainer from '@/components/ComponentWarehouse/MinHeightContainer';
 
 const TeamsPage: React.FC<{ teams: TeamsList }> = ({ teams }) => {
   return (

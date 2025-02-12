@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Stars from '@/components/stars';
-import ContentContainer from '@/components/ContentContainer';
+import Stars from '@/components/ComponentWarehouse/stars';
+import ContentContainer from '@/components/ComponentWarehouse/ContentContainer';
 import { Team } from '@/types/teams';
 
 export const Table = styled.table`

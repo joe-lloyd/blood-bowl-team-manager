@@ -117,6 +117,19 @@ const TeamPreSetup: React.FC<{ teamData: Team }> = ({ teamData }) => {
       ...prevDetails,
       variant,
     }));
+
+    // @TODO dont change treasury if user has already changed it
+    if (variant === GameVariant.CLASSIC) {
+      setTeamBaseDetails((prevDetails) => ({
+        ...prevDetails,
+        startingTreasury: 1000000,
+      }));
+    } else if (variant === GameVariant.SEVENS) {
+      setTeamBaseDetails((prevDetails) => ({
+        ...prevDetails,
+        startingTreasury: 600000,
+      }));
+    }
   };
 
   const handleSubmitTeam = async () => {

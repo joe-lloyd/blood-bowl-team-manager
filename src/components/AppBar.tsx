@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { auth, logout } from '@/services/firebase';
-import { onAuthStateChanged } from 'firebase/auth';
+import { logout } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';
 
 const AppBar = styled.div`

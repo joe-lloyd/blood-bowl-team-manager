@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { getFirestore, collection, onSnapshot } from 'firebase/firestore';
 import { useUser } from '@/contexts/userContext';
-import Parchment from '@/components/Parchment';
+import Parchment from '@/components/ComponentWarehouse/Parchment';
 import Hero from '@/components/Hero';
 import AppBar from '@/components/AppBar';
 import Footer from '@/components/Footer';
 import TextBorderBox from '@/components/TextBorderBox';
-import ContentContainer from '@/components/ContentContainer';
+import ContentContainer from '@/components/ComponentWarehouse/ContentContainer';
 import MyLeaguesList from '@/components/MyLeaguesList';
-import MinHeightContainer from '@/components/MinHeightContainer';
+import MinHeightContainer from '@/components/ComponentWarehouse/MinHeightContainer';
 
 const MyLeaguesPage: React.FC = () => {
   const user = useUser();

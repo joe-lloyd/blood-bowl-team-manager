@@ -7,8 +7,9 @@ import { useUser } from '@/contexts/userContext';
 import { useTeamBuilder } from '@/contexts/teamBuilder';
 import { stripUserDataFromPlayer } from '@/utils/playerUtils';
 import { Team } from '@/types/teams';
-import Parchment from '@/components/Parchment';
+import Parchment from '@/components/ComponentWarehouse/Parchment';
 import Toggle from '@/components/ComponentWarehouse/Toggle';
+import { refundPlayer } from '@/utils/accountant';
 
 const PopupContainerOuter = styled.div`
   position: fixed;
@@ -168,8 +169,43 @@ const PlayerManagementPopup: React.FC<{
     await updateDoc(teamDocRef, { players: updatedPlayers });
   };
 
-  const handleRefund = () => {
-    // Implement refund logic here
+  const handleRefund = async () => {
+    if (!user) {
+      console.error('User not found');
+      return;
+    }
+
+    const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
+    const copyOfPLayers = [...state.players];
+    copyOfPLayers[index] = null;
+
+    const updatedPlayers = [...copyOfPLayers].map((player, mapIndex) => {
+      if (!player) return null;
+      if (index === mapIndex) {
+        return null;
+      }
+      return stripUserDataFromPlayer(team, player);
+    });
+
+    const { treasury, teamValue } = refundPlayer(state, player.cost);
+
+    dispatch({
+      type: 'REMOVE_PLAYER',
+      payload: index,
+    });
+
+    dispatch({
+      type: 'UPDATE_META',
+      payload: { treasury, teamValue },
+    });
+
+    await updateDoc(teamDocRef, {
+      treasury,
+      teamValue,
+      players: updatedPlayers,
+    });
+
+    onClose();
   };
 
   const handleFire = () => {
@@ -209,8 +245,8 @@ const PlayerManagementPopup: React.FC<{
 
   return (
     <>
-      <Overlay onClick={onClose} />
-      <PopupContainerOuter>
+      <Overlay />
+      <PopupContainerOuter onClick={onClose}>
         <PopupContainer>
           <Parchment $intensity={'low'} />
           <PopupContainerInner>

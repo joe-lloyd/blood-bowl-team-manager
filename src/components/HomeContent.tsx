@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useUser } from '@/contexts/userContext';
-import ContentContainer from '@/components/ContentContainer';
+import ContentContainer from '@/components/ComponentWarehouse/ContentContainer';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const Grid = styled.div`

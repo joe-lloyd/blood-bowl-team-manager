@@ -7,4 +7,10 @@ const payForPlayer = (team: CustomTeam, player: Player) => {
   return { treasury: newTreasury, teamValue: newTeamValue };
 };
 
-export { payForPlayer };
+const refundPlayer = (team: CustomTeam, playerCost: number) => {
+  const newTreasury = team.treasury + playerCost;
+  const newTeamValue = team.teamValue - playerCost;
+  return { treasury: newTreasury, teamValue: newTeamValue };
+};
+
+export { payForPlayer, refundPlayer };
