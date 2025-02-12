@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import Footer from '@/components/Footer';
 import TeamLinkList from '@/components/TeamLinkList';
 import ContentContainer from '@/components/ContentContainer';
-import { Team, TeamsList } from '@/types/teams';
+import { Team, TeamId, TeamsList } from '@/types/teams';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 const SubHeading = styled.h3`
@@ -49,7 +49,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps = (async ({ params }) => {
-  const { teamId } = params as { teamId: string };
+  const { teamId } = params as { teamId: TeamId };
   const teams = await fetchTeamsList();
   const teamData = await getTeamData(teamId);
   return {

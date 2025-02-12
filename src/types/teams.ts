@@ -40,7 +40,7 @@ export interface TeamSpecialRules {
 }
 
 export interface Team {
-  teamId: string;
+  teamId: TeamId;
   name: string;
   players: Player[];
   rerollCost: number;
@@ -48,5 +48,37 @@ export interface Team {
   teamSpecialRules: TeamSpecialRules[];
   apothecary: boolean;
 }
+
+export type TeamId =
+  | 'amazon'
+  | 'blackOrc'
+  | 'chaosChosen'
+  | 'chaosDwarf'
+  | 'chaosRenegade'
+  | 'darkElf'
+  | 'dwarf'
+  | 'elvenUnion'
+  | 'gnomes'
+  | 'goblins'
+  | 'highElves'
+  | 'halflings'
+  | 'humans'
+  | 'imperialNobility'
+  | 'khemri'
+  | 'khorne'
+  | 'lizardmen'
+  | 'necromanticHorror'
+  | 'norse'
+  | 'nurgle'
+  | 'ogre'
+  | 'oldWorldAlliance'
+  | 'orcTeam'
+  | 'shamblingUndeadTeam'
+  | 'skavenTeam'
+  | 'slannTeam'
+  | 'snotlingTeam'
+  | 'underworldTeam'
+  | 'vampireTeam'
+  | 'woodElfTeam';
 
 export type TeamsList = { [key: string]: string };

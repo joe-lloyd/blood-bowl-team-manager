@@ -12,7 +12,10 @@ import { combineBasePlayerDataWithUserPlayerData } from '@/utils/playerUtils';
 type ActionType =
   | { type: 'SET_TEAM_NAME'; payload: string }
   | { type: 'SET_COACH_NAME'; payload: string }
-  | { type: 'ADD_PLAYER'; payload: { player: CustomPlayer; index: number } }
+  | {
+      type: 'ADD_PLAYER';
+      payload: { player: CustomPlayer | null; index: number };
+    }
   | { type: 'REMOVE_PLAYER'; payload: number }
   | {
       type: 'UPDATE_PLAYER';
@@ -33,7 +36,8 @@ const teamReducer = (state: CustomTeam, action: ActionType): CustomTeam => {
       return { ...state, coachName: action.payload };
     case 'ADD_PLAYER': {
       const newPlayers = [...state.players];
-      newPlayers[action.payload.index] = { ...action.payload.player };
+      newPlayers[action.payload.index] =
+        action.payload.player === null ? null : { ...action.payload.player };
       return { ...state, players: newPlayers };
     }
     case 'REMOVE_PLAYER': {

@@ -6,7 +6,7 @@ import Parchment from '@/components/Parchment';
 import TeamDetails from '@/components/TeamDetails';
 import AppBar from '@/components/AppBar';
 import ContentContainer from '@/components/ContentContainer';
-import { Team } from '@/types/teams';
+import { Team, TeamId } from '@/types/teams';
 import TeamBuilder from '@/components/TeamBuilder/TeamBuilder';
 import { TeamBuilderProvider } from '@/contexts/teamBuilder';
 import Footer from '@/components/Footer';
@@ -32,7 +32,7 @@ const TeamPage: React.FC<{ teamData: Team; uid: string }> = ({
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const { teamId, uid } = params as { teamId: string; uid: string };
+  const { teamId, uid } = params as { teamId: TeamId; uid: string };
 
   const teamData = await getTeamData(teamId);
 

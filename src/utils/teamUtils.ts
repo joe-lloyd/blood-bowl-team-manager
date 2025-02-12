@@ -6,9 +6,15 @@ import {
   getDoc,
   getDocs,
 } from 'firebase/firestore';
-import { Player, Team, TeamSpecialRules, TraitsAndSkills } from '@/types/teams';
+import {
+  Player,
+  Team,
+  TeamId,
+  TeamSpecialRules,
+  TraitsAndSkills,
+} from '@/types/teams';
 
-const getTeamData = async (teamId: string): Promise<Team> => {
+const getTeamData = async (teamId: TeamId): Promise<Team> => {
   const teamDoc = await getDoc(doc(db, 'teamBlueprints', teamId));
   const team = teamDoc.exists() ? teamDoc.data() : null;
 
@@ -59,7 +65,6 @@ const getTeamData = async (teamId: string): Promise<Team> => {
   );
 
   return {
-    variant: team.variant,
     teamId: teamId,
     name: team.name,
     rerollCost: team.rerollCost,

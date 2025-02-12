@@ -60,6 +60,25 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const SppWrapper = styled.div`
+  display: inline-flex;
+  align-items: center;
+`;
+
+const Label = styled.label`
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 10px;
+  color: #1d3860;
+`;
+
+const InputSpp = styled.input`
+  width: 50px;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #1d3860;
+`;
+
 const Input = styled.input`
   margin: 5px;
   padding: 10px;
@@ -124,6 +143,7 @@ const PlayerManagementPopup: React.FC<{
   const user = useUser();
   const { state, dispatch } = useTeamBuilder();
   const [playerName, setPlayerName] = useState(player.playerName);
+  const [spp, setSpp] = useState(player.spp);
 
   const handleUpdatePlayer = async (updates: Partial<CustomPlayer>) => {
     if (!user) {
@@ -131,7 +151,6 @@ const PlayerManagementPopup: React.FC<{
       return;
     }
 
-    console.log('Updating player', updates);
     const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
     const updatedPlayer = { ...player, ...updates };
     const updatedPlayers = [...state.players].map((player, mapIndex) => {
@@ -204,6 +223,16 @@ const PlayerManagementPopup: React.FC<{
                   onChange={(e) => setPlayerName(e.target.value)}
                   onBlur={() => handleUpdatePlayer({ playerName })}
                 />
+
+                <SppWrapper>
+                  <Label>SPP</Label>
+                  <InputSpp
+                    type="number"
+                    value={spp}
+                    onChange={(e) => setSpp(parseInt(e.target.value))}
+                    onBlur={() => handleUpdatePlayer({ spp })}
+                  />
+                </SppWrapper>
               </TitleWrapper>
 
               <ButtonWrapper>

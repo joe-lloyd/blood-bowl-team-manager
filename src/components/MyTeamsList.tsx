@@ -1,6 +1,5 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
 import { getFirestore, doc, deleteDoc } from 'firebase/firestore';
 import { CustomTeam } from '@/types/userData';
 import { useUser } from '@/contexts/userContext';
@@ -30,12 +29,13 @@ const StyledListItem = styled.li`
 `;
 
 const TeamHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  justify-content: start;
   align-items: center;
 `;
 
 const TeamId = styled.span`
+  margin: 0 1rem;
   font-size: 0.8rem;
   color: #eaaa02;
   background-color: #922d26;
@@ -160,7 +160,6 @@ const ConfirmButton = styled(DeleteButton)``;
 const MyTeamsList = ({ teams }: { teams: CustomTeam[] }) => {
   const user = useUser();
   const [modalTeam, setModalTeam] = useState<CustomTeam | null>(null);
-  const router = useRouter();
 
   const handleDelete = async (team: CustomTeam) => {
     const db = getFirestore();
@@ -181,11 +180,18 @@ const MyTeamsList = ({ teams }: { teams: CustomTeam[] }) => {
             <TeamHeader>
               <TeamName>{team.customTeamName || team.teamName}</TeamName>
               <TeamId>{team.teamId}</TeamId>
+              <TeamId>{team.variant}</TeamId>
             </TeamHeader>
             <TeamInfoGrid>
               <TeamInfo>
                 <InfoLabel>Players</InfoLabel>
-                <InfoValue>{team.players.filter(Boolean).length}/16</InfoValue>
+                <InfoValue>
+                  {team.players.filter(Boolean).length}/{team.players.length}
+                </InfoValue>
+              </TeamInfo>
+              <TeamInfo>
+                <InfoLabel>Team Value</InfoLabel>
+                <InfoValue>{team.teamValue} GP</InfoValue>
               </TeamInfo>
               <TeamInfo>
                 <InfoLabel>Treasury</InfoLabel>
@@ -193,15 +199,15 @@ const MyTeamsList = ({ teams }: { teams: CustomTeam[] }) => {
               </TeamInfo>
               <TeamInfo>
                 <InfoLabel>Total Touchdowns</InfoLabel>
-                <InfoValue>{team.totalTouchdowns} GP</InfoValue>
+                <InfoValue>{team.totalTouchdowns}</InfoValue>
               </TeamInfo>
               <TeamInfo>
                 <InfoLabel>Total Casualties</InfoLabel>
-                <InfoValue>{team.totalCasualties} GP</InfoValue>
+                <InfoValue>{team.totalCasualties}</InfoValue>
               </TeamInfo>
               <TeamInfo>
                 <InfoLabel>Dedicated Fans</InfoLabel>
-                <InfoValue>{team.dedicatedFans} GP</InfoValue>
+                <InfoValue>{team.dedicatedFans}</InfoValue>
               </TeamInfo>
             </TeamInfoGrid>
             <ActionButtons>

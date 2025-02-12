@@ -7,7 +7,7 @@ import { getTeamData, fetchTeamsList } from '@/utils/teamUtils';
 import styled from 'styled-components';
 import Footer from '@/components/Footer';
 import ContentContainer from '@/components/ContentContainer';
-import { Team } from '@/types/teams';
+import { Team, TeamId } from '@/types/teams';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import TeamPreSetup from '@/components/TeamBuilder/TeamPreSetup';
 
@@ -29,7 +29,7 @@ const TeamPage: React.FC<{ teamData: Team }> = ({ teamData }) => {
       <ContentContainer>
         <TeamDetails teamData={teamData} />
         <SubHeading>Just a few things before we start:</SubHeading>
-        <TeamPreSetup teamName={teamData.name} />
+        <TeamPreSetup teamData={teamData} />
       </ContentContainer>
       <Footer />
     </>
@@ -46,7 +46,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps = (async ({ params }) => {
-  const { teamId } = params as { teamId: string };
+  const { teamId } = params as { teamId: TeamId };
   const teamData = await getTeamData(teamId);
   return {
     props: {

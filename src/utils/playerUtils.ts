@@ -1,4 +1,4 @@
-import { GameVariant, Team } from '@/types/teams';
+import { GameVariant, Team, TeamId } from '@/types/teams';
 import {
   CustomPlayer,
   CustomTeam,
@@ -9,14 +9,12 @@ import generateRandomName from '@/utils/randomNameGenerator/randomNameGenerator'
 
 const createNewTeam = ({
   teamId,
-  teamName,
   customTeamName,
   coachName,
   startingTreasury,
   variant,
 }: {
-  teamId: string;
-  teamName: string;
+  teamId: TeamId;
   customTeamName: string;
   coachName: string;
   startingTreasury: number;
@@ -24,14 +22,14 @@ const createNewTeam = ({
 }): TeamDataToSave => {
   const numberOfPlayers = {
     classic: 16,
-    sevens: 7,
+    sevens: 11,
   }[variant];
 
   return {
     teamId: teamId,
     variant: variant,
-    teamName: '',
-    coachName: '',
+    teamName: customTeamName,
+    coachName: coachName,
     players: Array(numberOfPlayers).fill(null) as PlayerDataToSave[],
     startingTreasury: startingTreasury,
     treasury: startingTreasury,

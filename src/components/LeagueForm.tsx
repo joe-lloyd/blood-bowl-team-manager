@@ -87,7 +87,7 @@ const LeagueForm: React.FC<{ leagueId: string }> = ({ leagueId }) => {
     };
 
     const leagueData: League = {
-      leagueId,
+      id: leagueId,
       leagueName,
       description,
       createdBy: user.uid,

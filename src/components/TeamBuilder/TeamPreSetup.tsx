@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { GameVariant } from '@/types/teams';
+import { GameVariant, Team } from '@/types/teams';
 import { createNewTeam } from '@/utils/playerUtils';
 import { doc, setDoc } from 'firebase/firestore';
 import { db } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';
 import { uuidv4 } from '@firebase/util';
+import { useRouter } from 'next/router';
 
 const TopTableContainer = styled.div`
   display: inline-grid;
@@ -53,15 +54,55 @@ const PillButton = styled.button<{ selected: boolean }>`
   }
 `;
 
-const TeamPreSetup: React.FC<{ teamName: string }> = ({ teamName }) => {
+const SubmitButton = styled.button`
+  padding: 10px 20px;
+  border: 2px solid #1d3860;
+  background-color: #1d3860;
+  color: #e0f0ff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+`;
+
+const Loader = styled.div`
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1d3860;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+  margin-left: 10px;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
+const TeamPreSetup: React.FC<{ teamData: Team }> = ({ teamData }) => {
+  console.log('teamData:', teamData);
   const user = useUser();
+  const router = useRouter();
   const [teamBaseDetails, setTeamBaseDetails] = useState({
     variant: GameVariant.CLASSIC,
-    teamName: '',
+    teamId: teamData.teamId,
+    teamName: teamData.name,
     customTeamName: '',
     coachName: '',
     startingTreasury: 1000000,
   });
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -83,13 +124,12 @@ const TeamPreSetup: React.FC<{ teamName: string }> = ({ teamName }) => {
       console.error('User not found');
       return;
     }
+    setLoading(true);
     const uid = uuidv4();
     const teamDocRef = doc(db, 'users', user.uid, 'teams', uid);
-    const teamBlueprintData = createNewTeam({
-      ...teamBaseDetails,
-      teamId: uid,
-    });
+    const teamBlueprintData = createNewTeam(teamBaseDetails);
     await setDoc(teamDocRef, teamBlueprintData);
+    router.push(`/create-team/${teamData.teamId}/${uid}`);
   };
 
   return (
@@ -102,6 +142,7 @@ const TeamPreSetup: React.FC<{ teamName: string }> = ({ teamName }) => {
               key={variant}
               selected={teamBaseDetails.variant === variant}
               onClick={() => handleGameTypeChange(variant)}
+              disabled={loading}
             >
               {variant}
             </PillButton>
@@ -113,12 +154,13 @@ const TeamPreSetup: React.FC<{ teamName: string }> = ({ teamName }) => {
           name="customTeamName"
           value={teamBaseDetails.customTeamName}
           onChange={handleInputChange}
+          disabled={loading}
         />
         <Label>TEAM ROSTER:</Label>
         <InputField
           type="text"
           name="teamName"
-          value={teamName}
+          value={teamBaseDetails.teamName}
           disabled={true}
         />
         <Label>COACH:</Label>
@@ -127,6 +169,7 @@ const TeamPreSetup: React.FC<{ teamName: string }> = ({ teamName }) => {
           name="coachName"
           value={teamBaseDetails.coachName}
           onChange={handleInputChange}
+          disabled={loading}
         />
         <Label>STARTING TREASURY:</Label>
         <InputField
@@ -134,8 +177,19 @@ const TeamPreSetup: React.FC<{ teamName: string }> = ({ teamName }) => {
           name="startingTreasury"
           value={teamBaseDetails.startingTreasury}
           onChange={handleInputChange}
+          disabled={loading}
         />
       </TopTableContainer>
+      <SubmitButton onClick={handleSubmitTeam} disabled={loading}>
+        {loading ? (
+          <>
+            Creating Team
+            <Loader />
+          </>
+        ) : (
+          'Create Team'
+        )}
+      </SubmitButton>
     </>
   );
 };

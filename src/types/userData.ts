@@ -1,4 +1,4 @@
-import { GameVariant } from '@/types/teams';
+import { GameVariant, TeamId } from '@/types/teams';
 
 interface CustomPlayer {
   positionId: string;
@@ -25,7 +25,7 @@ interface CustomPlayer {
 
 interface CustomTeam {
   id: string;
-  teamId: string;
+  teamId: TeamId | '';
   variant: GameVariant;
   teamName: string;
   customTeamName: string;
@@ -46,7 +46,7 @@ interface CustomTeam {
 }
 
 interface TeamDataToSave {
-  teamId: string;
+  teamId: TeamId;
   variant: GameVariant;
   teamName: string;
   coachName: string;
