@@ -1,5 +1,3 @@
-import { TeamDataToSave } from '@/types/userData';
-
 interface League {
   id: string;
   leagueName: string;

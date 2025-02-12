@@ -59,6 +59,7 @@ const getTeamData = async (teamId: string): Promise<Team> => {
   );
 
   return {
+    variant: team.variant,
     teamId: teamId,
     name: team.name,
     rerollCost: team.rerollCost,

@@ -1,4 +1,4 @@
-import { Team } from '@/types/teams';
+import { GameVariant, Team } from '@/types/teams';
 import {
   CustomPlayer,
   CustomTeam,
@@ -6,23 +6,46 @@ import {
   TeamDataToSave,
 } from '@/types/userData';
 import generateRandomName from '@/utils/randomNameGenerator/randomNameGenerator';
-const createNewTeam = (teamId: string): TeamDataToSave => ({
-  teamId: teamId,
-  teamName: '',
-  coachName: '',
-  players: Array(16).fill(null) as PlayerDataToSave[],
-  startingTreasury: 1000000,
-  treasury: 1000000,
-  dedicatedFans: 0,
-  totalTouchdowns: 0,
-  totalCasualties: 0,
-  leaguePoints: 0,
-  rerolls: 0,
-  assistantCoaches: 0,
-  cheerleaders: 0,
-  apothecary: false,
-  teamValue: 0,
-});
+
+const createNewTeam = ({
+  teamId,
+  teamName,
+  customTeamName,
+  coachName,
+  startingTreasury,
+  variant,
+}: {
+  teamId: string;
+  teamName: string;
+  customTeamName: string;
+  coachName: string;
+  startingTreasury: number;
+  variant: GameVariant;
+}): TeamDataToSave => {
+  const numberOfPlayers = {
+    classic: 16,
+    sevens: 7,
+  }[variant];
+
+  return {
+    teamId: teamId,
+    variant: variant,
+    teamName: '',
+    coachName: '',
+    players: Array(numberOfPlayers).fill(null) as PlayerDataToSave[],
+    startingTreasury: startingTreasury,
+    treasury: startingTreasury,
+    dedicatedFans: 0,
+    totalTouchdowns: 0,
+    totalCasualties: 0,
+    leaguePoints: 0,
+    rerolls: 0,
+    assistantCoaches: 0,
+    cheerleaders: 0,
+    apothecary: false,
+    teamValue: 0,
+  };
+};
 
 const createNewPlayer = (
   positionId: string,
@@ -138,12 +161,14 @@ const combineBaseTeamDataWithUserTeamData = (
   teamBluePrint: Team,
   userCustomTeamData: TeamDataToSave
 ): CustomTeam => {
-  const players = userCustomTeamData.players.map((playerData) =>
-    combineBasePlayerDataWithUserPlayerData(teamBluePrint, playerData)
-  );
+  const players = userCustomTeamData.players.map((playerData) => {
+    if (!playerData) return null; // @TODO check if this breaks everything
+    return combineBasePlayerDataWithUserPlayerData(teamBluePrint, playerData);
+  });
 
   return {
     id: '',
+    variant: userCustomTeamData.variant,
     teamName: userCustomTeamData.teamName,
     customTeamName: userCustomTeamData.teamName,
     rerollCost: teamBluePrint.rerollCost,

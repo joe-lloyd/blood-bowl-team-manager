@@ -63,13 +63,7 @@ const TeamBuilder: React.FC<{ teamData: Team; uid: string }> = ({
             payload: { coachData, teamData },
           });
         } else {
-          const teamBlueprintData = createNewTeam(teamData.teamId);
-          const customTeamData = combineBaseTeamDataWithUserTeamData(
-            teamData,
-            teamBlueprintData
-          );
-          dispatch({ type: 'UPDATE_META', payload: customTeamData });
-          await setDoc(teamDocRef, teamBlueprintData);
+          throw new Error('Team not found');
         }
       } catch (error) {
         console.error('Error during Firestore operation:', error);

@@ -4,7 +4,6 @@ import { useUser } from '@/contexts/userContext';
 import { db } from '@/services/firebase';
 import { doc, setDoc, collection, getDocs } from 'firebase/firestore';
 import { League, Season } from '@/types/league';
-import { TeamDataToSave } from '@/types/userData';
 import { uuidv4 } from '@firebase/util';
 
 const FormWrapper = styled.div`

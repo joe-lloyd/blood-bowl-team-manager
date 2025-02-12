@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { getFirestore, collection, onSnapshot } from 'firebase/firestore';
+import { getFirestore, onSnapshot } from 'firebase/firestore';
 import { useUser } from '@/contexts/userContext';
 import Parchment from '@/components/Parchment';
 import Hero from '@/components/Hero';
 import AppBar from '@/components/AppBar';
 import Footer from '@/components/Footer';
-import TextBorderBox from '@/components/TextBorderBox';
 import ContentContainer from '@/components/ContentContainer';
 import MinHeightContainer from '@/components/MinHeightContainer';
 import { GetServerSideProps } from 'next';

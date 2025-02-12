@@ -7,11 +7,9 @@ import Footer from '@/components/Footer';
 import TeamLinkList from '@/components/TeamLinkList';
 import ContentContainer from '@/components/ContentContainer';
 import { TeamsList } from '@/types/teams';
-import { v4 as uuidv4 } from 'uuid';
 import MinHeightContainer from '@/components/MinHeightContainer';
 
 const TeamsPage: React.FC<{ teams: TeamsList }> = ({ teams }) => {
-  const uniqueTeamId = uuidv4();
   return (
     <>
       <Parchment />
@@ -19,11 +17,7 @@ const TeamsPage: React.FC<{ teams: TeamsList }> = ({ teams }) => {
       <MinHeightContainer>
         <Hero text={'Create Team'} />
         <ContentContainer>
-          <TeamLinkList
-            teams={teams}
-            rootPath="create-team"
-            uid={uniqueTeamId}
-          />
+          <TeamLinkList teams={teams} rootPath="create-team" />
         </ContentContainer>
         <Footer />
       </MinHeightContainer>

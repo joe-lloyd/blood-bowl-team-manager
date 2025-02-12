@@ -1,3 +1,12 @@
+export enum GameVariant {
+  CLASSIC = 'classic',
+  SEVENS = 'sevens',
+  // GUTTER_BOWL = 'gutter_bowl',
+  // STREET_BOWL = 'street-bowl',
+  // DEATH_BOWL = 'death-bowl',
+  // DEATH_BOWL_7S = 'death-bowl-7s',
+}
+
 export interface TraitsAndSkills {
   id: string;
   name: string;

@@ -1,3 +1,5 @@
+import { GameVariant } from '@/types/teams';
+
 interface CustomPlayer {
   positionId: string;
   positionName: string;
@@ -24,6 +26,7 @@ interface CustomPlayer {
 interface CustomTeam {
   id: string;
   teamId: string;
+  variant: GameVariant;
   teamName: string;
   customTeamName: string;
   coachName: string;
@@ -44,6 +47,7 @@ interface CustomTeam {
 
 interface TeamDataToSave {
   teamId: string;
+  variant: GameVariant;
   teamName: string;
   coachName: string;
   players: (PlayerDataToSave | null)[];

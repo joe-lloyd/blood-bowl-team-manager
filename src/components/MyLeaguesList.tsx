@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
 import { getFirestore, doc, deleteDoc } from 'firebase/firestore';
-import { League } from '@/types/league';
+import { League, Season } from '@/types/league';
 import { useUser } from '@/contexts/userContext';
 import Link from 'next/link';
 
@@ -174,7 +173,7 @@ const MyLeaguesList = ({ leagues }: { leagues: League[] }) => {
               <LeagueName>{league.leagueName}</LeagueName>
             </LeagueHeader>
             {!!league.seasons.length &&
-              league.seasons.map((season) => (
+              league.seasons.map((season: Season) => (
                 <LeagueInfoGrid>
                   <LeagueInfo>
                     <InfoLabel>Season</InfoLabel>
@@ -209,8 +208,7 @@ const MyLeaguesList = ({ leagues }: { leagues: League[] }) => {
         <ModalOverlay>
           <Modal>
             <ModalTitle>
-              Are you sure you want to delete "
-              {modalLeague.customLeagueName || modalLeague.leagueName}"?
+              Are you sure you want to delete "{modalLeague.leagueName}"?
             </ModalTitle>
             <ModalActions>
               <CancelButton onClick={() => setModalLeague(null)}>
