@@ -5,10 +5,6 @@ import TeamMeta from './TeamMeta';
 import styled from 'styled-components';
 import { Team } from '@/types/teams';
 import { useTeamBuilder } from '@/contexts/teamBuilder';
-import {
-  combineBaseTeamDataWithUserTeamData,
-  createNewTeam,
-} from '@/utils/playerUtils';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { db } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';

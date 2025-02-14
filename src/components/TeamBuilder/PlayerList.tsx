@@ -13,46 +13,13 @@ import { useUser } from '@/contexts/userContext';
 import { validatePositionLimit, validateTreasury } from '@/utils/validations';
 import { payForPlayer } from '@/utils/accountant';
 import PlayerManagementPopup from './PlayerManagementPopup';
-
-const TableWrapper = styled.div`
-  width: 100%;
-  overflow-x: auto;
-  border-left: 3px solid #1d3860;
-  border-right: 3px solid #1d3860;
-`;
-
-const MainTable = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #e0f0ff;
-  border: none;
-`;
-
-const TableHeader = styled.th`
-  background-color: #1d3860;
-  color: white;
-  padding: 10px;
-  font-weight: bold;
-  border: 1px solid #1d3860;
-`;
-
-const TableRow = styled.tr<{ $hasPlayer: boolean }>`
-  &:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  &:hover {
-    cursor: ${({ $hasPlayer }) => ($hasPlayer ? 'pointer' : 'default')};
-    background-color: ${({ $hasPlayer }) =>
-      $hasPlayer ? '#d4e8ff' : 'currentBackgroundColor'};
-  }
-`;
-
-const TableCell = styled.td`
-  border: 1px solid #1d3860;
-  text-align: center;
-  padding: 10px;
-`;
+import {
+  MainTable,
+  TableCell,
+  TableHeader,
+  TableRow,
+  TableWrapper,
+} from '@/components/ComponentWarehouse/Table';
 
 const NameCell = styled(TableCell)`
   min-width: 200px;
@@ -66,6 +33,14 @@ const PositionCell = styled(TableCell)`
 
 const SkillsCell = styled(TableCell)`
   min-width: 400px;
+`;
+
+const PlayerTableRow = styled(TableRow)<{ $hasPlayer: boolean }>`
+  &:hover {
+    cursor: ${({ $hasPlayer }) => ($hasPlayer ? 'pointer' : 'default')};
+    background-color: ${({ $hasPlayer }) =>
+      $hasPlayer ? '#d4e8ff' : 'currentBackgroundColor'};
+  }
 `;
 
 const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
@@ -161,7 +136,7 @@ const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
         <tbody>
           {state.players.map((player, index) => {
             return (
-              <TableRow
+              <PlayerTableRow
                 key={index}
                 onClick={() => player && setSelectedPlayerIndex(index)}
                 $hasPlayer={!!player}
@@ -198,7 +173,7 @@ const PlayerList: React.FC<{ teamData: Team; uid: string }> = ({
                 <TableCell>{player?.nigglingInjury ? 'yes' : 'no'}</TableCell>
                 <TableCell>{player?.tempRetirement ? 'yes' : 'no'}</TableCell>
                 <TableCell>{player?.currentValue || ''}</TableCell>
-              </TableRow>
+              </PlayerTableRow>
             );
           })}
         </tbody>

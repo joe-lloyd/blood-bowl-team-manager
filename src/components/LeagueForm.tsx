@@ -6,6 +6,7 @@ import { doc, setDoc, collection, getDocs } from 'firebase/firestore';
 import { League, Season } from '@/types/league';
 import { uuidv4 } from '@firebase/util';
 import { useRouter } from 'next/router';
+import { Button, RemoveButton } from '@/components/ComponentWarehouse/Button';
 
 const FormWrapper = styled.div`
   padding: 20px;
@@ -18,15 +19,6 @@ const Input = styled.input`
   padding: 10px;
   width: 100%;
   border: 2px solid #1d3860;
-`;
-
-const Button = styled.button`
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #1d3860;
-  color: white;
-  border: none;
-  cursor: pointer;
 `;
 
 const Select = styled.select`
@@ -49,14 +41,6 @@ const SelectedTeamItem = styled.li`
   padding: 10px;
   border: 1px solid #1d3860;
   background-color: #f0f8ff;
-`;
-
-const RemoveButton = styled.button`
-  background-color: #922d26;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 5px 10px;
 `;
 
 interface TeamSelect {
@@ -100,7 +84,7 @@ const LeagueForm: React.FC<{ leagueId: string }> = ({ leagueId }) => {
     }
   }, [user]);
 
-  const handleAddTeam = (selectedTeam) => {
+  const handleAddTeam = (selectedTeam: string) => {
     const teamToAdd = teams.find((team) => team.value === selectedTeam);
     if (
       teamToAdd &&

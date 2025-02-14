@@ -4,6 +4,7 @@ import { signInWithGoogle, auth } from '@/services/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import styled from 'styled-components';
 
+// @TODO remove this button, we should only use the buttons from the ComponentWarehouse
 const LoginButton = styled.button`
   background-color: #4285f4;
   color: white;

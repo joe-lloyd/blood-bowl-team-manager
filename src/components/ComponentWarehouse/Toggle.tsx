@@ -64,7 +64,6 @@ interface ToggleProps {
 }
 
 const Toggle: React.FC<ToggleProps> = ({ label, checked, onChange }) => {
-  console.log('Toggle rendering');
   const [isChecked, setIsChecked] = React.useState(checked);
   return (
     <ToggleWrapper>
@@ -76,7 +75,6 @@ const Toggle: React.FC<ToggleProps> = ({ label, checked, onChange }) => {
             type="checkbox"
             checked={isChecked}
             onChange={() => {
-              console.log('ToggleSwitch onChange');
               setIsChecked(!isChecked);
               onChange(!isChecked);
             }}

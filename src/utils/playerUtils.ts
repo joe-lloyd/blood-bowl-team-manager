@@ -157,7 +157,8 @@ const stripUserDataFromPlayer = (
 
 const combineBaseTeamDataWithUserTeamData = (
   teamBluePrint: Team,
-  userCustomTeamData: TeamDataToSave
+  userCustomTeamData: TeamDataToSave,
+  docId: string
 ): CustomTeam => {
   const players = userCustomTeamData.players.map((playerData) => {
     if (!playerData) return null; // @TODO check if this breaks everything
@@ -165,9 +166,9 @@ const combineBaseTeamDataWithUserTeamData = (
   });
 
   return {
-    id: '',
+    id: docId,
     variant: userCustomTeamData.variant,
-    teamName: userCustomTeamData.teamName,
+    teamName: teamBluePrint.name,
     customTeamName: userCustomTeamData.teamName,
     rerollCost: teamBluePrint.rerollCost,
     teamId: userCustomTeamData.teamId,

@@ -1,21 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
-import styled from 'styled-components';
 import { TeamsList } from '@/types/teams';
-
-const LinkText = styled.span`
-  padding: 10px 20px;
-  display: inline-block;
-  margin: 10px;
-  background-color: #922d26;
-  color: white;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #701d1a;
-  }
-`;
+import { InlineLink } from '@/components/ComponentWarehouse/Button';
 
 const TeamLinkList: React.FC<{
   teams: TeamsList;
@@ -25,7 +11,7 @@ const TeamLinkList: React.FC<{
     <div>
       {Object.entries(teams).map(([teamId, teamName]) => (
         <Link href={`/${rootPath}/${teamId}`} key={teamId} passHref>
-          <LinkText>{teamName}</LinkText>
+          <InlineLink>{teamName}</InlineLink>
         </Link>
       ))}
     </div>

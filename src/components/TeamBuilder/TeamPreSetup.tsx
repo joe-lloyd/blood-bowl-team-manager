@@ -7,6 +7,7 @@ import { db } from '@/services/firebase';
 import { useUser } from '@/contexts/userContext';
 import { uuidv4 } from '@firebase/util';
 import { useRouter } from 'next/router';
+import { Button } from '@/components/ComponentWarehouse/Button';
 
 const TopTableContainer = styled.div`
   display: inline-grid;
@@ -38,36 +39,14 @@ const PillContainer = styled.div`
   gap: 10px;
 `;
 
-const PillButton = styled.button<{ selected: boolean }>`
-  padding: 10px 20px;
-  border: 2px solid #1d3860;
+const PillButton = styled(Button)<{ selected: boolean }>`
+  border-radius: 30px;
   background-color: ${({ selected }) => (selected ? '#1d3860' : '#e0f0ff')};
   color: ${({ selected }) => (selected ? '#e0f0ff' : '#1d3860')};
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
 
   &:hover {
     background-color: #1d3860;
     color: #e0f0ff;
-  }
-`;
-
-const SubmitButton = styled.button`
-  padding: 10px 20px;
-  border: 2px solid #1d3860;
-  background-color: #1d3860;
-  color: #e0f0ff;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 20px;
-
-  &:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
   }
 `;
 
@@ -91,7 +70,6 @@ const Loader = styled.div`
 `;
 
 const TeamPreSetup: React.FC<{ teamData: Team }> = ({ teamData }) => {
-  console.log('teamData:', teamData);
   const user = useUser();
   const router = useRouter();
   const [teamBaseDetails, setTeamBaseDetails] = useState({
@@ -193,7 +171,7 @@ const TeamPreSetup: React.FC<{ teamData: Team }> = ({ teamData }) => {
           disabled={loading}
         />
       </TopTableContainer>
-      <SubmitButton onClick={handleSubmitTeam} disabled={loading}>
+      <Button onClick={handleSubmitTeam} disabled={loading}>
         {loading ? (
           <>
             Creating Team
@@ -202,7 +180,7 @@ const TeamPreSetup: React.FC<{ teamData: Team }> = ({ teamData }) => {
         ) : (
           'Create Team'
         )}
-      </SubmitButton>
+      </Button>
     </>
   );
 };

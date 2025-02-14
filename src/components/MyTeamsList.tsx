@@ -4,6 +4,7 @@ import { getFirestore, doc, deleteDoc } from 'firebase/firestore';
 import { CustomTeam } from '@/types/userData';
 import { useUser } from '@/contexts/userContext';
 import Link from 'next/link';
+import { Button, DangerButton } from '@/components/ComponentWarehouse/Button';
 
 const blueColor = '#1d3860';
 
@@ -80,41 +81,6 @@ const ActionButtons = styled.div`
   margin-top: 20px;
 `;
 
-const Button = styled.button`
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-`;
-
-const EditButton = styled.a`
-  display: inline-block;
-  color: white;
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 4px;
-  background-color: ${blueColor};
-
-  &:hover {
-    background-color: #144055;
-  }
-`;
-
-const DeleteButton = styled(Button)`
-  background-color: #922d26;
-
-  &:hover {
-    background-color: #751f1a;
-  }
-`;
-
 const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -146,16 +112,6 @@ const ModalActions = styled.div`
   justify-content: space-between;
   gap: 10px;
 `;
-
-const CancelButton = styled(Button)`
-  background-color: #cccccc;
-
-  &:hover {
-    background-color: #aaaaaa;
-  }
-`;
-
-const ConfirmButton = styled(DeleteButton)``;
 
 const MyTeamsList = ({ teams }: { teams: CustomTeam[] }) => {
   const user = useUser();
@@ -212,11 +168,11 @@ const MyTeamsList = ({ teams }: { teams: CustomTeam[] }) => {
             </TeamInfoGrid>
             <ActionButtons>
               <Link href={`/create-team/${team.teamId}/${team.id}`}>
-                <EditButton>Edit</EditButton>
+                <Button>Edit</Button>
               </Link>
-              <DeleteButton onClick={() => setModalTeam(team)}>
+              <DangerButton onClick={() => setModalTeam(team)}>
                 Delete
-              </DeleteButton>
+              </DangerButton>
             </ActionButtons>
           </StyledListItem>
         ))}
@@ -230,12 +186,10 @@ const MyTeamsList = ({ teams }: { teams: CustomTeam[] }) => {
               {modalTeam.customTeamName || modalTeam.teamName}"?
             </ModalTitle>
             <ModalActions>
-              <CancelButton onClick={() => setModalTeam(null)}>
-                Cancel
-              </CancelButton>
-              <ConfirmButton onClick={() => handleDelete(modalTeam)}>
+              <Button onClick={() => setModalTeam(null)}>Cancel</Button>
+              <DangerButton onClick={() => handleDelete(modalTeam)}>
                 Delete
-              </ConfirmButton>
+              </DangerButton>
             </ModalActions>
           </Modal>
         </ModalOverlay>

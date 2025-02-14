@@ -10,6 +10,7 @@ import { Team } from '@/types/teams';
 import Parchment from '@/components/ComponentWarehouse/Parchment';
 import Toggle from '@/components/ComponentWarehouse/Toggle';
 import { refundPlayer } from '@/utils/accountant';
+import { Button } from '@/components/ComponentWarehouse/Button';
 
 const PopupContainerOuter = styled.div`
   position: fixed;
@@ -50,15 +51,6 @@ const Heading = styled.h2`
   font-style: italic;
   margin-right: 1rem;
   font-size: 2rem;
-`;
-
-const Button = styled.button`
-  margin: 5px;
-  padding: 10px;
-  background-color: #1d3860;
-  color: white;
-  border: none;
-  cursor: pointer;
 `;
 
 const SppWrapper = styled.div`
@@ -123,7 +115,9 @@ const StatsValue = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  display: inline-flex;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem;
   align-items: right;
 `;
 
