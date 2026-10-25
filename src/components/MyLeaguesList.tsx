@@ -130,7 +130,7 @@ const MyLeaguesList = ({ leagues }: { leagues: League[] }) => {
             </LeagueHeader>
             {!!league.seasons.length &&
               league.seasons.map((season: Season) => (
-                <LeagueInfoGrid>
+                <LeagueInfoGrid key={season.seasonName}>
                   <LeagueInfo>
                     <InfoLabel>Season</InfoLabel>
                     <InfoValue>{season.seasonName}</InfoValue>
@@ -164,7 +164,8 @@ const MyLeaguesList = ({ leagues }: { leagues: League[] }) => {
         <ModalOverlay>
           <Modal>
             <ModalTitle>
-              Are you sure you want to delete "{modalLeague.leagueName}"?
+              Are you sure you want to delete &quot;{modalLeague.leagueName}
+              &quot;?
             </ModalTitle>
             <ModalActions>
               <Button onClick={() => setModalLeague(null)}>Cancel</Button>
