@@ -130,7 +130,7 @@ const MyLeaguesList = ({ leagues }: { leagues: League[] }) => {
             </LeagueHeader>
             {!!league.seasons.length &&
               league.seasons.map((season: Season) => (
-                <LeagueInfoGrid key={season.seasonName}>
+                <LeagueInfoGrid key={season.seasonId}>
                   <LeagueInfo>
                     <InfoLabel>Season</InfoLabel>
                     <InfoValue>{season.seasonName}</InfoValue>
