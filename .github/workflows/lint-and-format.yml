@@ -31,14 +31,14 @@ jobs:
 
       - name: Upload ESLint report
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: eslint-report
           path: eslint-report.html
 
       - name: Upload Prettier report
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: prettier-report
           path: prettier-report.html

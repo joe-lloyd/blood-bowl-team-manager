@@ -182,8 +182,8 @@ const MyTeamsList = ({ teams }: { teams: CustomTeam[] }) => {
         <ModalOverlay>
           <Modal>
             <ModalTitle>
-              Are you sure you want to delete "
-              {modalTeam.customTeamName || modalTeam.teamName}"?
+              Are you sure you want to delete &quot;
+              {modalTeam.customTeamName || modalTeam.teamName}&quot;?
             </ModalTitle>
             <ModalActions>
               <Button onClick={() => setModalTeam(null)}>Cancel</Button>
